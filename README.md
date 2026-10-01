@@ -72,6 +72,10 @@ The hero uses a local copy of **Al Sowda Hill top 04** by **Irshadpp**, from Wik
 - **Shamsan Castle** — Heritage Commission, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 - **Abha Dam Lake** — Aiman ALhaddad, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
 
+### User-supplied decorative assets
+
+`images/al-qatt-aseeri-pattern.jpg` and `images/soft-cloud-layer.jpg` are unchanged visual files supplied for this guide. The pattern appears only as low-opacity, clipped edge decoration around the hero, category area, and travel notes; the cloud layer replaces the former geometric cloud shapes. Neither file is placed over the interactive map or controls. No creator, licence, or ownership claim is made beyond the supplied-file record.
+
 The full local-file, source, creator, licence, and derivative ledger is in [`images/credits.md`](images/credits.md).
 
 All other place cards—including Hotels & Stays—use clearly labelled, intentional local illustrations until a specific reusable image is verified. These are not failed images.
@@ -84,8 +88,8 @@ This static release has no Google Places API key, billing configuration, Place I
 
 ## Design and accessibility
 
-The interface uses an original CSS-only Aseeri-inspired treatment: abstract mountain triangles, crossed bands, diamonds, forest green, deep indigo, muted red, and warm sand. It is not a copied pattern or artwork.
+The interface combines original CSS mountains and geometry with the unchanged, user-supplied Al-Qatt edge asset described above. The supplied pattern is never redrawn, recolored, or presented as original CSS artwork.
 
-Decorative cloud silhouettes and mist animate only when the browser allows motion. The guide supports English and Arabic, RTL, light/dark theme persistence, visible focus styles, a skip link, an accessible non-map place list, and reduced-motion map/page behavior.
+The supplied cloud layer replaces the earlier geometric cloud silhouettes. Decorative cloud and mist layers animate only when the browser allows motion. The guide supports English and Arabic, RTL, light/dark theme persistence, visible focus styles, a skip link, an accessible non-map place list, and reduced-motion map/page behavior.
 
 Built with Claude Code during the KKU Claude Code hackathon.

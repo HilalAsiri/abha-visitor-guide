@@ -141,16 +141,15 @@ h3 { font-size: 1.35rem; }
 .mountain-plane { position: absolute; z-index: -1; pointer-events: none; opacity: .42; }
 .mountain-plane-one { inset: auto 16% 0 auto; width: 19rem; height: 9rem; background: rgba(15, 48, 49, .72); clip-path: polygon(0 100%, 40% 17%, 56% 60%, 73% 2%, 100% 100%); }
 .mountain-plane-two { inset: auto auto -2rem -4rem; width: 23rem; height: 9rem; background: rgba(247, 234, 193, .13); clip-path: polygon(0 100%, 21% 33%, 37% 75%, 63% 10%, 86% 72%, 100% 42%, 100% 100%); }
-.cloud { position: absolute; z-index: -1; width: 15rem; height: 4rem; opacity: .58; pointer-events: none; }
-.cloud::before, .cloud::after, .cloud span { position: absolute; display: block; content: ""; background: rgba(255, 253, 245, .5); box-shadow: 0 .2rem 1.5rem rgba(255, 253, 245, .12); }
-.cloud::before { inset: 1.35rem .3rem .15rem; border-radius: 999px; }
-.cloud::after { width: 5.5rem; height: 5.5rem; inset: -.15rem auto auto 2.7rem; border-radius: 50%; }
-.cloud span { width: 4.5rem; height: 4.5rem; inset: .5rem 2.3rem auto auto; border-radius: 50%; }
-.cloud-one { inset-block-start: 1.4rem; inset-inline-end: 18%; transform: scale(.8); }
-.cloud-two { inset-block-end: 2.7rem; inset-inline-start: 27%; opacity: .42; transform: scale(1.15); }
-.hero-mist { position: absolute; z-index: -1; inset: auto -10% 0; height: 37%; background: linear-gradient(0deg, rgba(244, 249, 242, .28), rgba(244, 249, 242, .04) 62%, transparent); filter: blur(5px); pointer-events: none; }
-.aseeri-weave { position: absolute; z-index: 3; pointer-events: none; opacity: .42; background: linear-gradient(135deg, transparent 0 39%, var(--sand) 39.5% 42%, transparent 42.5% 58%, var(--ornament-red) 58.5% 61%, transparent 61.5%), linear-gradient(45deg, transparent 0 39%, var(--indigo) 39.5% 42%, transparent 42.5% 58%, var(--forest) 58.5% 61%, transparent 61.5%), linear-gradient(90deg, transparent 0 44%, color-mix(in srgb, var(--sand) 60%, transparent) 44.5% 55%, transparent 55.5%); background-size: 2.4rem 2.4rem, 2.4rem 2.4rem, 1.2rem 1.2rem; }
-.intro-weave { inset: auto 7% 0 auto; width: min(25rem, 60%); height: 1.1rem; border-radius: .7rem .7rem 0 0; }
+.cloud { position: absolute; z-index: -1; width: clamp(12rem, 29vw, 22rem); height: clamp(7rem, 15vw, 10rem); background: url("images/soft-cloud-layer.jpg") center / cover no-repeat; opacity: .38; pointer-events: none; }
+.cloud-one { inset-block-start: .8rem; inset-inline-end: 15%; transform: scale(.82); }
+.cloud-two { inset-block-end: 1.8rem; inset-inline-start: 22%; opacity: .27; transform: scale(1.1); }
+.hero-mist { position: absolute; z-index: -1; inset: auto -8% -8%; height: 43%; background: url("images/soft-cloud-layer.jpg") center bottom / cover no-repeat; opacity: .2; pointer-events: none; }
+.al-qatt-edge { position: absolute; z-index: -1; width: clamp(5.3rem, 12vw, 8.75rem); aspect-ratio: 1265 / 2349; background: url("images/al-qatt-aseeri-pattern.jpg") center / contain no-repeat; opacity: .16; pointer-events: none; }
+.al-qatt-hero-edge { inset-block-start: .65rem; inset-inline-end: clamp(.35rem, 2vw, 1.7rem); }
+.al-qatt-category-edge { inset-block-start: .45rem; inset-inline-end: clamp(-.45rem, 1vw, .8rem); }
+.al-qatt-notes-edge { inset-block-start: -.9rem; inset-inline-end: 0; opacity: .13; }
+html[dir="rtl"] .al-qatt-hero-edge, html[dir="rtl"] .al-qatt-category-edge { transform: scaleX(-1); }
 .intro-art { position: relative; z-index: 2; min-height: 12.4rem; margin: 0; overflow: hidden; background: #224f44; border: .42rem solid color-mix(in srgb, var(--sand) 86%, #fff); border-radius: 1.25rem 1.25rem 1.25rem .45rem; box-shadow: 0 0 0 1px rgba(24, 48, 64, .35), 0 15px 30px rgba(8, 37, 35, .25); }
 .intro-art::before { position: absolute; z-index: 2; inset: .55rem .55rem auto auto; width: 2.4rem; height: 2.4rem; background: linear-gradient(45deg, var(--ornament-red) 0 38%, transparent 38.5%), linear-gradient(135deg, var(--sand) 0 38%, transparent 38.5%); content: ""; opacity: .92; pointer-events: none; }
 .intro-art img { width: 100%; height: 100%; min-height: 12.4rem; object-fit: cover; opacity: .98; }
@@ -163,10 +162,10 @@ h3 { font-size: 1.35rem; }
 .explorer::before, .explorer::after { position: absolute; z-index: -1; width: 9rem; height: 9rem; background: linear-gradient(45deg, transparent 45%, color-mix(in srgb, var(--forest) 25%, transparent) 45.5% 50%, transparent 50.5%), linear-gradient(135deg, transparent 45%, color-mix(in srgb, var(--ornament-red) 22%, transparent) 45.5% 50%, transparent 50.5%); content: ""; opacity: .72; pointer-events: none; }
 .explorer::before { inset-block-start: -1rem; inset-inline-end: -2.2rem; }
 .explorer::after { inset-block-end: 4rem; inset-inline-start: -3.5rem; transform: rotate(180deg); }
-.category-atmosphere { position: absolute; z-index: -1; inset: 2rem -1rem auto; height: 13rem; overflow: hidden; pointer-events: none; }
-.category-atmosphere span { position: absolute; display: block; border-radius: 100%; filter: blur(2px); }
-.category-atmosphere span:first-child { inset: 1rem auto auto 8%; width: 21rem; height: 6rem; background: radial-gradient(ellipse, color-mix(in srgb, var(--mist) 72%, transparent), transparent 66%); }
-.category-atmosphere span:last-child { inset: 2rem 5% auto auto; width: 16rem; height: 5rem; background: radial-gradient(ellipse, color-mix(in srgb, var(--sand) 20%, transparent), transparent 70%); }
+.category-atmosphere { position: absolute; z-index: -1; inset: 1.2rem -1rem auto; height: 14rem; overflow: hidden; pointer-events: none; }
+.category-atmosphere span { position: absolute; display: block; background: url("images/soft-cloud-layer.jpg") center / cover no-repeat; }
+.category-atmosphere span:first-child { inset: .45rem auto auto 5%; width: min(27rem, 61vw); height: 8rem; opacity: .17; }
+.category-atmosphere span:last-child { inset: 2.2rem 9% auto auto; width: min(19rem, 44vw); height: 6rem; opacity: .11; }
 .explorer-heading { display: grid; gap: .55rem; margin-block-end: 1.05rem; }
 .eyebrow { margin: 0 0 .45rem; color: #893b33; font-size: .88rem; font-weight: 850; letter-spacing: .08em; line-height: 1.45; text-transform: uppercase; }
 :root[data-theme="dark"] .eyebrow { color: var(--ornament-red); }
@@ -228,8 +227,7 @@ h3 { font-size: 1.35rem; }
 .map-frame { position: relative; min-height: 20.8rem; overflow: hidden; background: #b5cac2; border: .35rem solid color-mix(in srgb, var(--sand) 78%, var(--surface-solid)); outline: 1px solid color-mix(in srgb, var(--indigo) 40%, var(--line)); border-radius: var(--radius); box-shadow: var(--shadow-lg); }
 #map { position: relative; z-index: 1; width: 100%; height: clamp(20.8rem, 49dvh, 28rem); opacity: 0; transition: opacity .25s ease; }
 #map.is-ready { opacity: 1; }
-.map-weave { z-index: 710; inset: 0 auto auto 9%; width: 8rem; height: .38rem; opacity: .84; }
-.map-mist { position: absolute; z-index: 2; inset: auto -7% 0; height: 28%; background: linear-gradient(0deg, rgba(235,245,237,.22), transparent); pointer-events: none; }
+.map-weave, .map-mist { display: none; }
 .map-prompt { position: absolute; z-index: 700; inset-block-end: 1rem; inset-inline-start: 1rem; display: grid; justify-items: start; gap: .34rem; width: min(18.7rem, calc(100% - 2rem)); padding: .9rem; color: var(--ink); background: color-mix(in srgb, var(--surface-solid) 94%, transparent); border: 1px solid color-mix(in srgb, var(--forest) 28%, var(--line)); border-radius: .9rem .9rem .9rem .35rem; box-shadow: 0 .8rem 1.8rem rgba(10, 44, 36, .25); text-align: start; pointer-events: none; }
 .map-prompt::before { position: absolute; inset: .5rem .5rem auto auto; width: .55rem; height: .55rem; background: var(--ornament-red); content: ""; transform: rotate(45deg); }
 @supports (backdrop-filter: blur(8px)) { .map-prompt { backdrop-filter: blur(8px); } }
@@ -363,9 +361,15 @@ button:focus-visible, a:focus-visible, #map:focus-visible { outline: 3px solid v
   .hero-mist { animation: mist-breathe 20s ease-in-out infinite alternate; }
   .category-atmosphere span { animation: drift-cloud 20s ease-in-out infinite alternate; }
 }
-@keyframes mist-breathe { from { opacity: .48; transform: translateX(-.7rem); } to { opacity: .85; transform: translateX(.7rem); } }
-@keyframes drift-cloud { from { translate: -1.15rem 0; opacity: .62; } to { translate: 1.15rem .3rem; opacity: .9; } }
+@keyframes mist-breathe { from { opacity: .16; transform: translateX(-.7rem); } to { opacity: .29; transform: translateX(.7rem); } }
+@keyframes drift-cloud { from { translate: -1.15rem 0; } to { translate: 1.15rem .3rem; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }
+
+:root[data-theme="dark"] .cloud { opacity: .28; }
+:root[data-theme="dark"] .cloud-two { opacity: .2; }
+:root[data-theme="dark"] .hero-mist { opacity: .13; }
+:root[data-theme="dark"] .category-atmosphere span { opacity: .1; }
+:root[data-theme="dark"] .al-qatt-edge { opacity: .11; }
 
 :root[data-theme="dark"] .category-button.is-active { color: #153536; }
 :root[data-theme="dark"] .category-button.is-active .category-icon { color: #153536; background: rgba(255, 255, 255, .72); border-color: rgba(21, 53, 54, .35); }

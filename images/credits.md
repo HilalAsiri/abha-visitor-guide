@@ -17,9 +17,18 @@ All imagery loaded by the guide is stored inside this repository. The website do
 | `places/al-sowda-hill-top-04.jpg` | Active hero image: green mountain ridges and low cloud at Al Soudah near Abha. | [Al Sowda Hill top 04.jpg](https://commons.wikimedia.org/wiki/File:Al_Sowda_Hill_top_04.jpg) | Irshadpp | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | Downloaded and stored locally as a JPEG. The page may crop it for responsive layout; the visible credit discloses the crop. This derivative remains available under CC BY-SA 4.0. |
 | `places/abha-hero.jpg` | Local fallback only if the active hero cannot load; it does not represent an individual guide entry. | [Abha1.jpg](https://commons.wikimedia.org/wiki/File:Abha1.jpg) | Aimk07 (uploaded by Aziz1005) | Public Domain / PD-self, as stated on the Commons file page | Downloaded and stored locally as a JPEG. |
 
+## User-supplied decorative assets
+
+| Local file | Use in the guide | Provenance and handling |
+| --- | --- | --- |
+| `al-qatt-aseeri-pattern.jpg` | Low-opacity, clipped decorative edges around the hero, category area, and travel notes. | Supplied directly for this project. The file is stored and used unchanged: it is not redrawn, recolored, edited, or represented as an original CSS artwork. No creator, licence, or ownership claim was supplied, so none is inferred here. |
+| `soft-cloud-layer.jpg` | Natural cloud decoration in the hero and category atmosphere, replacing the prior geometric cloud silhouettes. | Supplied directly for this project. The file is stored and used unchanged as a local CSS background. No creator, licence, or ownership claim was supplied, so none is inferred here. |
+
+Both files are decorative only, have no interactive role, and are deliberately excluded from the Leaflet map frame, map controls, attribution, markers, tooltips, and popups.
+
 ## Original interface decoration
 
-The mountain, crossed-band, diamond, cloud, and mist treatment is drawn with local CSS and inline SVG only. It is an original Aseeri-inspired visual system, not a copy, trace, or reproduction of any reference artwork, text, or creator handle.
+The mountain, crossed-band, diamond, and mist treatment is drawn with local CSS and inline SVG only. It is an original Aseeri-inspired visual system, not a copy, trace, or reproduction of any reference artwork, text, or creator handle. The Al-Qatt pattern and natural cloud image are excluded from this original-CSS claim.
 
 ## Hotels & Stays illustrations
 
@@ -41,4 +50,4 @@ No Google Places API configuration, billing setup, Place IDs, or official photo 
 
 A future official Google Place Photos implementation would require approved use of remote assets, a billed Google Maps Platform project with Places API (New), restricted credentials, canonical Place IDs, official Place Details/Photo requests, required Google attribution, and resilient missing-key, unavailable-photo, and quota states. A secure server or serverless proxy is preferred to exposing a credential in a static page.
 
-The page decoration is an original CSS-only Aseeri-inspired geometric treatment. It uses abstract mountains, diagonal bands, and diamonds; it does not reproduce a source artwork or creator handle.
+The page retains original CSS-only abstract mountains, diagonal bands, diamonds, and mist. The supplied Al-Qatt and cloud files are documented separately above and are not represented as original CSS-only artwork.
