@@ -124,6 +124,8 @@ h3 { font-size: 1.35rem; }
   box-shadow: var(--shadow-lg);
 }
 .intro::after { position: absolute; z-index: -1; inset: auto -10% -19% 20%; height: 57%; background: radial-gradient(ellipse at center, rgba(229,242,232,.5) 0 2%, transparent 2.5%), radial-gradient(ellipse at center, transparent 0 44%, rgba(255,255,255,.1) 45% 46%, transparent 47%); background-size: 3.5rem 3.5rem, 10rem 10rem; content: ""; opacity: .34; transform: rotate(-7deg); }
+.aseeri-rhythm { position: absolute; z-index: 3; height: .52rem; pointer-events: none; background: repeating-linear-gradient(135deg, #e9c469 0 .45rem, #c8684e .45rem .9rem, #2c705e .9rem 1.35rem, #f6ead1 1.35rem 1.8rem); box-shadow: 0 1px 0 rgba(255,255,255,.35) inset; }
+.intro-rhythm { inset-block-end: 0; inset-inline: 10%; opacity: .8; }
 .intro-copy { position: relative; z-index: 2; }
 .intro .eyebrow { color: #ffe0a5; }
 .intro h1 { color: #fffef7; }
@@ -133,8 +135,9 @@ h3 { font-size: 1.35rem; }
 .fog-two { inset-block-end: 4rem; inset-inline-start: 32%; width: 34rem; background: #d5e4d8; opacity: .16; }
 .topography { position: absolute; z-index: -1; inset: 0; opacity: .2; background: repeating-radial-gradient(ellipse at 30% 130%, transparent 0 1.65rem, rgba(255,255,255,.35) 1.7rem 1.76rem, transparent 1.81rem 3rem); pointer-events: none; }
 .intro-art { position: relative; z-index: 2; min-height: 11.5rem; margin: 0; overflow: hidden; border: 1px solid rgba(255,255,255,.24); border-radius: 1.05rem; background: #224f44; }
-.intro-art img { width: 100%; height: 100%; min-height: 11.5rem; object-fit: cover; mix-blend-mode: luminosity; opacity: .92; }
-.intro-art figcaption, .image-badge { position: absolute; inset-block-end: .65rem; inset-inline-start: .65rem; max-width: calc(100% - 1.3rem); padding: .28rem .52rem; color: #f6f8ef; background: rgba(7, 29, 24, .72); border: 1px solid rgba(255,255,255,.18); border-radius: 100px; font-size: .68rem; font-weight: 700; }
+.intro-art img { width: 100%; height: 100%; min-height: 11.5rem; object-fit: cover; opacity: .98; }
+.intro-art::after { position: absolute; inset: 0; background: linear-gradient(150deg, rgba(9, 40, 33, .08), rgba(7, 37, 30, .46)); content: ""; pointer-events: none; }
+.intro-art figcaption, .image-badge { position: absolute; z-index: 1; inset-block-end: .65rem; inset-inline-start: .65rem; max-width: calc(100% - 1.3rem); padding: .28rem .52rem; color: #f6f8ef; background: rgba(7, 29, 24, .76); border: 1px solid rgba(255,255,255,.18); border-radius: 100px; font-size: .68rem; font-weight: 700; }
 .explore-link { position: relative; z-index: 2; display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 2.85rem; width: fit-content; padding: .6rem 1rem; color: #103b34; background: #f5efdd; border-radius: 100px; font-weight: 850; text-decoration: none; }
 .explore-link svg { width: 1rem; height: 1rem; }
 
@@ -168,17 +171,20 @@ h3 { font-size: 1.35rem; }
 .map-frame { position: relative; min-height: 20.5rem; overflow: hidden; background: #b5cac2; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-lg); }
 #map { position: relative; z-index: 1; width: 100%; height: clamp(20.5rem, 49dvh, 28rem); opacity: 0; transition: opacity .25s ease; }
 #map.is-ready { opacity: 1; }
+.map-rhythm { z-index: 710; inset-block-start: 0; inset-inline: 13%; height: .36rem; opacity: .92; }
 .map-mist { position: absolute; z-index: 2; inset: auto -7% 0; height: 27%; background: linear-gradient(0deg, rgba(235,245,237,.2), transparent); pointer-events: none; }
-.map-prompt { position: absolute; z-index: 700; inset: 0; display: grid; place-content: center; justify-items: center; gap: .6rem; padding: 1.4rem; color: var(--pine-deep); background: linear-gradient(145deg, color-mix(in srgb, var(--surface-solid) 88%, transparent), color-mix(in srgb, var(--surface-soft) 88%, transparent)); text-align: center; }
+.map-prompt { position: absolute; z-index: 700; inset-block-end: 1rem; inset-inline-start: 1rem; display: grid; justify-items: start; gap: .34rem; width: min(18.25rem, calc(100% - 2rem)); padding: .8rem .9rem; color: var(--pine-deep); background: color-mix(in srgb, var(--surface-solid) 88%, transparent); border: 1px solid color-mix(in srgb, var(--pine) 23%, var(--line)); border-radius: .82rem; box-shadow: 0 .8rem 1.8rem rgba(10, 44, 36, .22); text-align: start; pointer-events: none; }
+@supports (backdrop-filter: blur(8px)) { .map-prompt { backdrop-filter: blur(8px); } }
 .map-prompt[hidden] { display: none; }
-.map-prompt h3 { font-size: 1.45rem; }
-.map-prompt p { max-width: 20rem; margin: 0; color: var(--muted-strong); }
-.prompt-icon { display: grid; width: 3.1rem; height: 3.1rem; place-items: center; color: var(--earth); background: color-mix(in srgb, var(--earth) 12%, var(--surface-solid)); border: 1px solid color-mix(in srgb, var(--earth) 30%, transparent); border-radius: 50%; }
-.prompt-icon svg { width: 1.55rem; height: 1.55rem; }
+.map-prompt h3 { font-size: 1rem; letter-spacing: -.03em; }
+.map-prompt p { margin: 0; color: var(--muted-strong); font-size: .78rem; line-height: 1.35; }
+.prompt-icon { display: grid; width: 2.25rem; height: 2.25rem; place-items: center; color: var(--earth); background: color-mix(in srgb, var(--earth) 12%, var(--surface-solid)); border: 1px solid color-mix(in srgb, var(--earth) 30%, transparent); border-radius: 50%; }
+.prompt-icon svg { width: 1.1rem; height: 1.1rem; }
 
 .place-panel { min-height: 17rem; }
 .place-card { position: relative; min-height: 100%; overflow: hidden; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-lg); }
 .card-media { position: relative; overflow: hidden; aspect-ratio: 16 / 8.2; background: var(--surface-soft); }
+.card-media::after { position: absolute; inset: 42% 0 0; background: linear-gradient(0deg, rgba(5, 28, 23, .34), transparent); content: ""; pointer-events: none; }
 .card-media img { width: 100%; height: 100%; object-fit: cover; }
 .card-media img.card-image-error { display: none; }
 .image-fallback { display: grid; width: 100%; height: 100%; place-items: center; color: var(--pine-deep); background: linear-gradient(130deg, var(--surface-soft), color-mix(in srgb, var(--surface-soft) 60%, var(--cloud))); text-align: center; }
@@ -189,6 +195,10 @@ h3 { font-size: 1.35rem; }
 .confirmation-tag { color: var(--earth-deep); font-size: .68rem; font-weight: 800; text-align: end; }
 .place-card h3 { font-size: 1.5rem; }
 .place-card p { margin: .55rem 0 .8rem; color: var(--muted); font-size: .9rem; }
+.photo-credit, .image-status { display: block; margin-block: .15rem .7rem; padding: .55rem .6rem; color: var(--muted-strong); background: color-mix(in srgb, var(--surface-soft) 78%, transparent); border-inline-start: .2rem solid var(--saffron); border-radius: 0 .5rem .5rem 0; font-size: .68rem; line-height: 1.45; }
+.photo-credit strong { color: var(--ink); }
+.photo-credit a { color: var(--pine); font-weight: 800; text-underline-offset: .18em; }
+.image-status { border-inline-start-color: var(--earth); }
 .card-source { margin-block: auto .75rem; color: var(--muted); font-size: .7rem; }
 .card-source strong { color: var(--muted-strong); }
 .map-link { display: inline-flex; align-items: center; justify-content: center; gap: .4rem; min-height: 2.8rem; width: 100%; padding: .55rem .85rem; color: #fff; background: var(--earth); border-radius: .65rem; font-size: .85rem; font-weight: 850; text-decoration: none; }
@@ -233,6 +243,8 @@ html[dir="rtl"] body { font-family: Tahoma, Arial, sans-serif; }
 html[dir="rtl"] .brand-copy { font-size: .76rem; }
 html[dir="rtl"] .explore-link svg, html[dir="rtl"] .map-link svg, html[dir="rtl"] .list-arrow { transform: scaleX(-1); }
 html[dir="rtl"] .confirmation-tag { text-align: start; }
+html[dir="rtl"] .map-prompt { inset-inline-start: auto; inset-inline-end: 1rem; text-align: start; }
+html[dir="rtl"] .photo-credit, html[dir="rtl"] .image-status { border-radius: .5rem 0 0 .5rem; }
 
 button:focus-visible, a:focus-visible, #map:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
 @media (min-width: 640px) {
