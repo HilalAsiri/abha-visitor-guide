@@ -67,8 +67,10 @@
   let shouldFocusGuide = false;
 
   const root = document.documentElement;
+  const categorySection = document.querySelector(".explorer");
   const exploreSection = document.querySelector("#explore");
   const exploreHeading = document.querySelector("#explore-map-title");
+  const categoryHeading = document.querySelector("#explorer-title");
   const guideHeading = document.querySelector("#intro-title");
   const themeToggle = document.querySelector("#theme-toggle");
   const mapPrompt = document.querySelector("#map-prompt");
@@ -496,11 +498,14 @@
   document.querySelectorAll(".category-button").forEach((button) => {
     button.addEventListener("click", () => navigateToExplore(button.dataset.category, { focus: true }));
   });
-  document.querySelectorAll(".explore-link, .skip-link").forEach((link) => {
-    link.addEventListener("click", (event) => {
-      event.preventDefault();
-      navigateToExplore(null, { focus: true });
-    });
+  document.querySelector(".explore-link").addEventListener("click", (event) => {
+    event.preventDefault();
+    categoryHeading.focus({ preventScroll: true });
+    categorySection.scrollIntoView({ behavior: reducedMotion() ? "auto" : "smooth", block: "start" });
+  });
+  document.querySelector(".skip-link").addEventListener("click", (event) => {
+    event.preventDefault();
+    navigateToExplore(null, { focus: true });
   });
   document.querySelector(".brand").addEventListener("click", (event) => {
     event.preventDefault();
