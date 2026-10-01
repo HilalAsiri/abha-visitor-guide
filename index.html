@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A bilingual, interactive visitor map for Abha and nearby Aseer attractions.">
+  <meta name="description" content="A bilingual interactive visitor map for Abha and nearby Aseer attractions.">
   <title>Abha Visitor Guide | دليل زائر أبها</title>
   <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
   <link rel="stylesheet" href="styles.css">
@@ -11,119 +11,126 @@
 <body>
   <a class="skip-link" href="#explore" data-i18n="skipToMap">Skip to map</a>
 
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="Abha Visitor Guide home">
-      <span class="brand-mark" aria-hidden="true">A</span>
-      <span>Abha <strong>Guide</strong></span>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" data-i18n-aria="brandLabel" aria-label="Abha Visitor Guide home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false"><path d="M3 18 9.1 7.2 12 12l2.7-4.3L21 18M5 18h14"/></svg>
+      </span>
+      <span class="brand-copy"><strong>Abha</strong><span data-i18n="brandGuide">Field Guide</span></span>
     </a>
+
     <div class="header-actions">
-      <div class="language-switcher" aria-label="Language selector">
+      <div class="language-switcher" data-i18n-aria="languageLabel" aria-label="Language selector">
         <button class="language-button is-active" type="button" data-language="en" aria-pressed="true">EN</button>
         <button class="language-button" type="button" data-language="ar" aria-pressed="false">ع</button>
       </div>
       <button class="theme-button" id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode">
-        <span aria-hidden="true" class="theme-icon">◐</span>
+        <svg class="theme-icon" aria-hidden="true" viewBox="0 0 24 24" focusable="false"><path d="M20.5 14.2A8.6 8.6 0 0 1 9.8 3.5 8.6 8.6 0 1 0 20.5 14.2Z"/></svg>
         <span class="theme-label" data-i18n="theme">Theme</span>
       </button>
     </div>
   </header>
 
-  <main id="top">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow" data-i18n="eyebrow">A local-first map for curious visitors</p>
-        <h1 id="hero-title" data-i18n="heroTitle">Find your way through Abha.</h1>
-        <p class="hero-description" data-i18n="heroDescription">Choose what you feel like doing, then explore a focused map of real places in Abha, Al Soudah, and Rijal Almaa.</p>
-        <a class="primary-link" href="#categories" data-i18n="startExploring">Start exploring <span aria-hidden="true">↓</span></a>
+  <main>
+    <section class="intro" aria-labelledby="intro-title">
+      <div class="fog fog-one" aria-hidden="true"></div>
+      <div class="fog fog-two" aria-hidden="true"></div>
+      <div class="topography" aria-hidden="true"></div>
+      <div class="intro-copy">
+        <p class="eyebrow" data-i18n="eyebrow">Aseer highland field guide</p>
+        <h1 id="intro-title" data-i18n="heroTitle">A slower way to find Abha.</h1>
+        <p data-i18n="heroDescription">A focused map for cloud forests, heritage lanes, good coffee, and family stops across Abha, Al Soudah, and Rijal Almaa.</p>
       </div>
-      <figure class="hero-art" aria-label="Illustrated mountain landscape placeholder">
-        <img src="images/nature-placeholder.svg" alt="Illustrated mountain landscape placeholder for a future licensed Abha photograph" width="1200" height="800">
-        <figcaption data-i18n="heroPlaceholder">Photo placeholder — replace with a licensed Abha landscape image.</figcaption>
+      <figure class="intro-art">
+        <img src="images/nature-placeholder.svg" alt="Illustrated mountain landscape placeholder for a future licensed Abha photograph" data-i18n-alt="heroImageAlt" width="1200" height="800">
+        <figcaption data-i18n="heroPlaceholder">Illustrated local placeholder — replace with a licensed Abha image.</figcaption>
       </figure>
+      <a class="explore-link" href="#categories" data-i18n="startExploring">
+        Explore the map
+        <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false"><path d="M12 4v15m0 0 6-6m-6 6-6-6"/></svg>
+      </a>
     </section>
 
-    <section class="category-section" id="categories" aria-labelledby="category-title">
-      <div class="section-heading">
-        <p class="eyebrow" data-i18n="stepOne">Step 1</p>
-        <h2 id="category-title" data-i18n="categoryTitle">What would you like to explore?</h2>
-        <p data-i18n="categoryDescription">Select one category to show only its verified places on the map.</p>
+    <section class="explorer" id="explore" aria-labelledby="explorer-title">
+      <div class="explorer-heading">
+        <div>
+          <p class="eyebrow" data-i18n="chooseEyebrow">Choose your day</p>
+          <h2 id="explorer-title" data-i18n="categoryTitle">Which side of Abha calls you?</h2>
+        </div>
+        <p class="explorer-note" data-i18n="categoryDescription">Select a route lens to reveal its verified places.</p>
       </div>
-      <div class="category-grid" role="group" aria-label="Place categories">
+
+      <div class="category-grid" id="categories" role="group" data-i18n-aria="categoryLabel" aria-label="Place categories">
         <button class="category-button category-food" type="button" data-category="food" aria-pressed="false">
-          <span class="category-icon" aria-hidden="true">☕</span>
-          <span class="category-name" data-i18n="categoryFood">Restaurants &amp; Cafés</span>
+          <span class="category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M7 3v8m3-8v8M5 7h7m-3 4v10M17 3c2.2 2.4 2.2 6.2 0 8.6V21M14.5 7h5"/></svg></span>
+          <span><span class="category-name" data-i18n="categoryFood">Restaurants &amp; Cafés</span><small data-i18n="categoryFoodHint">A pause for coffee or a meal</small></span>
           <span class="category-count" data-count="food"></span>
         </button>
         <button class="category-button category-nature" type="button" data-category="nature" aria-pressed="false">
-          <span class="category-icon" aria-hidden="true">⌁</span>
-          <span class="category-name" data-i18n="categoryNature">Nature &amp; Views</span>
+          <span class="category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="m3 18 6-9 3 4 3-6 6 11M3 20h18"/></svg></span>
+          <span><span class="category-name" data-i18n="categoryNature">Nature &amp; Views</span><small data-i18n="categoryNatureHint">Highlands, parks, and outlooks</small></span>
           <span class="category-count" data-count="nature"></span>
         </button>
         <button class="category-button category-heritage" type="button" data-category="heritage" aria-pressed="false">
-          <span class="category-icon" aria-hidden="true">▦</span>
-          <span class="category-name" data-i18n="categoryHeritage">Heritage &amp; Culture</span>
+          <span class="category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 20V8l8-5 8 5v12M8 20v-5h8v5M8 10h.01M12 10h.01M16 10h.01"/></svg></span>
+          <span><span class="category-name" data-i18n="categoryHeritage">Heritage &amp; Culture</span><small data-i18n="categoryHeritageHint">Stories in stone and color</small></span>
           <span class="category-count" data-count="heritage"></span>
         </button>
         <button class="category-button category-family" type="button" data-category="family" aria-pressed="false">
-          <span class="category-icon" aria-hidden="true">✦</span>
-          <span class="category-name" data-i18n="categoryFamily">Family Activities</span>
+          <span class="category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16ZM12 2v4m0 12v4M2 12h4m12 0h4m-4.3-5.7-2.8 2.8m-6.2 6.2-2.8 2.8m0-11.3 2.8 2.8m6.2 6.2 2.8 2.8"/></svg></span>
+          <span><span class="category-name" data-i18n="categoryFamily">Family Activities</span><small data-i18n="categoryFamilyHint">Easy stops for everyone</small></span>
           <span class="category-count" data-count="family"></span>
         </button>
       </div>
-    </section>
 
-    <section class="map-section" id="explore" aria-labelledby="map-title">
-      <div class="map-heading">
-        <div>
-          <p class="eyebrow" data-i18n="stepTwo">Step 2</p>
-          <h2 id="map-title" data-i18n="mapTitle">Explore the map</h2>
-        </div>
-        <p class="map-status" id="map-status" role="status" aria-live="polite"></p>
+      <div class="map-toolbar">
+        <div><span class="toolbar-label" data-i18n="mapLabel">Map explorer</span><p id="map-status" role="status" aria-live="polite"></p></div>
+        <a class="browse-link" href="#place-list" data-i18n="browsePlaces">Browse places as a list</a>
       </div>
 
       <div class="map-layout">
         <div class="map-frame">
-          <div id="map" role="application" aria-label="Interactive map of Abha visitor places"></div>
+          <div class="map-mist" aria-hidden="true"></div>
+          <div id="map" role="region" data-i18n-aria="mapLabel" aria-label="Interactive map of Abha visitor places" tabindex="0"></div>
           <div class="map-prompt" id="map-prompt">
-            <span class="prompt-number">01</span>
-            <p data-i18n="mapPrompt">Choose a category above to reveal its places.</p>
+            <span class="prompt-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="9" r="2.3"/></svg></span>
+            <h3 data-i18n="mapPromptTitle">Your map is ready.</h3>
+            <p data-i18n="mapPrompt">Choose a route lens to reveal a small set of places.</p>
           </div>
         </div>
 
         <aside class="place-panel" id="place-panel" aria-live="polite" aria-labelledby="place-panel-title">
-          <div class="empty-card" id="empty-card">
-            <span class="empty-card-number">02</span>
-            <h3 id="place-panel-title" data-i18n="cardPromptTitle">Choose a marker</h3>
-            <p data-i18n="cardPromptDescription">Tap a pin to see a place card with location details and directions.</p>
-          </div>
-          <article class="place-card" id="place-card" hidden></article>
+          <article class="place-card" id="place-card"></article>
         </aside>
       </div>
 
       <section class="place-list-section" aria-labelledby="place-list-title">
         <div class="list-heading">
           <div>
-            <p class="eyebrow" data-i18n="accessibleListEyebrow">Accessible list</p>
-            <h3 id="place-list-title" data-i18n="accessibleListTitle">Places in this category</h3>
+            <p class="eyebrow" data-i18n="accessibleListEyebrow">A list, not just a map</p>
+            <h3 id="place-list-title" data-i18n="accessibleListTitle">Places in this route</h3>
           </div>
-          <p data-i18n="accessibleListDescription">Use this list if you prefer not to use the map.</p>
+          <p data-i18n="accessibleListDescription">Use this keyboard-friendly list to choose a place.</p>
         </div>
         <div class="place-list" id="place-list"></div>
       </section>
     </section>
 
     <section class="notes" aria-labelledby="notes-title">
-      <h2 id="notes-title" data-i18n="notesTitle">Good to know</h2>
+      <div class="notes-heading">
+        <p class="eyebrow" data-i18n="notesEyebrow">Travel thoughtfully</p>
+        <h2 id="notes-title" data-i18n="notesTitle">Good to know before you go</h2>
+      </div>
       <div class="notes-grid">
-        <p data-i18n="noteOne"><strong>Location check:</strong> Each marker uses the coordinates in this guide and opens directions to that same point in Google Maps.</p>
-        <p data-i18n="noteTwo"><strong>Before you go:</strong> Confirm opening times, prices, access, and seasonal availability directly with each venue.</p>
-        <p data-i18n="noteThree"><strong>Images:</strong> The illustrated cards are labeled placeholders. Replace them with licensed photographs in the <code>images/</code> folder.</p>
+        <p data-i18n="noteOne"><strong>Exact pin:</strong> Each map link opens the same coordinate used by this guide.</p>
+        <p data-i18n="noteTwo"><strong>Check ahead:</strong> Confirm times, prices, access, and seasonal availability directly with each place.</p>
+        <p data-i18n="noteThree"><strong>Illustrated for now:</strong> Current art is a local placeholder, ready to be replaced by licensed photography.</p>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>Abha Visitor Guide <span aria-hidden="true">·</span> <span data-i18n="footerText">Built for friends discovering Aseer</span></p>
+    <p>Abha Field Guide <span aria-hidden="true">·</span> <span data-i18n="footerText">Built for friends discovering Aseer</span></p>
     <p><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap contributors</a></p>
   </footer>
 
