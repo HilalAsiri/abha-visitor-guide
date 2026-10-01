@@ -22,11 +22,9 @@ All imagery loaded by the guide is stored inside this repository. The website do
 | Local file | Use in the guide | Provenance and handling |
 | --- | --- | --- |
 | `al-qatt-aseeri-pattern.jpg` | Low-opacity, clipped decorative edges around the hero, category area, and travel notes. | Supplied directly for this project. The file is stored and used unchanged: it is not redrawn, recolored, edited, or represented as an original CSS artwork. No creator, licence, or ownership claim was supplied, so none is inferred here. |
-| `soft-cloud-layer.jpg` | Natural cloud decoration in the hero and category atmosphere, replacing the prior geometric cloud silhouettes. | Supplied directly for this project. The file is stored and used unchanged as a local CSS background. No creator, licence, or ownership claim was supplied, so none is inferred here. |
+| `abha-cloud-layer.jpg` | Natural cloud decoration behind the hero, category atmosphere, and compact route-to-map transition. | Supplied directly for this project. The JPEG is stored and used unchanged as a local CSS background. Its opaque source background is only softened at render time with CSS masking and low opacity; no creator, licence, or ownership claim was supplied, so none is inferred here. |
 
-Both files are decorative only, have no interactive role, and are deliberately excluded from the Leaflet map frame, map controls, attribution, markers, tooltips, and popups.
-
-A later requested replacement is pending actual transparent-source files. JPEG cannot encode an alpha channel, so the supplied JPEG candidates are not documented or used as transparent-background assets, and their baked pixels are not altered to imitate transparency.
+Both files are decorative only, have no interactive role, and are deliberately excluded from the Leaflet map frame, map controls, attribution, markers, tooltips, and popups. The cloud asset is a JPEG and therefore does not have alpha transparency; the source artwork is not altered.
 
 ## Original interface decoration
 

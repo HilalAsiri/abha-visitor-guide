@@ -142,17 +142,25 @@ h3 { font-size: 1.35rem; }
 .mountain-plane-one { inset: auto 16% 0 auto; width: 19rem; height: 9rem; background: rgba(15, 48, 49, .72); clip-path: polygon(0 100%, 40% 17%, 56% 60%, 73% 2%, 100% 100%); }
 .mountain-plane-two { inset: auto auto -2rem -4rem; width: 23rem; height: 9rem; background: rgba(247, 234, 193, .13); clip-path: polygon(0 100%, 21% 33%, 37% 75%, 63% 10%, 86% 72%, 100% 42%, 100% 100%); }
 .cloud, .hero-mist, .category-atmosphere span, .al-qatt-edge { position: absolute; z-index: -1; pointer-events: none; }
-.cloud { width: clamp(12rem, 29vw, 22rem); height: clamp(7rem, 15vw, 10rem); background: url("images/soft-cloud-layer.jpg") center / cover no-repeat; opacity: .34; }
+.cloud { width: clamp(12rem, 29vw, 22rem); height: clamp(7rem, 15vw, 10rem); background: url("images/abha-cloud-layer.jpg") center / contain no-repeat; mix-blend-mode: screen; opacity: .42; }
 .cloud-one { inset-block-start: .8rem; inset-inline-end: 15%; transform: scale(.82); }
-.cloud-two { inset-block-end: 1.8rem; inset-inline-start: 22%; opacity: .23; transform: scale(1.1); }
-.hero-mist { inset: auto -8% -8%; height: 43%; background: url("images/soft-cloud-layer.jpg") center bottom / cover no-repeat; opacity: .16; }
+.cloud-two { inset-block-end: 1.8rem; inset-inline-start: 22%; opacity: .3; transform: scale(1.1); }
+.hero-mist { inset: auto -8% -8%; height: 43%; background: url("images/abha-cloud-layer.jpg") center bottom / contain no-repeat; mix-blend-mode: screen; opacity: .24; }
+@supports not ((mask-image: linear-gradient(#000, transparent)) or (-webkit-mask-image: linear-gradient(#000, transparent))) {
+  .cloud, .hero-mist, .category-atmosphere span, .map-bridge-cloud { mix-blend-mode: multiply; }
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .cloud, :root:not([data-theme="light"]) .hero-mist, :root:not([data-theme="light"]) .category-atmosphere span, :root:not([data-theme="light"]) .map-bridge-cloud { mix-blend-mode: screen; }
+}
+:root[data-theme="dark"] .cloud, :root[data-theme="dark"] .hero-mist, :root[data-theme="dark"] .category-atmosphere span, :root[data-theme="dark"] .map-bridge-cloud { mix-blend-mode: screen; }
+:root[data-theme="light"] .cloud, :root[data-theme="light"] .hero-mist, :root[data-theme="light"] .category-atmosphere span, :root[data-theme="light"] .map-bridge-cloud { mix-blend-mode: multiply; }
 .al-qatt-edge { width: clamp(5.3rem, 12vw, 8.75rem); aspect-ratio: 1265 / 2349; background: url("images/al-qatt-aseeri-pattern.jpg") center / contain no-repeat; opacity: .13; }
 .al-qatt-hero-edge { inset-block-start: .65rem; inset-inline-end: clamp(.35rem, 2vw, 1.7rem); }
 .al-qatt-category-edge { inset-block-start: .45rem; inset-inline-end: clamp(-.45rem, 1vw, .8rem); }
 .al-qatt-notes-edge { inset-block-start: -.9rem; inset-inline-end: 0; opacity: .11; }
 html[dir="rtl"] .al-qatt-hero-edge, html[dir="rtl"] .al-qatt-category-edge { transform: scaleX(-1); }
 @supports ((mask-image: linear-gradient(#000, transparent)) or (-webkit-mask-image: linear-gradient(#000, transparent))) {
-  .cloud, .hero-mist, .category-atmosphere span {
+  .cloud, .hero-mist, .category-atmosphere span, .map-bridge-cloud {
     -webkit-mask-image: radial-gradient(ellipse 86% 82% at 50% 48%, #000 42%, transparent 100%);
     mask-image: radial-gradient(ellipse 86% 82% at 50% 48%, #000 42%, transparent 100%);
   }
@@ -180,7 +188,7 @@ html[dir="rtl"] .al-qatt-hero-edge, html[dir="rtl"] .al-qatt-category-edge { tra
 .explorer::before { inset-block-start: -1rem; inset-inline-end: -2.2rem; }
 .explorer::after { inset-block-end: 4rem; inset-inline-start: -3.5rem; transform: rotate(180deg); }
 .category-atmosphere { position: absolute; z-index: -1; inset: 1.2rem -1rem auto; height: 14rem; overflow: hidden; pointer-events: none; }
-.category-atmosphere span { display: block; background: url("images/soft-cloud-layer.jpg") center / cover no-repeat; }
+.category-atmosphere span { display: block; background: url("images/abha-cloud-layer.jpg") center / contain no-repeat; }
 .category-atmosphere span:first-child { inset: .45rem auto auto 5%; width: min(27rem, 61vw); height: 8rem; opacity: .13; }
 .category-atmosphere span:last-child { inset: 2.2rem 9% auto auto; width: min(19rem, 44vw); height: 6rem; opacity: .09; }
 .explorer-heading { display: grid; gap: .55rem; margin-block-end: 1.05rem; }
@@ -219,6 +227,21 @@ html[dir="rtl"] .al-qatt-hero-edge, html[dir="rtl"] .al-qatt-category-edge { tra
 .meal-filter-button.is-active, .stay-filter-button.is-active { color: var(--on-action); background: var(--action); border-color: color-mix(in srgb, var(--sand) 50%, var(--action)); }
 .meal-stay-context { margin: .7rem 0 0; padding: .65rem .75rem; color: var(--muted-strong); background: color-mix(in srgb, var(--surface) 92%, transparent); border-inline-start: .22rem solid var(--gold); border-radius: 0 .6rem .6rem 0; font-size: .9rem; font-weight: 650; line-height: 1.55; }
 html[dir="rtl"] .meal-stay-context { border-radius: .6rem 0 0 .6rem; }
+.map-bridge { position: relative; display: grid; min-height: 6.7rem; margin-block: 1rem .8rem; padding: 1rem 5.3rem 1rem 1rem; overflow: hidden; isolation: isolate; background: linear-gradient(110deg, color-mix(in srgb, var(--surface-soft) 88%, var(--mist)), color-mix(in srgb, var(--surface) 92%, transparent)); border: 1px solid var(--line); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); }
+.map-bridge-copy { position: relative; z-index: 1; max-width: 34rem; }
+.map-bridge .eyebrow { margin-block-end: .2rem; }
+.map-bridge-copy > p:last-child { margin: 0; color: var(--ink); font-size: clamp(1rem, 2.6vw, 1.28rem); font-weight: 850; line-height: 1.35; }
+.map-bridge-art, .map-bridge-cloud, .map-bridge-pattern { position: absolute; pointer-events: none; }
+.map-bridge-art { z-index: 0; inset: 0; overflow: hidden; }
+.map-bridge-cloud { width: 12rem; height: 6rem; background: url("images/abha-cloud-layer.jpg") center / contain no-repeat; opacity: .3; }
+.map-bridge-cloud-one { inset-block-start: -.7rem; inset-inline-end: 2.1rem; }
+.map-bridge-cloud-two { inset-block-end: -1.1rem; inset-inline-end: -2rem; opacity: .18; transform: scale(1.12); }
+.map-bridge-pattern { inset: -2.7rem -.7rem -2.7rem auto; width: 4.8rem; background: url("images/al-qatt-aseeri-pattern.jpg") center / contain no-repeat; opacity: .1; }
+html[dir="rtl"] .map-bridge { padding-inline: 5.3rem 1rem; }
+html[dir="rtl"] .map-bridge-pattern { transform: scaleX(-1); }
+:root[data-theme="dark"] .map-bridge { background: linear-gradient(110deg, color-mix(in srgb, var(--surface-soft) 88%, var(--canvas)), color-mix(in srgb, var(--surface) 92%, transparent)); }
+:root[data-theme="dark"] .map-bridge-cloud { opacity: .18; }
+:root[data-theme="dark"] .map-bridge-pattern { opacity: .07; }
 .visitor-assistant { position: relative; display: grid; gap: 1rem; margin-block: 1.1rem 0; padding: 1rem; overflow: hidden; background: color-mix(in srgb, var(--surface-soft) 86%, transparent); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-sm); }
 .visitor-assistant::before { position: absolute; inset: 0 auto auto 0; width: 7rem; height: .35rem; background: repeating-linear-gradient(45deg, var(--sand) 0 .35rem, var(--ornament-red) .35rem .7rem, var(--forest) .7rem 1.05rem, var(--indigo) 1.05rem 1.4rem); content: ""; }
 .assistant-heading { max-width: 48rem; padding-block-start: .25rem; }
@@ -381,7 +404,7 @@ button:focus-visible, a:focus-visible, #map:focus-visible { outline: 3px solid v
   .cloud-one { animation: drift-cloud 18s ease-in-out infinite alternate; }
   .cloud-two { animation: drift-cloud 23s ease-in-out infinite alternate-reverse; }
   .hero-mist { animation: mist-breathe 20s ease-in-out infinite alternate; }
-  .category-atmosphere span { animation: drift-cloud 20s ease-in-out infinite alternate; }
+  .category-atmosphere span, .map-bridge-cloud { animation: drift-cloud 20s ease-in-out infinite alternate; }
 }
 @keyframes mist-breathe { from { opacity: .16; transform: translateX(-.7rem); } to { opacity: .29; transform: translateX(.7rem); } }
 @keyframes drift-cloud { from { translate: -1.15rem 0; } to { translate: 1.15rem .3rem; } }

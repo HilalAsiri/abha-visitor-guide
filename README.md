@@ -84,9 +84,11 @@ The hero uses a local copy of **Al Sowda Hill top 04** by **Irshadpp**, from Wik
 
 ### User-supplied decorative assets
 
-`images/al-qatt-aseeri-pattern.jpg` and `images/soft-cloud-layer.jpg` are unchanged visual files supplied for this guide. The pattern appears only as low-opacity, clipped edge decoration around the hero, category area, and travel notes; the cloud layer replaces the former geometric cloud shapes. Neither file is placed over the interactive map or controls. No creator, licence, or ownership claim is made beyond the supplied-file record.
+`images/al-qatt-aseeri-pattern.jpg` and `images/abha-cloud-layer.jpg` are unchanged visual files supplied for this guide. The pattern appears only as low-opacity, clipped edge decoration around the hero, category area, map transition, and travel notes. The cloud layer appears behind the hero, category atmosphere, and compact route-to-map transition; it is never placed over the interactive map or controls.
 
-A second decorative replacement is intentionally pending true transparent-source files (PNG, alpha-enabled WebP, or SVG). The available supplied JPEG files cannot contain an alpha channel, so the guide does not misrepresent them as transparent assets or alter their pixels to simulate transparency.
+The cloud asset is a JPEG, so it has no transparent background. Its source pixels remain unchanged; CSS masks and low opacity only soften the rendered edges so the white source background does not create a hard rectangular boundary. No creator, licence, or ownership claim is made beyond the supplied-file record.
+
+The compact route-to-map transition says “Choose your route, then explore Abha on the map.” / “اختر مسارك، ثم استكشف أبها على الخريطة.” It is decorative and noninteractive, stays outside the Leaflet map frame, and respects the page’s RTL, dark-mode, and reduced-motion behavior.
 
 The full local-file, source, creator, licence, and derivative ledger is in [`images/credits.md`](images/credits.md).
 
