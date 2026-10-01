@@ -10,11 +10,24 @@ All imagery loaded by the guide is stored inside this repository. The website do
 | `places/shamsan-castle.jpg` | Shamsan Castle | [قلعة شمسان.jpg](https://commons.wikimedia.org/wiki/File:%D9%82%D9%84%D8%B9%D8%A9_%D8%B4%D9%85%D8%B3%D8%A7%D9%86.jpg) | Heritage Commission | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | Downloaded and stored locally as a JPEG derivative. This derivative is shared under CC BY-SA 4.0. |
 | `places/abha-dam.jpg` | Abha Dam Lake | [Boat on Abha.jpg](https://commons.wikimedia.org/wiki/File:Boat_on_Abha.jpg) | Aiman ALhaddad | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) | Downloaded and stored locally as a JPEG derivative. This derivative is shared under CC BY-SA 3.0. |
 
-## General hero photograph
+## General hero photographs
 
 | Local file | Use | Original source | Creator | License | Local modification |
 | --- | --- | --- | --- | --- | --- |
-| `places/abha-hero.jpg` | General Abha hero image only; it does not represent an individual guide entry. | [Abha1.jpg](https://commons.wikimedia.org/wiki/File:Abha1.jpg) | Aimk07 (uploaded by Aziz1005) | Public Domain / PD-self, as stated on the Commons file page | Downloaded and stored locally as a JPEG. Courtesy source credit remains visible in the interface. |
+| `places/al-sowda-hill-top-04.jpg` | Active hero image: green mountain ridges and low cloud at Al Soudah near Abha. | [Al Sowda Hill top 04.jpg](https://commons.wikimedia.org/wiki/File:Al_Sowda_Hill_top_04.jpg) | Irshadpp | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | Downloaded and stored locally as a JPEG. The page may crop it for responsive layout; the visible credit discloses the crop. This derivative remains available under CC BY-SA 4.0. |
+| `places/abha-hero.jpg` | Local fallback only if the active hero cannot load; it does not represent an individual guide entry. | [Abha1.jpg](https://commons.wikimedia.org/wiki/File:Abha1.jpg) | Aimk07 (uploaded by Aziz1005) | Public Domain / PD-self, as stated on the Commons file page | Downloaded and stored locally as a JPEG. |
+
+## Original interface decoration
+
+The mountain, crossed-band, diamond, cloud, and mist treatment is drawn with local CSS and inline SVG only. It is an original Aseeri-inspired visual system, not a copy, trace, or reproduction of any reference artwork, text, or creator handle.
+
+## Hotels & Stays illustrations
+
+`stays-placeholder.svg` is an original local illustration used for accommodation records until a place-specific, reusable photograph with clear permission is verified. It is intentionally labelled as an illustration and is not a hotel marketing image.
+
+## Catalog sources
+
+Each guide record now carries a reviewed source identifier, visible card source links where available, a review date, and venue-versus-area precision. See `sample-data/data.js` for the full local source ledger. The guide retains its Google Maps button only for outbound coordinate links; it never uses Google Maps user photos or Google Place Photos.
 
 ## Intentional placeholders
 

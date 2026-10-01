@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrated Abha stay placeholder</title>
+  <desc id="desc">An original illustration of a mountain lodge below clouds.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#dcebe2"/><stop offset="1" stop-color="#f3dfad"/></linearGradient>
+    <linearGradient id="ridge" x1="0" x2="1"><stop stop-color="#1c574b"/><stop offset="1" stop-color="#28405d"/></linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#sky)"/>
+  <path d="M0 595 205 332l126 150 172-252 162 281 148-191 287 275v205H0Z" fill="url(#ridge)"/>
+  <path d="M0 650 222 465l112 95 184-164 164 155 126-98 392 197v150H0Z" fill="#143d37" opacity=".72"/>
+  <g fill="#fffaf0" opacity=".78"><ellipse cx="210" cy="173" rx="138" ry="49"/><ellipse cx="317" cy="145" rx="99" ry="62"/><ellipse cx="405" cy="180" rx="124" ry="47"/><ellipse cx="825" cy="232" rx="150" ry="48"/><ellipse cx="947" cy="190" rx="102" ry="67"/><ellipse cx="1040" cy="237" rx="116" ry="42"/></g>
+  <g transform="translate(430 470)"><path d="M0 196V62l170-130 170 130v134Z" fill="#f8e8bd"/><path d="m-20 68 190-152L360 68Z" fill="#a64e43"/><path d="M66 196v-87h72v87m65-93h56v45h-56m-203 0h56v-45H0" fill="none" stroke="#243755" stroke-width="18"/><path d="M170 12v62m-33-31h66" stroke="#1c574b" stroke-width="16"/></g>
+  <path d="M0 746h1200" stroke="#d0a955" stroke-width="18"/>
+</svg>

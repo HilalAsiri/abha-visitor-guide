@@ -35,17 +35,18 @@
     <section class="intro" aria-labelledby="intro-title">
       <div class="mountain-plane mountain-plane-one" aria-hidden="true"></div>
       <div class="mountain-plane mountain-plane-two" aria-hidden="true"></div>
-      <div class="cloud cloud-one" aria-hidden="true"></div>
-      <div class="cloud cloud-two" aria-hidden="true"></div>
+      <div class="cloud cloud-one" aria-hidden="true"><span></span></div>
+      <div class="cloud cloud-two" aria-hidden="true"><span></span></div>
+      <div class="hero-mist" aria-hidden="true"></div>
       <div class="aseeri-weave intro-weave" aria-hidden="true"></div>
       <div class="intro-copy">
         <p class="eyebrow" data-i18n="eyebrow">Aseer highland field guide</p>
-        <h1 id="intro-title" data-i18n="heroTitle">A slower way to find Abha.</h1>
-        <p data-i18n="heroDescription">A focused map for cloud forests, heritage lanes, good coffee, and family stops across Abha, Al Soudah, and Rijal Almaa.</p>
+        <h1 id="intro-title" data-i18n="heroTitle">Discover Abha — Where Clouds Drift Through Green Mountains.</h1>
+        <p data-i18n="heroDescription">A focused map for cloud forests, heritage lanes, good coffee, family stops, and practical stays across Abha and Aseer.</p>
       </div>
       <figure class="intro-art">
-        <img src="images/places/abha-hero.jpg" alt="A general view of Abha city" data-i18n-alt="heroImageAlt" width="300" height="300">
-        <figcaption data-i18n="heroPhotoCredit">General Abha view · Aimk07 · Public Domain</figcaption>
+        <img src="images/places/al-sowda-hill-top-04.jpg" alt="Green mountain slopes and low clouds at Al Soudah near Abha" data-i18n-alt="heroImageAlt" width="4608" height="2592" data-fallback-src="images/places/abha-hero.jpg">
+        <figcaption><span data-i18n="heroPhotoCredit">Photo: Irshadpp / Wikimedia Commons · CC BY-SA 4.0 · Cropped for layout.</span> <a href="https://commons.wikimedia.org/wiki/File:Al_Sowda_Hill_top_04.jpg" target="_blank" rel="noopener" data-i18n="heroPhotoSource">Source</a></figcaption>
       </figure>
       <a class="explore-link" href="#categories">
         <span data-i18n="startExploring">Explore the map</span>
@@ -60,7 +61,7 @@
           <p class="eyebrow" data-i18n="chooseEyebrow">Choose your day</p>
           <h2 id="explorer-title" data-i18n="categoryTitle">Which side of Abha calls you?</h2>
         </div>
-        <p class="explorer-note" data-i18n="categoryDescription">Select a route lens to reveal its verified places.</p>
+        <p class="explorer-note" data-i18n="categoryDescription">Select a route lens to reveal its reviewed places.</p>
       </div>
 
       <div class="category-grid" id="categories" role="group" data-i18n-aria="categoryLabel" aria-label="Place categories">
@@ -84,7 +85,45 @@
           <span><span class="category-name" data-i18n="categoryFamily">Family Activities</span><small data-i18n="categoryFamilyHint">Easy stops for everyone</small></span>
           <span class="category-count" data-count="family"></span>
         </button>
+        <button class="category-button category-stays" type="button" data-category="stays" aria-pressed="false">
+          <span class="category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M3 19v-7h18v7M5 12V7h6v5m2 0V9h4a2 2 0 0 1 2 2v1M3 19v2m18-2v2"/></svg></span>
+          <span><span class="category-name" data-i18n="categoryStays">Hotels &amp; Stays</span><small data-i18n="categoryStaysHint">A practical base for your visit</small></span>
+          <span class="category-count" data-count="stays"></span>
+        </button>
       </div>
+
+      <section class="visitor-assistant" aria-labelledby="assistant-title">
+        <div class="assistant-heading">
+          <p class="eyebrow" data-i18n="assistantEyebrow">Plan with the local guide</p>
+          <h3 id="assistant-title" data-i18n="assistantTitle">Curated Visitor Assistant</h3>
+          <p data-i18n="assistantDescription">Choose what matters and receive a local catalog recommendation. It does not use live booking, traffic, or opening-hour data.</p>
+        </div>
+        <form class="assistant-form" id="assistant-form">
+          <label><span data-i18n="assistantInterest">What interests you?</span><select id="assistant-interest" name="interest">
+            <option value="scenic-view" data-i18n="interestViews">Mountain views</option>
+            <option value="heritage" data-i18n="interestCulture">Culture &amp; heritage</option>
+            <option value="family-friendly" data-i18n="interestFamily">Family time</option>
+            <option value="hotel" data-i18n="interestStay">A practical stay</option>
+          </select></label>
+          <label><span data-i18n="assistantTime">Time available</span><select id="assistant-time" name="time">
+            <option value="short" data-i18n="timeShort">Under 2 hours</option>
+            <option value="half" data-i18n="timeHalf">Half a day</option>
+            <option value="full" data-i18n="timeFull">A full day</option>
+          </select></label>
+          <label><span data-i18n="assistantFamily">Travelling with family?</span><select id="assistant-family" name="family">
+            <option value="any" data-i18n="familyAny">No preference</option>
+            <option value="yes" data-i18n="familyYes">Yes</option>
+          </select></label>
+          <label><span data-i18n="assistantBudget">Budget</span><select id="assistant-budget" name="budget">
+            <option value="any" data-i18n="budgetAny">No preference</option>
+            <option value="low" data-i18n="budgetLow">Lower-cost ideas</option>
+            <option value="mid" data-i18n="budgetMid">Mid-range</option>
+            <option value="high" data-i18n="budgetHigh">Higher-end stay</option>
+          </select></label>
+          <div class="assistant-actions"><button class="assistant-submit" type="submit" data-i18n="assistantSubmit">Suggest places</button><button class="assistant-reset" id="assistant-reset" type="button" data-i18n="assistantReset">Clear</button></div>
+        </form>
+        <div class="assistant-results" id="assistant-results" role="status" aria-live="polite"></div>
+      </section>
 
       <div class="map-toolbar">
         <div><span class="toolbar-label" data-i18n="mapLabel">Map explorer</span><p id="map-status" role="status" aria-live="polite"></p></div>

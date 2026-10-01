@@ -2,48 +2,79 @@
 
 ## What it does
 
-A bilingual, mobile-first visitor guide for Abha and nearby Aseer attractions. Choose a category to reveal its places on an interactive Leaflet and OpenStreetMap map, choose a marker or accessible list item, then open the same coordinates in Google Maps.
+A bilingual, mobile-first guide to Abha and nearby Aseer. Choose one of five categories—restaurants and cafés, nature and views, heritage and culture, family activities, or hotels and stays—to reveal that route’s places on a Leaflet and OpenStreetMap map. Select a marker or keyboard-friendly list item, then open the same coordinate in Google Maps.
 
-The map opens immediately to an unselected Abha overview. It shows no place markers until a visitor chooses a category.
+The map opens immediately to an unselected Abha overview and deliberately shows no place markers until a visitor chooses a category.
 
-## Who it is for
+## Run it
 
-Friends and visitors who want a simple way to explore restaurants and cafés, nature, heritage, and family activities around Abha, Al Soudah, and Rijal Almaa.
+Open `index.html` in a browser. For the most reliable local test, run this from the project folder:
 
-## Needs
+```bash
+python -m http.server 4173
+```
 
-A modern web browser and an internet connection for OpenStreetMap tiles and Google Maps links. No API key is needed.
+Then open `http://localhost:4173`.
 
-## How to run it
+The page has no build step or backend. Internet access is needed only for OpenStreetMap map tiles, external source links, and Google Maps links.
 
-Open `index.html` in a browser. For the most reliable local test, from this project folder run `python -m http.server 4173`, then open `http://localhost:4173`.
+## Reviewed local catalog
 
-## Try it with the sample data
+The catalog is stored in `sample-data/data.js` and currently contains **25 locations**:
 
-The initial place data is in `sample-data/data.js`. Choose a category, then choose a map marker or a keyboard-friendly list item. Use **View on Google Maps** to open its exact coordinate. Use the EN / ع switcher to change language and the Theme control to change light or dark mode.
+| Category | Places |
+| --- | ---: |
+| Restaurants & Cafés | 6 |
+| Nature & Views | 5 |
+| Heritage & Culture | 6 |
+| Family Activities | 5 |
+| Hotels & Stays | 3 |
 
-## Images, licences, and location notes
+Each place has bilingual content, a coordinate used by both the marker and Google Maps URL, local media, local tag IDs, source references, a review date, and a location-precision status.
 
-All imagery used by the guide is loaded from local relative paths in `images/`; the website does not hotlink photos. Three place-specific photographs are supplied from verified Wikimedia Commons sources with visible in-card credits:
+- **Reviewed location** means the map point is a named venue or feature supported by the catalog’s source record.
+- **Area reference — confirm access** means the location is helpful for orientation but is not claimed to be a particular entrance. Visitors should choose and confirm their own access point.
+- Opening hours, prices, facilities, bookings, and seasonal access are not live data. Confirm them directly before travelling.
+
+## Curated Visitor Assistant
+
+The **Curated Visitor Assistant / مساعد الزائر المنسق** is a local deterministic recommendation tool, not a remote chatbot. It combines structured interests, time, family needs, and budget preferences with curated catalog routes.
+
+- It runs entirely in the browser.
+- It does not send visitor input to an AI provider, backend, analytics service, or booking service.
+- It does not save visitor selections; language and theme preferences remain the only localStorage values.
+- It gives only catalog-backed recommendations and clearly avoids live claims about reservations, traffic, weather, prices, or opening hours.
+
+A future free-text or generative AI assistant would require explicit approval to send visitor content externally, a secure server/serverless proxy, provider credentials kept outside frontend code, rate limits, privacy disclosure, source grounding, response validation, and the local assistant as fallback. No API key is present in this project.
+
+## Images, licences, and local fallbacks
+
+All displayed imagery is loaded from project-local relative paths. The guide does not hotlink photos.
+
+### Active hero image
+
+The hero uses a local copy of **Al Sowda Hill top 04** by **Irshadpp**, from Wikimedia Commons, under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). It depicts green mountain terrain and low cloud around Al Soudah. The visible credit identifies the creator, source, licence, and any responsive crop. `images/places/abha-hero.jpg` remains a local fallback.
+
+### Licensed place photographs
 
 - **Rijal Almaa Heritage Village** — Richard Mortel, [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)
 - **Shamsan Castle** — Heritage Commission, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 - **Abha Dam Lake** — Aiman ALhaddad, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
 
-The full local-file, source, creator, licence, and modification ledger is in [`images/credits.md`](images/credits.md). The `CC BY-SA` derivatives remain available under their corresponding ShareAlike licence.
+The full local-file, source, creator, licence, and derivative ledger is in [`images/credits.md`](images/credits.md).
 
-Twelve entries deliberately retain clearly marked local illustrations because a reusable photo of that exact place was not verified: Towns Talk Coffee, Fit Kitchen, Carlito, Kudu — Abha, Al Soudah, Abu Kheyal Park, Waterfall Park, Al Muftaha Art Village, Asir Regional Museum, Civilisation Museum, Abha Palace Theme Park, and Al Andalus Park. These illustrations are intentional, not broken images.
+All other place cards—including Hotels & Stays—use clearly labelled, intentional local illustrations until a specific reusable image is verified. These are not failed images.
 
-Google Maps is used only for outbound place links. No Google Maps or Google Maps user photos are scraped, downloaded, hotlinked, cached, or reused. Venue information, access, and hours can change, so confirm them directly before travelling.
+## Google Maps and Google Place Photos
 
-### Google Place Photos
+Google Maps is used only for outbound coordinate links. No Google Maps or Google Maps user photos are scraped, downloaded, hotlinked, cached, or reused.
 
-This static release has no Google Places API key, billing configuration, Google Place IDs, Places client, backend, or serverless proxy. It therefore deliberately uses the three licensed local photos and twelve labelled local illustrations above rather than attempting to display Google photos.
+This static release has no Google Places API key, billing configuration, Place IDs, Places client, backend, or serverless proxy. To enable official Google Place Photos later, the project would need an approved exception to the local-assets rule, a billed Google Maps Platform project with Places API (New), restricted credentials, canonical Place IDs, official Place Details/Photo requests with required attribution, and handling for unavailable-photo, quota, and missing-key states. A secure server or serverless proxy is preferred to exposing a credential in a static GitHub Pages page.
 
-To enable official Google Place Photos later, the project needs an approved exception to the local-assets rule, a billed Google Maps Platform project with Places API (New) enabled, restricted credentials, canonical Place IDs, the official Place Details and Photo flow with required Google attribution, and clear unavailable-photo, quota, and missing-key states. A secure server or serverless proxy is preferred so a credential is not exposed in a static GitHub Pages page.
+## Design and accessibility
 
-The visual framing uses original CSS-only Aseeri-inspired geometry—abstract mountains, bands, and diamonds—not a copied pattern or artwork.
+The interface uses an original CSS-only Aseeri-inspired treatment: abstract mountain triangles, crossed bands, diamonds, forest green, deep indigo, muted red, and warm sand. It is not a copied pattern or artwork.
 
-Built with Claude Code during the KKU Claude Code hackathon
+Decorative cloud silhouettes and mist animate only when the browser allows motion. The guide supports English and Arabic, RTL, light/dark theme persistence, visible focus styles, a skip link, an accessible non-map place list, and reduced-motion map/page behavior.
 
-Started on 2026-10-01
+Built with Claude Code during the KKU Claude Code hackathon.
