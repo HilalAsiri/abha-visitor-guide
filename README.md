@@ -34,7 +34,15 @@ The full local-file, source, creator, licence, and modification ledger is in [`i
 
 Twelve entries deliberately retain clearly marked local illustrations because a reusable photo of that exact place was not verified: Towns Talk Coffee, Fit Kitchen, Carlito, Kudu — Abha, Al Soudah, Abu Kheyal Park, Waterfall Park, Al Muftaha Art Village, Asir Regional Museum, Civilisation Museum, Abha Palace Theme Park, and Al Andalus Park. These illustrations are intentional, not broken images.
 
-Google Maps is used only for outbound place links. No Google Maps or Google Maps user photos are scraped, downloaded, or reused. Venue information, access, and hours can change, so confirm them directly before travelling.
+Google Maps is used only for outbound place links. No Google Maps or Google Maps user photos are scraped, downloaded, hotlinked, cached, or reused. Venue information, access, and hours can change, so confirm them directly before travelling.
+
+### Google Place Photos
+
+This static release has no Google Places API key, billing configuration, Google Place IDs, Places client, backend, or serverless proxy. It therefore deliberately uses the three licensed local photos and twelve labelled local illustrations above rather than attempting to display Google photos.
+
+To enable official Google Place Photos later, the project needs an approved exception to the local-assets rule, a billed Google Maps Platform project with Places API (New) enabled, restricted credentials, canonical Place IDs, the official Place Details and Photo flow with required Google attribution, and clear unavailable-photo, quota, and missing-key states. A secure server or serverless proxy is preferred so a credential is not exposed in a static GitHub Pages page.
+
+The visual framing uses original CSS-only Aseeri-inspired geometry—abstract mountains, bands, and diamonds—not a copied pattern or artwork.
 
 Built with Claude Code during the KKU Claude Code hackathon
 

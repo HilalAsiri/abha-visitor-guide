@@ -162,7 +162,7 @@
     });
   }
 
-  function renderImage(place) {
+  function renderImage(place, updateFallbackState) {
     const image = document.createElement("img");
     const { media } = place;
     image.src = media.src;
@@ -181,6 +181,7 @@
       fallback.setAttribute("role", "status");
       fallback.innerHTML = `<span>${text("imageFallback")}</span>`;
       image.parentElement.append(fallback);
+      updateFallbackState();
     });
     return image;
   }
@@ -197,25 +198,44 @@
     placeCard.innerHTML = "";
     const media = document.createElement("div");
     media.className = "card-media";
-    media.append(renderImage(place));
     const badge = document.createElement("span");
     badge.className = "image-badge";
     badge.textContent = place.media.kind === "photo" ? text("modifiedPhoto") : text("placeholderImage");
-    media.append(badge);
 
     const body = document.createElement("div");
     body.className = "place-card-body";
     const credit = place.media.credit;
+    const provenance = document.createElement("div");
+    provenance.className = credit ? "photo-credit" : "image-status";
+    provenance.innerHTML = credit
+      ? `<strong>${text("photoCredit")}:</strong> ${credit.creator} · <a href="${credit.licenseUrl}" target="_blank" rel="noopener">${credit.license}</a><br><span>${mediaText(credit, "notice")}</span> <a href="${credit.sourceUrl}" target="_blank" rel="noopener">${text("openSource")}</a>`
+      : text("noVerifiedPhoto");
+
+    const updateFallbackState = () => {
+      badge.textContent = text("placeholderImage");
+      provenance.className = "image-status";
+      provenance.textContent = text("imageFallback");
+    };
+    media.append(renderImage(place, updateFallbackState), badge);
+
     body.innerHTML = `
       <div class="card-kicker">
         <span class="category-tag">${categoryName(place.category)}</span>
         ${place.needsConfirmation ? `<span class="confirmation-tag">${text("needsConfirmation")}</span>` : ""}
       </div>
       <h3 id="place-panel-title">${placeText(place, "name")}</h3>
-      <p>${placeText(place, "description")}</p>
-      ${credit ? `<div class="photo-credit"><strong>${text("photoCredit")}:</strong> ${credit.creator} · <a href="${credit.licenseUrl}" target="_blank" rel="noopener">${credit.license}</a><br><span>${mediaText(credit, "notice")}</span> <a href="${credit.sourceUrl}" target="_blank" rel="noopener">${text("openSource")}</a></div>` : `<small class="image-status">${text("noVerifiedPhoto")}</small>`}
-      <small class="card-source"><strong>${text("locationNote")}:</strong> ${placeText(place, "source")}</small>
-      <a class="map-link" href="${mapUrl(place)}" target="_blank" rel="noopener">${text("openMaps")} ${externalIcon()}<span class="visually-hidden"> (${text("opensNewTab")})</span></a>`;
+      <p>${placeText(place, "description")}</p>`;
+    body.append(provenance);
+    const source = document.createElement("small");
+    source.className = "card-source";
+    source.innerHTML = `<strong>${text("locationNote")}:</strong> ${placeText(place, "source")}`;
+    const mapsLink = document.createElement("a");
+    mapsLink.className = "map-link";
+    mapsLink.href = mapUrl(place);
+    mapsLink.target = "_blank";
+    mapsLink.rel = "noopener";
+    mapsLink.innerHTML = `${text("openMaps")} ${externalIcon()}<span class="visually-hidden"> (${text("opensNewTab")})</span>`;
+    body.append(source, mapsLink);
     placeCard.append(media, body);
   }
 

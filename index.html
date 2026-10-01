@@ -12,17 +12,17 @@
   <a class="skip-link" href="#explore" data-i18n="skipToMap">Skip to map</a>
 
   <header class="site-header" id="top">
-    <a class="brand" href="#top" data-i18n-aria="brandLabel" aria-label="Abha Visitor Guide home">
+    <a class="brand" href="#top" data-i18n-aria="brandLabel" aria-label="Abha Field Guide home">
       <span class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 24 24" focusable="false"><path d="M3 18 9.1 7.2 12 12l2.7-4.3L21 18M5 18h14"/></svg>
+        <svg viewBox="0 0 32 32" focusable="false"><path d="M3 23 11 11l5 7 4-5 9 10M5 26h22"/><path d="m16 5 3 3-3 3-3-3 3-3Z"/></svg>
       </span>
       <span class="brand-copy"><strong>Abha</strong><span data-i18n="brandGuide">Field Guide</span></span>
     </a>
 
     <div class="header-actions">
       <div class="language-switcher" data-i18n-aria="languageLabel" aria-label="Language selector">
-        <button class="language-button is-active" type="button" data-language="en" aria-pressed="true">EN</button>
-        <button class="language-button" type="button" data-language="ar" aria-pressed="false">ع</button>
+        <button class="language-button is-active" type="button" data-language="en" aria-pressed="true" aria-label="English">EN</button>
+        <button class="language-button" type="button" data-language="ar" aria-pressed="false" aria-label="العربية">ع</button>
       </div>
       <button class="theme-button" id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode">
         <svg class="theme-icon" aria-hidden="true" viewBox="0 0 24 24" focusable="false"><path d="M20.5 14.2A8.6 8.6 0 0 1 9.8 3.5 8.6 8.6 0 1 0 20.5 14.2Z"/></svg>
@@ -33,10 +33,11 @@
 
   <main>
     <section class="intro" aria-labelledby="intro-title">
-      <div class="fog fog-one" aria-hidden="true"></div>
-      <div class="fog fog-two" aria-hidden="true"></div>
-      <div class="topography" aria-hidden="true"></div>
-      <div class="aseeri-rhythm intro-rhythm" aria-hidden="true"></div>
+      <div class="mountain-plane mountain-plane-one" aria-hidden="true"></div>
+      <div class="mountain-plane mountain-plane-two" aria-hidden="true"></div>
+      <div class="cloud cloud-one" aria-hidden="true"></div>
+      <div class="cloud cloud-two" aria-hidden="true"></div>
+      <div class="aseeri-weave intro-weave" aria-hidden="true"></div>
       <div class="intro-copy">
         <p class="eyebrow" data-i18n="eyebrow">Aseer highland field guide</p>
         <h1 id="intro-title" data-i18n="heroTitle">A slower way to find Abha.</h1>
@@ -46,13 +47,14 @@
         <img src="images/places/abha-hero.jpg" alt="A general view of Abha city" data-i18n-alt="heroImageAlt" width="300" height="300">
         <figcaption data-i18n="heroPhotoCredit">General Abha view · Aimk07 · Public Domain</figcaption>
       </figure>
-      <a class="explore-link" href="#categories" data-i18n="startExploring">
-        Explore the map
+      <a class="explore-link" href="#categories">
+        <span data-i18n="startExploring">Explore the map</span>
         <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false"><path d="M12 4v15m0 0 6-6m-6 6-6-6"/></svg>
       </a>
     </section>
 
     <section class="explorer" id="explore" aria-labelledby="explorer-title">
+      <div class="category-atmosphere" aria-hidden="true"><span></span><span></span></div>
       <div class="explorer-heading">
         <div>
           <p class="eyebrow" data-i18n="chooseEyebrow">Choose your day</p>
@@ -91,13 +93,13 @@
 
       <div class="map-layout">
         <div class="map-frame">
-          <div class="aseeri-rhythm map-rhythm" aria-hidden="true"></div>
+          <div class="aseeri-weave map-weave" aria-hidden="true"></div>
           <div class="map-mist" aria-hidden="true"></div>
           <div id="map" role="region" data-i18n-aria="mapLabel" aria-label="Interactive map of Abha visitor places" tabindex="0"></div>
           <div class="map-prompt" id="map-prompt">
             <span class="prompt-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="9" r="2.3"/></svg></span>
-            <h3 data-i18n="mapPromptTitle">Your map is ready.</h3>
-            <p data-i18n="mapPrompt">Choose a route lens to reveal a small set of places.</p>
+            <h3 data-i18n="mapPromptTitle">Choose a category to explore.</h3>
+            <p data-i18n="mapPrompt">The Abha overview is open. Select a route lens to reveal its places.</p>
           </div>
         </div>
 
@@ -126,7 +128,7 @@
       <div class="notes-grid">
         <p data-i18n="noteOne"><strong>Exact pin:</strong> Each map link opens the same coordinate used by this guide.</p>
         <p data-i18n="noteTwo"><strong>Check ahead:</strong> Confirm times, prices, access, and seasonal availability directly with each place.</p>
-        <p data-i18n="noteThree"><strong>Illustrated for now:</strong> Current art is a local placeholder, ready to be replaced by licensed photography.</p>
+        <p data-i18n="noteThree"><strong>Images with care:</strong> Licensed local photos include visible credits; remaining cards use intentional local illustrations. Google Maps photos are never reused.</p>
       </div>
     </section>
   </main>

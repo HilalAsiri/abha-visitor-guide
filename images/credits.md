@@ -21,3 +21,11 @@ All imagery loaded by the guide is stored inside this repository. The website do
 The following cards keep their local illustrated placeholder because no specific, reusable photograph was verified at publication time: Towns Talk Coffee, Fit Kitchen, Carlito, Kudu — Abha, Al Soudah, Abu Kheyal Park, Waterfall Park, Al Muftaha Art Village, Asir Regional Museum, Civilisation Museum, Abha Palace Theme Park, and Al Andalus Park.
 
 The local placeholders are not failed images and do not indicate that the underlying location is unverified. They will be replaced only when a place-specific source satisfies the project’s attribution and reuse checks.
+
+## Google Place Photos policy
+
+No Google Places API configuration, billing setup, Place IDs, or official photo flow is present in this static release. Google Maps is only an outbound coordinate link. The guide never scrapes, downloads, hotlinks, caches, or copies Google Maps user photos.
+
+A future official Google Place Photos implementation would require approved use of remote assets, a billed Google Maps Platform project with Places API (New), restricted credentials, canonical Place IDs, official Place Details/Photo requests, required Google attribution, and resilient missing-key, unavailable-photo, and quota states. A secure server or serverless proxy is preferred to exposing a credential in a static page.
+
+The page decoration is an original CSS-only Aseeri-inspired geometric treatment. It uses abstract mountains, diagonal bands, and diamonds; it does not reproduce a source artwork or creator handle.
