@@ -18,7 +18,7 @@
       accessibleListEyebrow: "A list, not just a map", accessibleListTitle: "Places in this route", accessibleListDescription: "Use this keyboard-friendly list to choose a place.",
       placeholderImage: "Local illustration", noVerifiedPhoto: "A verified reusable photo is not available for this place yet.", imageFallback: "The local image could not load. This local illustration is shown instead.",
       photoCredit: "Photo credit", modifiedPhoto: "Local derivative", openSource: "View source and licence", locationNote: "Location reference", needsConfirmation: "Area reference — confirm access", verifiedLocation: "Reviewed location", sourceLinks: "Sources", tagsLabel: "What to expect",
-      openMaps: "View on Google Maps", opensNewTab: "opens in a new tab",
+      openMaps: "View on Google Maps", opensNewTab: "opens in a new tab", focusPlaceCard: "Focus {place} on the map", cardFocusHint: "Select this card to refocus the map.",
       notesEyebrow: "Travel thoughtfully", notesTitle: "Good to know before you go", noteOne: "<strong>Coordinate-backed:</strong> Each Google Maps link opens the same coordinate used by this guide.",
       noteTwo: "<strong>Check ahead:</strong> Confirm times, prices, access, and seasonal availability directly with each place.", noteThree: "<strong>Images with care:</strong> Licensed local photos include visible credits; remaining cards use intentional local illustrations. Google Maps photos are never reused.",
       footerText: "Built for friends discovering Aseer"
@@ -41,7 +41,7 @@
       accessibleListEyebrow: "قائمة وليست خريطة فقط", accessibleListTitle: "أماكن في هذا المسار", accessibleListDescription: "استخدم هذه القائمة المناسبة للوحة المفاتيح لاختيار مكان.",
       placeholderImage: "رسم توضيحي محلي", noVerifiedPhoto: "لا تتوفر حالياً صورة قابلة لإعادة الاستخدام تم التحقق منها لهذا المكان.", imageFallback: "تعذر تحميل الصورة المحلية، لذلك تظهر هذه الصورة التوضيحية المحلية.",
       photoCredit: "حقوق الصورة", modifiedPhoto: "نسخة محلية مشتقة", openSource: "عرض المصدر والترخيص", locationNote: "مرجع الموقع", needsConfirmation: "مرجع للمنطقة — تحقق من نقطة الدخول", verifiedLocation: "موقع مراجع", sourceLinks: "المصادر", tagsLabel: "ما الذي تتوقعه",
-      openMaps: "عرض في خرائط Google", opensNewTab: "يفتح في علامة تبويب جديدة",
+      openMaps: "عرض في خرائط Google", opensNewTab: "يفتح في علامة تبويب جديدة", focusPlaceCard: "ركز {place} على الخريطة", cardFocusHint: "حدد هذه البطاقة لإعادة تركيز الخريطة.",
       notesEyebrow: "سافر بوعي", notesTitle: "معلومات مفيدة قبل الذهاب", noteOne: "<strong>إحداثية موحدة:</strong> يفتح كل رابط خرائط Google الإحداثية نفسها المستخدمة في هذا الدليل.",
       noteTwo: "<strong>تحقق مسبقاً:</strong> تأكد من المواعيد والأسعار وإمكانية الدخول والتوفر الموسمي مباشرةً مع كل مكان.", noteThree: "<strong>الصور بعناية:</strong> للصور المحلية المرخصة حقوق واضحة؛ أما البطاقات الأخرى فتستخدم رسوماً محلية مقصودة. لا يعاد استخدام صور خرائط Google.",
       footerText: "صُمم للأصدقاء الذين يكتشفون عسير"
@@ -146,7 +146,9 @@
   }
 
   function clearMarkers() { markers.forEach(({ marker }) => map.removeLayer(marker)); markers = []; }
-  function updateMarkerSelection() { markers.forEach(({ marker, place }) => marker.setIcon(markerIcon(place.category, activePlace?.id === place.id))); }
+  function updateMarkerSelection() {
+    markers.forEach(({ marker, place }) => marker.setIcon(markerIcon(place.category, activePlace?.id === place.id)));
+  }
 
   function renderList(places) {
     placeList.innerHTML = "";
@@ -172,7 +174,7 @@
       button.type = "button";
       button.setAttribute("aria-pressed", String(selected));
       button.innerHTML = `<span><strong>${placeText(place, "name")}</strong><small>${categoryName(place.category)}${place.needsConfirmation ? ` · ${text("needsConfirmation")}` : ""}</small></span><span class="list-arrow" aria-hidden="true">↗</span>`;
-      button.addEventListener("click", () => showPlace(place, true));
+      button.addEventListener("click", () => showPlace(place));
       placeList.append(button);
     });
   }
@@ -212,6 +214,10 @@
       const hasRoute = Boolean(activeCategory);
       const mealEmpty = isMealEmptyState();
       placeCard.className = "place-card card-empty";
+      placeCard.removeAttribute("tabindex");
+      placeCard.removeAttribute("role");
+      placeCard.removeAttribute("aria-label");
+      placeCard.removeAttribute("aria-describedby");
       placeCard.innerHTML = `<span class="empty-mark" aria-hidden="true">${hasRoute ? "02" : "01"}</span><h3 id="place-panel-title">${text(mealEmpty ? "mealEmptyTitle" : hasRoute ? "routeReadyTitle" : "initialCardTitle")}</h3><p>${text(mealEmpty ? "mealEmptyDescription" : hasRoute ? "routeReadyDescription" : "initialCardDescription")}</p>`;
       if (mealEmpty) {
         const reset = document.createElement("button");
@@ -223,8 +229,12 @@
       }
       return;
     }
-    placeCard.className = "place-card";
+    placeCard.className = "place-card is-selected";
     placeCard.innerHTML = "";
+    placeCard.tabIndex = 0;
+    placeCard.setAttribute("role", "button");
+    placeCard.setAttribute("aria-label", text("focusPlaceCard").replace("{place}", placeText(place, "name")));
+    placeCard.setAttribute("aria-describedby", "place-card-focus-hint");
     const media = document.createElement("div");
     media.className = "card-media";
     const badge = document.createElement("span");
@@ -240,7 +250,7 @@
     media.append(renderImage(place, updateFallbackState), badge);
     const tags = (place.tagIds || []).map(tagName).map((label) => `<span>${label}</span>`).join("");
     const statusLabel = place.needsConfirmation ? text("needsConfirmation") : text("verifiedLocation");
-    body.innerHTML = `<div class="card-kicker"><span class="category-tag">${categoryName(place.category)}</span><span class="confirmation-tag${place.needsConfirmation ? "" : " is-verified"}">${statusLabel}</span></div><h3 id="place-panel-title">${placeText(place, "name")}</h3><p>${placeText(place, "description")}</p>${tags ? `<div class="tag-group"><strong>${text("tagsLabel")}:</strong>${tags}</div>` : ""}`;
+    body.innerHTML = `<span class="visually-hidden" id="place-card-focus-hint">${text("cardFocusHint")}</span><div class="card-kicker"><span class="category-tag">${categoryName(place.category)}</span><span class="confirmation-tag${place.needsConfirmation ? "" : " is-verified"}">${statusLabel}</span></div><h3 id="place-panel-title">${placeText(place, "name")}</h3><p>${placeText(place, "description")}</p>${tags ? `<div class="tag-group"><strong>${text("tagsLabel")}:</strong>${tags}</div>` : ""}`;
     body.append(provenance);
     const source = document.createElement("small");
     source.className = "card-source";
@@ -258,7 +268,7 @@
     placeCard.append(media, body);
   }
 
-  function showPlace(place, panMap) {
+  function showPlace(place) {
     if (!routePlaces().some((item) => item.id === place.id)) return;
     activePlace = place;
     renderCard(place);
@@ -266,12 +276,10 @@
     renderList(routePlaces());
     const routeStatus = activeCategory === "food" ? text("foodRouteStatus") : text("routeReadyStatus");
     mapStatus.textContent = `${routeStatus.replace("{count}", routePlaces().length)} · ${text("selectedPlace").replace("{place}", placeText(place, "name"))}`;
-    if (panMap) {
-      if (reducedMotion()) map.setView(place.coordinates, 14);
-      else map.flyTo(place.coordinates, 14, { duration: 0.45 });
-      markers.find((item) => item.place.id === place.id)?.marker.openTooltip();
-      document.querySelector("#place-panel").scrollIntoView({ behavior: reducedMotion() ? "auto" : "smooth", block: "nearest" });
-    }
+    if (reducedMotion()) map.setView(place.coordinates, 14);
+    else map.flyTo(place.coordinates, 14, { duration: 0.45 });
+    markers.find((item) => item.place.id === place.id)?.marker.openTooltip();
+    document.querySelector("#place-panel").scrollIntoView({ behavior: reducedMotion() ? "auto" : "smooth", block: "nearest" });
   }
 
   function renderCategory() {
@@ -298,7 +306,7 @@
     selectedPlaces.forEach((place) => {
       const marker = L.marker(place.coordinates, { icon: markerIcon(place.category, activePlace?.id === place.id), title: placeText(place, "name"), keyboard: true }).addTo(map);
       marker.bindTooltip(placeText(place, "name"), { direction: "top", offset: [0, -37] });
-      marker.on("click", () => showPlace(place, false));
+      marker.on("click keypress", () => showPlace(place));
       markers.push({ marker, place });
     });
     if (selectedPlaces.length) {
@@ -343,7 +351,7 @@
       button.addEventListener("click", () => {
         activeCategory = place.category;
         renderCategory();
-        showPlace(place, true);
+        showPlace(place);
       });
       choices.append(button);
     });
@@ -360,6 +368,16 @@
       renderCategory();
       document.querySelector("#explore").scrollIntoView({ behavior: reducedMotion() ? "auto" : "smooth", block: "start" });
     });
+  });
+  placeCard.addEventListener("click", (event) => {
+    if (!activePlace || event.target.closest("a, button")) return;
+    showPlace(activePlace);
+  });
+  placeCard.addEventListener("keydown", (event) => {
+    if (!activePlace || event.target.closest("a, button")) return;
+    if (event.key !== "Enter" && event.key !== " ") return;
+    event.preventDefault();
+    showPlace(activePlace);
   });
   document.querySelectorAll(".meal-filter-button").forEach((button) => {
     button.addEventListener("click", () => {

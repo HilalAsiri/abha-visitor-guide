@@ -141,15 +141,32 @@ h3 { font-size: 1.35rem; }
 .mountain-plane { position: absolute; z-index: -1; pointer-events: none; opacity: .42; }
 .mountain-plane-one { inset: auto 16% 0 auto; width: 19rem; height: 9rem; background: rgba(15, 48, 49, .72); clip-path: polygon(0 100%, 40% 17%, 56% 60%, 73% 2%, 100% 100%); }
 .mountain-plane-two { inset: auto auto -2rem -4rem; width: 23rem; height: 9rem; background: rgba(247, 234, 193, .13); clip-path: polygon(0 100%, 21% 33%, 37% 75%, 63% 10%, 86% 72%, 100% 42%, 100% 100%); }
-.cloud { position: absolute; z-index: -1; width: clamp(12rem, 29vw, 22rem); height: clamp(7rem, 15vw, 10rem); background: url("images/soft-cloud-layer.jpg") center / cover no-repeat; opacity: .38; pointer-events: none; }
+.cloud, .hero-mist, .category-atmosphere span, .al-qatt-edge { position: absolute; z-index: -1; pointer-events: none; }
+.cloud { width: clamp(12rem, 29vw, 22rem); height: clamp(7rem, 15vw, 10rem); background: url("images/soft-cloud-layer.jpg") center / cover no-repeat; opacity: .34; }
 .cloud-one { inset-block-start: .8rem; inset-inline-end: 15%; transform: scale(.82); }
-.cloud-two { inset-block-end: 1.8rem; inset-inline-start: 22%; opacity: .27; transform: scale(1.1); }
-.hero-mist { position: absolute; z-index: -1; inset: auto -8% -8%; height: 43%; background: url("images/soft-cloud-layer.jpg") center bottom / cover no-repeat; opacity: .2; pointer-events: none; }
-.al-qatt-edge { position: absolute; z-index: -1; width: clamp(5.3rem, 12vw, 8.75rem); aspect-ratio: 1265 / 2349; background: url("images/al-qatt-aseeri-pattern.jpg") center / contain no-repeat; opacity: .16; pointer-events: none; }
+.cloud-two { inset-block-end: 1.8rem; inset-inline-start: 22%; opacity: .23; transform: scale(1.1); }
+.hero-mist { inset: auto -8% -8%; height: 43%; background: url("images/soft-cloud-layer.jpg") center bottom / cover no-repeat; opacity: .16; }
+.al-qatt-edge { width: clamp(5.3rem, 12vw, 8.75rem); aspect-ratio: 1265 / 2349; background: url("images/al-qatt-aseeri-pattern.jpg") center / contain no-repeat; opacity: .13; }
 .al-qatt-hero-edge { inset-block-start: .65rem; inset-inline-end: clamp(.35rem, 2vw, 1.7rem); }
 .al-qatt-category-edge { inset-block-start: .45rem; inset-inline-end: clamp(-.45rem, 1vw, .8rem); }
-.al-qatt-notes-edge { inset-block-start: -.9rem; inset-inline-end: 0; opacity: .13; }
+.al-qatt-notes-edge { inset-block-start: -.9rem; inset-inline-end: 0; opacity: .11; }
 html[dir="rtl"] .al-qatt-hero-edge, html[dir="rtl"] .al-qatt-category-edge { transform: scaleX(-1); }
+@supports ((mask-image: linear-gradient(#000, transparent)) or (-webkit-mask-image: linear-gradient(#000, transparent))) {
+  .cloud, .hero-mist, .category-atmosphere span {
+    -webkit-mask-image: radial-gradient(ellipse 86% 82% at 50% 48%, #000 42%, transparent 100%);
+    mask-image: radial-gradient(ellipse 86% 82% at 50% 48%, #000 42%, transparent 100%);
+  }
+  .al-qatt-edge {
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 17%, #000 80%, transparent 100%), linear-gradient(to left, transparent 0, #000 34%, #000 100%);
+    -webkit-mask-composite: source-in;
+    mask-image: linear-gradient(to bottom, transparent 0, #000 17%, #000 80%, transparent 100%), linear-gradient(to left, transparent 0, #000 34%, #000 100%);
+    mask-composite: intersect;
+  }
+  html[dir="rtl"] .al-qatt-edge {
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 17%, #000 80%, transparent 100%), linear-gradient(to right, transparent 0, #000 34%, #000 100%);
+    mask-image: linear-gradient(to bottom, transparent 0, #000 17%, #000 80%, transparent 100%), linear-gradient(to right, transparent 0, #000 34%, #000 100%);
+  }
+}
 .intro-art { position: relative; z-index: 2; min-height: 12.4rem; margin: 0; overflow: hidden; background: #224f44; border: .42rem solid color-mix(in srgb, var(--sand) 86%, #fff); border-radius: 1.25rem 1.25rem 1.25rem .45rem; box-shadow: 0 0 0 1px rgba(24, 48, 64, .35), 0 15px 30px rgba(8, 37, 35, .25); }
 .intro-art::before { position: absolute; z-index: 2; inset: .55rem .55rem auto auto; width: 2.4rem; height: 2.4rem; background: linear-gradient(45deg, var(--ornament-red) 0 38%, transparent 38.5%), linear-gradient(135deg, var(--sand) 0 38%, transparent 38.5%); content: ""; opacity: .92; pointer-events: none; }
 .intro-art img { width: 100%; height: 100%; min-height: 12.4rem; object-fit: cover; opacity: .98; }
@@ -163,9 +180,9 @@ html[dir="rtl"] .al-qatt-hero-edge, html[dir="rtl"] .al-qatt-category-edge { tra
 .explorer::before { inset-block-start: -1rem; inset-inline-end: -2.2rem; }
 .explorer::after { inset-block-end: 4rem; inset-inline-start: -3.5rem; transform: rotate(180deg); }
 .category-atmosphere { position: absolute; z-index: -1; inset: 1.2rem -1rem auto; height: 14rem; overflow: hidden; pointer-events: none; }
-.category-atmosphere span { position: absolute; display: block; background: url("images/soft-cloud-layer.jpg") center / cover no-repeat; }
-.category-atmosphere span:first-child { inset: .45rem auto auto 5%; width: min(27rem, 61vw); height: 8rem; opacity: .17; }
-.category-atmosphere span:last-child { inset: 2.2rem 9% auto auto; width: min(19rem, 44vw); height: 6rem; opacity: .11; }
+.category-atmosphere span { display: block; background: url("images/soft-cloud-layer.jpg") center / cover no-repeat; }
+.category-atmosphere span:first-child { inset: .45rem auto auto 5%; width: min(27rem, 61vw); height: 8rem; opacity: .13; }
+.category-atmosphere span:last-child { inset: 2.2rem 9% auto auto; width: min(19rem, 44vw); height: 6rem; opacity: .09; }
 .explorer-heading { display: grid; gap: .55rem; margin-block-end: 1.05rem; }
 .eyebrow { margin: 0 0 .45rem; color: #893b33; font-size: .88rem; font-weight: 850; letter-spacing: .08em; line-height: 1.45; text-transform: uppercase; }
 :root[data-theme="dark"] .eyebrow { color: var(--ornament-red); }
@@ -239,6 +256,9 @@ html[dir="rtl"] .al-qatt-hero-edge, html[dir="rtl"] .al-qatt-category-edge { tra
 
 .place-panel { min-height: 17rem; }
 .place-card { position: relative; min-height: 100%; overflow: hidden; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-lg); }
+.place-card.is-selected { border-color: color-mix(in srgb, var(--forest) 56%, var(--line)); }
+.place-card.is-selected:not(.card-empty) { cursor: pointer; }
+.place-card.is-selected:not(.card-empty):focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
 .card-media { position: relative; overflow: hidden; aspect-ratio: 16 / 8.2; background: var(--surface-soft); }
 .card-media::after { position: absolute; inset: 42% 0 0; background: linear-gradient(0deg, rgba(5, 28, 23, .34), transparent); content: ""; pointer-events: none; }
 .card-media img { width: 100%; height: 100%; object-fit: cover; }
