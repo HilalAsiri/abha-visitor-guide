@@ -13,6 +13,8 @@
       assistantEyebrow: "Plan with the local guide", assistantTitle: "Curated Visitor Assistant", assistantDescription: "Choose what matters and receive a local catalog recommendation. It does not use live booking, traffic, or opening-hour data.", assistantInterest: "What interests you?", assistantTime: "Time available", assistantFamily: "Travelling with family?", assistantBudget: "Budget", assistantSubmit: "Suggest places", assistantReset: "Clear", interestViews: "Mountain views", interestCulture: "Culture & heritage", interestFamily: "Family time", interestStay: "A practical stay", timeShort: "Under 2 hours", timeHalf: "Half a day", timeFull: "A full day", familyAny: "No preference", familyYes: "Yes", budgetAny: "No preference", budgetLow: "Lower-cost ideas", budgetMid: "Mid-range", budgetHigh: "Higher-end stay", assistantNoMatch: "Try another combination. This local guide only recommends places in its curated catalog.", assistantOpenPlace: "Show on map", assistantLocalNotice: "Recommendations come from this guide’s local curated catalog, not live booking data.",
       mapLabel: "Map explorer", mapPromptTitle: "Choose a category to explore.", mapPrompt: "The Abha overview is open. Select a route lens to reveal its places.", browsePlaces: "Browse places as a list",
       mealFilterLegend: "Choose a meal", mealFilterDescription: "Meal filters show only venue-specific service evidence recorded in this guide.", mealFilterLabel: "Restaurant meal filters", mealAll: "All", mealBreakfast: "Breakfast", mealLunch: "Lunch", mealDinner: "Dinner", foodRouteStatus: "{count} food places shown. Choose a marker or list item.", noVerifiedMealPlaces: "No verified {meal} places are in this guide yet. Meal periods are not inferred from venue type or location data.", returnToAll: "Show all food places",
+      stayFilterLegend: "Choose a stay rating", stayFilterDescription: "Star filters include only properties with a separately recorded, source-backed classification.", stayFilterLabel: "Hotel star filters", stayAll: "All Stays", stay3Stars: "3 Stars", stay4Stars: "4 Stars", stay5Stars: "5 Stars", staysRouteStatus: "{count} stays shown. Choose a marker or list item.", noVerifiedStarStays: "No stays with a verified {stars}-star classification are in this guide yet. Ratings are not inferred from a property name, brand, or map record.", stayEmptyTitle: "No verified stay rating matches yet", returnToAllStays: "Show all stays", ratingNotVerified: "Rating not verified",
+      noVerifiedHotelMeal: "No verified hotel {meal} availability is linked to this guide yet.",
       initialCardTitle: "Choose a place when you are ready", initialCardDescription: "Select a category, then choose a marker or a place from the keyboard-friendly list.", routeReadyTitle: "Your route is ready", routeReadyDescription: "Choose a marker or place from the list to see its story, image, and map link.", mealEmptyTitle: "No verified meal matches yet", mealEmptyDescription: "This guide does not infer meal service. Return to all food places to browse the mapped cafés and restaurants.",
       selectedPlace: "Selected: {place}", placesShown: "{count} places in this route", routeReadyStatus: "{count} places shown. Choose a marker or list item.", noPlaces: "No places are available in this route yet.", chooseCategoryList: "Choose a category to view its places.",
       accessibleListEyebrow: "A list, not just a map", accessibleListTitle: "Places in this route", accessibleListDescription: "Use this keyboard-friendly list to choose a place.",
@@ -36,6 +38,8 @@
       assistantEyebrow: "خطط مع الدليل المحلي", assistantTitle: "مساعد الزائر المنسق", assistantDescription: "اختر ما يهمك واحصل على توصية من دليل محلي منسق. لا يستخدم بيانات الحجز أو الحركة أو مواعيد العمل المباشرة.", assistantInterest: "ما الذي يهمك؟", assistantTime: "الوقت المتاح", assistantFamily: "هل تسافر مع العائلة؟", assistantBudget: "الميزانية", assistantSubmit: "اقترح أماكن", assistantReset: "مسح", interestViews: "إطلالات جبلية", interestCulture: "ثقافة وتراث", interestFamily: "وقت عائلي", interestStay: "إقامة عملية", timeShort: "أقل من ساعتين", timeHalf: "نصف يوم", timeFull: "يوم كامل", familyAny: "لا تفضيل", familyYes: "نعم", budgetAny: "لا تفضيل", budgetLow: "أفكار أقل تكلفة", budgetMid: "متوسط", budgetHigh: "إقامة أعلى سعراً", assistantNoMatch: "جرّب مجموعة مختلفة. يوصي هذا الدليل المحلي فقط بالأماكن الموجودة في كتالوجه المنسق.", assistantOpenPlace: "عرض على الخريطة", assistantLocalNotice: "تأتي التوصيات من كتالوج هذا الدليل المحلي، وليست من بيانات حجز مباشرة.",
       mapLabel: "مستكشف الخريطة", mapPromptTitle: "اختر فئة لاستكشاف الأماكن.", mapPrompt: "تظهر نظرة عامة على أبها. اختر مساراً لإظهار أماكنه.", browsePlaces: "تصفح الأماكن كقائمة",
       mealFilterLegend: "اختر الوجبة", mealFilterDescription: "تعرض فلاتر الوجبات فقط أدلة الخدمة الخاصة بالمكان والمسجلة في هذا الدليل.", mealFilterLabel: "فلاتر وجبات المطاعم", mealAll: "الكل", mealBreakfast: "الإفطار", mealLunch: "الغداء", mealDinner: "العشاء", foodRouteStatus: "تظهر {count} أماكن للطعام. اختر علامة أو عنصراً من القائمة.", noVerifiedMealPlaces: "لا توجد أماكن {meal} موثقة في هذا الدليل حتى الآن. لا تُستنتج الوجبات من نوع المكان أو بيانات الموقع.", returnToAll: "عرض جميع أماكن الطعام",
+      stayFilterLegend: "اختر تصنيف الإقامة", stayFilterDescription: "تعرض فلاتر النجوم فقط المنشآت ذات التصنيف المسجل مع مصدر مستقل.", stayFilterLabel: "فلاتر نجوم الفنادق", stayAll: "جميع الإقامات", stay3Stars: "3 نجوم", stay4Stars: "4 نجوم", stay5Stars: "5 نجوم", staysRouteStatus: "تظهر {count} إقامات. اختر علامة أو عنصراً من القائمة.", noVerifiedStarStays: "لا توجد إقامات بتصنيف {stars} نجوم متحقق منه في هذا الدليل بعد. لا يُستنتج التصنيف من اسم المنشأة أو العلامة التجارية أو سجل الخريطة.", stayEmptyTitle: "لا توجد نتائج بتصنيف إقامة متحقق منه بعد", returnToAllStays: "عرض جميع الإقامات", ratingNotVerified: "تصنيف النجوم غير متحقق منه",
+      noVerifiedHotelMeal: "لا تتوفر في هذا الدليل حتى الآن معلومات موثقة عن وجبة {meal} في فندق مرتبط.",
       initialCardTitle: "اختر مكاناً عندما تكون مستعداً", initialCardDescription: "اختر فئة، ثم حدد علامة على الخريطة أو مكاناً من القائمة المناسبة للوحة المفاتيح.", routeReadyTitle: "مسارك جاهز", routeReadyDescription: "اختر علامة أو مكاناً من القائمة لرؤية قصته وصورته ورابط الخريطة.", mealEmptyTitle: "لا توجد نتائج وجبات موثقة بعد", mealEmptyDescription: "لا يستنتج هذا الدليل خدمة الوجبات. عُد إلى جميع أماكن الطعام لتصفح المقاهي والمطاعم المحددة على الخريطة.",
       selectedPlace: "المكان المحدد: {place}", placesShown: "{count} أماكن في هذا المسار", routeReadyStatus: "تظهر {count} أماكن. اختر علامة أو عنصراً من القائمة.", noPlaces: "لا توجد أماكن متاحة في هذا المسار بعد.", chooseCategoryList: "اختر فئة لعرض أماكنها.",
       accessibleListEyebrow: "قائمة وليست خريطة فقط", accessibleListTitle: "أماكن في هذا المسار", accessibleListDescription: "استخدم هذه القائمة المناسبة للوحة المفاتيح لاختيار مكان.",
@@ -55,6 +59,7 @@
   let language = localStorage.getItem("abha-language") || "en";
   let activeCategory = null;
   let activeFoodMeal = "all";
+  let activeStayStar = "all";
   let activePlace = null;
   let markers = [];
 
@@ -69,6 +74,8 @@
   const assistantForm = document.querySelector("#assistant-form");
   const assistantResults = document.querySelector("#assistant-results");
   const mealFilter = document.querySelector("#meal-filter");
+  const mealStayContext = document.querySelector("#meal-stay-context");
+  const stayFilter = document.querySelector("#stay-filter");
 
   const map = L.map("map", { scrollWheelZoom: false, zoomControl: false, attributionControl: false }).setView(defaultCenter, 10);
   const zoomControl = L.control.zoom({ position: "topleft" }).addTo(map);
@@ -91,13 +98,35 @@
   function hasMealEvidence(place, meal) {
     return Boolean(place.mealPeriodIds?.includes(meal) && place.mealPeriodEvidence?.[meal]?.source && place.mealPeriodEvidence?.[meal]?.checkedAt);
   }
+  function hasVerifiedStarRating(place, stars) {
+    return Boolean(
+      place.starRating === Number(stars) &&
+      place.starRatingEvidence?.source &&
+      place.starRatingEvidence?.checkedAt
+    );
+  }
   function routePlaces() {
     if (!activeCategory) return [];
     const categoryPlaces = window.PLACES.filter((place) => place.category === activeCategory);
-    if (activeCategory !== "food" || activeFoodMeal === "all") return categoryPlaces;
-    return categoryPlaces.filter((place) => hasMealEvidence(place, activeFoodMeal));
+    if (activeCategory === "food" && activeFoodMeal !== "all") {
+      return categoryPlaces.filter((place) => hasMealEvidence(place, activeFoodMeal));
+    }
+    if (activeCategory === "stays" && activeStayStar !== "all") {
+      return categoryPlaces.filter((place) => hasVerifiedStarRating(place, activeStayStar));
+    }
+    return categoryPlaces;
   }
   function isMealEmptyState() { return activeCategory === "food" && activeFoodMeal !== "all" && !routePlaces().length; }
+  function isStayEmptyState() { return activeCategory === "stays" && activeStayStar !== "all" && !routePlaces().length; }
+  function updateMealStayContext() {
+    const visible = activeCategory === "food" && activeFoodMeal !== "all";
+    mealStayContext.hidden = !visible;
+    if (!visible) {
+      mealStayContext.textContent = "";
+      return;
+    }
+    mealStayContext.textContent = text("noVerifiedHotelMeal").replace("{meal}", activeMealLabel());
+  }
   function updateMealFilter() {
     const visible = activeCategory === "food";
     mealFilter.hidden = !visible;
@@ -107,7 +136,17 @@
       button.setAttribute("aria-pressed", String(selected));
     });
   }
+  function updateStayFilter() {
+    const visible = activeCategory === "stays";
+    stayFilter.hidden = !visible;
+    document.querySelectorAll(".stay-filter-button").forEach((button) => {
+      const selected = button.dataset.star === activeStayStar;
+      button.classList.toggle("is-active", selected);
+      button.setAttribute("aria-pressed", String(selected));
+    });
+  }
   function mealEmptyMessage() { return text("noVerifiedMealPlaces").replace("{meal}", activeMealLabel()); }
+  function stayEmptyMessage() { return text("noVerifiedStarStays").replace("{stars}", activeStayStar); }
 
   function updateThemeButton() {
     const isDark = root.dataset.theme === "dark";
@@ -154,15 +193,19 @@
     placeList.innerHTML = "";
     if (!activeCategory) { placeList.innerHTML = `<p class="list-empty">${text("chooseCategoryList")}</p>`; return; }
     if (!places.length) {
-      if (isMealEmptyState()) {
+      if (isMealEmptyState() || isStayEmptyState()) {
         const message = document.createElement("p");
         message.className = "list-empty";
-        message.textContent = mealEmptyMessage();
+        message.textContent = isMealEmptyState() ? mealEmptyMessage() : stayEmptyMessage();
         const reset = document.createElement("button");
         reset.type = "button";
         reset.className = "list-empty-action";
-        reset.textContent = text("returnToAll");
-        reset.addEventListener("click", () => { activeFoodMeal = "all"; renderCategory(); });
+        reset.textContent = isMealEmptyState() ? text("returnToAll") : text("returnToAllStays");
+        reset.addEventListener("click", () => {
+          if (isMealEmptyState()) activeFoodMeal = "all";
+          else activeStayStar = "all";
+          renderCategory();
+        });
         placeList.append(message, reset);
       } else placeList.innerHTML = `<p class="list-empty">${text("noPlaces")}</p>`;
       return;
@@ -213,18 +256,23 @@
     if (!place) {
       const hasRoute = Boolean(activeCategory);
       const mealEmpty = isMealEmptyState();
+      const stayEmpty = isStayEmptyState();
       placeCard.className = "place-card card-empty";
       placeCard.removeAttribute("tabindex");
       placeCard.removeAttribute("role");
       placeCard.removeAttribute("aria-label");
       placeCard.removeAttribute("aria-describedby");
-      placeCard.innerHTML = `<span class="empty-mark" aria-hidden="true">${hasRoute ? "02" : "01"}</span><h3 id="place-panel-title">${text(mealEmpty ? "mealEmptyTitle" : hasRoute ? "routeReadyTitle" : "initialCardTitle")}</h3><p>${text(mealEmpty ? "mealEmptyDescription" : hasRoute ? "routeReadyDescription" : "initialCardDescription")}</p>`;
-      if (mealEmpty) {
+      placeCard.innerHTML = `<span class="empty-mark" aria-hidden="true">${hasRoute ? "02" : "01"}</span><h3 id="place-panel-title">${text(mealEmpty ? "mealEmptyTitle" : stayEmpty ? "stayEmptyTitle" : hasRoute ? "routeReadyTitle" : "initialCardTitle")}</h3><p>${mealEmpty ? text("mealEmptyDescription") : stayEmpty ? stayEmptyMessage() : text(hasRoute ? "routeReadyDescription" : "initialCardDescription")}</p>`;
+      if (mealEmpty || stayEmpty) {
         const reset = document.createElement("button");
         reset.type = "button";
         reset.className = "list-empty-action";
-        reset.textContent = text("returnToAll");
-        reset.addEventListener("click", () => { activeFoodMeal = "all"; renderCategory(); });
+        reset.textContent = mealEmpty ? text("returnToAll") : text("returnToAllStays");
+        reset.addEventListener("click", () => {
+          if (mealEmpty) activeFoodMeal = "all";
+          else activeStayStar = "all";
+          renderCategory();
+        });
         placeCard.append(reset);
       }
       return;
@@ -250,7 +298,10 @@
     media.append(renderImage(place, updateFallbackState), badge);
     const tags = (place.tagIds || []).map(tagName).map((label) => `<span>${label}</span>`).join("");
     const statusLabel = place.needsConfirmation ? text("needsConfirmation") : text("verifiedLocation");
-    body.innerHTML = `<span class="visually-hidden" id="place-card-focus-hint">${text("cardFocusHint")}</span><div class="card-kicker"><span class="category-tag">${categoryName(place.category)}</span><span class="confirmation-tag${place.needsConfirmation ? "" : " is-verified"}">${statusLabel}</span></div><h3 id="place-panel-title">${placeText(place, "name")}</h3><p>${placeText(place, "description")}</p>${tags ? `<div class="tag-group"><strong>${text("tagsLabel")}:</strong>${tags}</div>` : ""}`;
+    const ratingLabel = place.category === "stays"
+      ? `<span class="confirmation-tag${hasVerifiedStarRating(place, place.starRating) ? " is-verified" : ""}">${hasVerifiedStarRating(place, place.starRating) ? `${place.starRating} ${text("stay5Stars").replace("5 ", "")}` : text("ratingNotVerified")}</span>`
+      : `<span class="confirmation-tag${place.needsConfirmation ? "" : " is-verified"}">${statusLabel}</span>`;
+    body.innerHTML = `<span class="visually-hidden" id="place-card-focus-hint">${text("cardFocusHint")}</span><div class="card-kicker"><span class="category-tag">${categoryName(place.category)}</span>${ratingLabel}</div><h3 id="place-panel-title">${placeText(place, "name")}</h3><p>${placeText(place, "description")}</p>${tags ? `<div class="tag-group"><strong>${text("tagsLabel")}:</strong>${tags}</div>` : ""}`;
     body.append(provenance);
     const source = document.createElement("small");
     source.className = "card-source";
@@ -274,7 +325,7 @@
     renderCard(place);
     updateMarkerSelection();
     renderList(routePlaces());
-    const routeStatus = activeCategory === "food" ? text("foodRouteStatus") : text("routeReadyStatus");
+    const routeStatus = activeCategory === "food" ? text("foodRouteStatus") : activeCategory === "stays" ? text("staysRouteStatus") : text("routeReadyStatus");
     mapStatus.textContent = `${routeStatus.replace("{count}", routePlaces().length)} · ${text("selectedPlace").replace("{place}", placeText(place, "name"))}`;
     if (reducedMotion()) map.setView(place.coordinates, 14);
     else map.flyTo(place.coordinates, 14, { duration: 0.45 });
@@ -290,7 +341,10 @@
       button.setAttribute("aria-pressed", String(selected));
     });
     if (activeCategory !== "food") activeFoodMeal = "all";
+    if (activeCategory !== "stays") activeStayStar = "all";
     updateMealFilter();
+    updateMealStayContext();
+    updateStayFilter();
     if (!activeCategory) {
       mapPrompt.hidden = false;
       activePlace = null;
@@ -315,9 +369,9 @@
     } else map.setView(defaultCenter, 10, { animate: !reducedMotion() });
     renderCard(activePlace);
     renderList(selectedPlaces);
-    if (!selectedPlaces.length) mapStatus.textContent = isMealEmptyState() ? mealEmptyMessage() : text("noPlaces");
+    if (!selectedPlaces.length) mapStatus.textContent = isMealEmptyState() ? mealEmptyMessage() : isStayEmptyState() ? stayEmptyMessage() : text("noPlaces");
     else {
-      const routeStatus = activeCategory === "food" ? text("foodRouteStatus") : text("routeReadyStatus");
+      const routeStatus = activeCategory === "food" ? text("foodRouteStatus") : activeCategory === "stays" ? text("staysRouteStatus") : text("routeReadyStatus");
       mapStatus.textContent = activePlace
         ? `${routeStatus.replace("{count}", selectedPlaces.length)} · ${text("selectedPlace").replace("{place}", placeText(activePlace, "name"))}`
         : routeStatus.replace("{count}", selectedPlaces.length);
@@ -382,6 +436,12 @@
   document.querySelectorAll(".meal-filter-button").forEach((button) => {
     button.addEventListener("click", () => {
       activeFoodMeal = button.dataset.meal;
+      renderCategory();
+    });
+  });
+  document.querySelectorAll(".stay-filter-button").forEach((button) => {
+    button.addEventListener("click", () => {
+      activeStayStar = button.dataset.star;
       renderCategory();
     });
   });

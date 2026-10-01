@@ -12,9 +12,19 @@ Selecting **Restaurants & Cafés / مطاعم ومقاهٍ** reveals a second fi
 
 Meal labels are evidence-gated: this guide adds Breakfast, Lunch, or Dinner only when it has a venue-specific meal-service source and review date. A location record alone does not establish meal service. At present, **All** contains Towns Talk Coffee, Fit Kitchen, Carlito, Kudu — Abha, Raha café, and Herfy 323; **Breakfast**, **Lunch**, and **Dinner** intentionally have no evidence-backed assignments. Their empty state explains this and offers a one-click return to All.
 
+### Hotels & Stays star filter
+
+Selecting **Hotels & Stays / إقامات وفنادق** reveals **All Stays, 3 Stars, 4 Stars, and 5 Stars / جميع الإقامات، 3 نجوم، 4 نجوم، و5 نجوم**. A star filter includes a property only when this local catalog records a separate source and review date for that property’s classification.
+
+At present, Citadines Abha, Abha Palace Hotel, and InterContinental Al Soudah are shown only in **All Stays** and each card says **Rating not verified / تصنيف النجوم غير متحقق منه**. The 3-, 4-, and 5-star views intentionally have a clear empty state with a return action; the guide does not infer ratings from property names, brands, or map records.
+
+### Hotel meals
+
+Breakfast, Lunch, and Dinner remain venue-evidence filters. When a selected meal has no separately verified connection to a hotel stay, the guide shows the truthful unavailable note rather than a hotel link. Current links are intentionally: Breakfast → none, Lunch → none, Dinner → none.
+
 ## Manual browser checks
 
-Use the local-server command below, then verify the page at **390px** and **1440px** in English LTR and Arabic RTL, in both light and dark mode. Confirm there is no horizontal scrolling; the map opens without markers; Food → All shows the six named records; each meal filter shows the truthful empty state and return action; card/list/marker selection stays synchronized; and Google Maps links, language, theme, RTL, and the Curated Visitor Assistant remain functional.
+Use the local-server command below, then verify the page at **390px** and **1440px** in English LTR and Arabic RTL, in both light and dark mode. Confirm there is no horizontal scrolling; the map opens without markers; Food → All shows the six named records; each meal filter shows the truthful empty state, hotel-meal unavailable note, and return action; Hotels & Stays → All shows the three unverified records; each star filter shows the truthful empty state and return action; card/list/marker selection stays synchronized; and Google Maps links, language, theme, RTL, and the Curated Visitor Assistant remain functional.
 
 
 ## Run it
@@ -75,6 +85,8 @@ The hero uses a local copy of **Al Sowda Hill top 04** by **Irshadpp**, from Wik
 ### User-supplied decorative assets
 
 `images/al-qatt-aseeri-pattern.jpg` and `images/soft-cloud-layer.jpg` are unchanged visual files supplied for this guide. The pattern appears only as low-opacity, clipped edge decoration around the hero, category area, and travel notes; the cloud layer replaces the former geometric cloud shapes. Neither file is placed over the interactive map or controls. No creator, licence, or ownership claim is made beyond the supplied-file record.
+
+A second decorative replacement is intentionally pending true transparent-source files (PNG, alpha-enabled WebP, or SVG). The available supplied JPEG files cannot contain an alpha channel, so the guide does not misrepresent them as transparent assets or alter their pixels to simulate transparency.
 
 The full local-file, source, creator, licence, and derivative ledger is in [`images/credits.md`](images/credits.md).
 

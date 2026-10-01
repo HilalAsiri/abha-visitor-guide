@@ -26,6 +26,8 @@ All imagery loaded by the guide is stored inside this repository. The website do
 
 Both files are decorative only, have no interactive role, and are deliberately excluded from the Leaflet map frame, map controls, attribution, markers, tooltips, and popups.
 
+A later requested replacement is pending actual transparent-source files. JPEG cannot encode an alpha channel, so the supplied JPEG candidates are not documented or used as transparent-background assets, and their baked pixels are not altered to imitate transparency.
+
 ## Original interface decoration
 
 The mountain, crossed-band, diamond, and mist treatment is drawn with local CSS and inline SVG only. It is an original Aseeri-inspired visual system, not a copy, trace, or reproduction of any reference artwork, text, or creator handle. The Al-Qatt pattern and natural cloud image are excluded from this original-CSS claim.

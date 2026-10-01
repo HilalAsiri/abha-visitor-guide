@@ -103,6 +103,18 @@
           <button type="button" class="meal-filter-button" data-meal="dinner" aria-pressed="false" data-i18n="mealDinner">Dinner</button>
         </div>
       </fieldset>
+      <div class="meal-stay-context" id="meal-stay-context" hidden role="status" aria-live="polite"></div>
+
+      <fieldset class="stay-filter" id="stay-filter" hidden aria-describedby="stay-filter-description">
+        <legend data-i18n="stayFilterLegend">Choose a stay rating</legend>
+        <p id="stay-filter-description" data-i18n="stayFilterDescription">Star filters include only properties with a separately recorded, source-backed classification.</p>
+        <div class="stay-filter-buttons" role="group" data-i18n-aria="stayFilterLabel" aria-label="Hotel star filters">
+          <button type="button" class="stay-filter-button is-active" data-star="all" aria-pressed="true" data-i18n="stayAll">All Stays</button>
+          <button type="button" class="stay-filter-button" data-star="3" aria-pressed="false" data-i18n="stay3Stars">3 Stars</button>
+          <button type="button" class="stay-filter-button" data-star="4" aria-pressed="false" data-i18n="stay4Stars">4 Stars</button>
+          <button type="button" class="stay-filter-button" data-star="5" aria-pressed="false" data-i18n="stay5Stars">5 Stars</button>
+        </div>
+      </fieldset>
 
       <div class="map-toolbar">
         <div><span class="toolbar-label" data-i18n="mapLabel">Map explorer</span><p id="map-status" role="status" aria-live="polite"></p></div>
