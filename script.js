@@ -11,7 +11,7 @@
       categoryLabel: "Place categories", categoryFood: "Restaurants & Cafés", categoryFoodHint: "A pause for coffee or a meal", categoryNature: "Nature & Views", categoryNatureHint: "Highlands, parks, and outlooks",
       categoryHeritage: "Heritage & Culture", categoryHeritageHint: "Stories in stone and color", categoryFamily: "Family Activities", categoryFamilyHint: "Easy stops for everyone", categoryStays: "Hotels & Stays", categoryStaysHint: "A practical base for your visit",
       assistantEyebrow: "Plan with the local guide", assistantTitle: "Curated Visitor Assistant", assistantDescription: "Choose what matters and receive a local catalog recommendation. It does not use live booking, traffic, or opening-hour data.", assistantInterest: "What interests you?", assistantTime: "Time available", assistantFamily: "Travelling with family?", assistantBudget: "Budget", assistantSubmit: "Suggest places", assistantReset: "Clear", interestViews: "Mountain views", interestCulture: "Culture & heritage", interestFamily: "Family time", interestStay: "A practical stay", timeShort: "Under 2 hours", timeHalf: "Half a day", timeFull: "A full day", familyAny: "No preference", familyYes: "Yes", budgetAny: "No preference", budgetLow: "Lower-cost ideas", budgetMid: "Mid-range", budgetHigh: "Higher-end stay", assistantNoMatch: "Try another combination. This local guide only recommends places in its curated catalog.", assistantOpenPlace: "Show on map", assistantLocalNotice: "Recommendations come from this guide’s local curated catalog, not live booking data.",
-      exploreMapEyebrow: "Explore Abha", exploreMapTitle: "Explore the map", exploreMapDescription: "Choose a route on the Guide, or browse the overview and select a place.", backToGuide: "Back to Guide",
+      exploreMapEyebrow: "Explore Abha", exploreMapTitle: "Explore the map", exploreMapDescription: "Choose a route on the Guide, or browse the overview and select a place.",
       mapLabel: "Map explorer", mapPromptTitle: "Choose a category to explore.", mapPrompt: "The Abha overview is open. Select a route lens to reveal its places.", browsePlaces: "Browse places as a list",
       mealFilterLegend: "Choose a meal", mealFilterDescription: "Meal filters show only venue-specific service evidence recorded in this guide.", mealFilterLabel: "Restaurant meal filters", mealAll: "All", mealBreakfast: "Breakfast", mealLunch: "Lunch", mealDinner: "Dinner", foodRouteStatus: "{count} food places shown. Choose a marker or list item.", noVerifiedMealPlaces: "No verified {meal} places are in this guide yet. Meal periods are not inferred from venue type or location data.", returnToAll: "Show all food places",
       stayFilterLegend: "Choose a stay rating", stayFilterDescription: "Star filters include only properties with a separately recorded, source-backed classification.", stayFilterLabel: "Hotel star filters", stayAll: "All Stays", stay3Stars: "3 Stars", stay4Stars: "4 Stars", stay5Stars: "5 Stars", staysRouteStatus: "{count} stays shown. Choose a marker or list item.", noVerifiedStarStays: "No stays with a verified {stars}-star classification are in this guide yet. Ratings are not inferred from a property name, brand, or map record.", stayEmptyTitle: "No verified stay rating matches yet", returnToAllStays: "Show all stays", ratingNotVerified: "Rating not verified",
@@ -22,8 +22,7 @@
       placeholderImage: "Local illustration", noVerifiedPhoto: "A verified reusable photo is not available for this place yet.", imageFallback: "The local image could not load. This local illustration is shown instead.",
       photoCredit: "Photo credit", modifiedPhoto: "Local derivative", openSource: "View source and licence", locationNote: "Location reference", needsConfirmation: "Area reference — confirm access", verifiedLocation: "Reviewed location", sourceLinks: "Sources", tagsLabel: "What to expect",
       openMaps: "View on Google Maps", opensNewTab: "opens in a new tab", focusPlaceCard: "Focus {place} on the map", cardFocusHint: "Select this card to refocus the map.",
-      notesEyebrow: "Travel thoughtfully", notesTitle: "Good to know before you go", noteOne: "<strong>Coordinate-backed:</strong> Each Google Maps link opens the same coordinate used by this guide.",
-      noteTwo: "<strong>Check ahead:</strong> Confirm times, prices, access, and seasonal availability directly with each place.", noteThree: "<strong>Images with care:</strong> Licensed local photos include visible credits; remaining cards use intentional local illustrations. Google Maps photos are never reused.",
+      notesEyebrow: "Travel thoughtfully", notesTitle: "Good to know before you go", noteOne: "<strong>Coordinate-backed:</strong> Each Google Maps link opens the same coordinate used by this guide.", noteTwo: "<strong>Check ahead:</strong> Confirm times, prices, access, and seasonal availability directly with each place.", noteThree: "<strong>Images with care:</strong> Licensed local photos include visible credits; remaining cards use intentional local illustrations. Google Maps photos are never reused.",
       footerText: "Built for friends discovering Aseer"
     },
     ar: {
@@ -37,7 +36,7 @@
       categoryLabel: "فئات الأماكن", categoryFood: "مطاعم ومقاهٍ", categoryFoodHint: "استراحة لقهوة أو وجبة", categoryNature: "طبيعة وإطلالات", categoryNatureHint: "مرتفعات ومنتزهات ومناظر",
       categoryHeritage: "تراث وثقافة", categoryHeritageHint: "حكايات من الحجر واللون", categoryFamily: "أنشطة عائلية", categoryFamilyHint: "محطات سهلة للجميع", categoryStays: "إقامات وفنادق", categoryStaysHint: "قاعدة عملية لزيارتك",
       assistantEyebrow: "خطط مع الدليل المحلي", assistantTitle: "مساعد الزائر المنسق", assistantDescription: "اختر ما يهمك واحصل على توصية من دليل محلي منسق. لا يستخدم بيانات الحجز أو الحركة أو مواعيد العمل المباشرة.", assistantInterest: "ما الذي يهمك؟", assistantTime: "الوقت المتاح", assistantFamily: "هل تسافر مع العائلة؟", assistantBudget: "الميزانية", assistantSubmit: "اقترح أماكن", assistantReset: "مسح", interestViews: "إطلالات جبلية", interestCulture: "ثقافة وتراث", interestFamily: "وقت عائلي", interestStay: "إقامة عملية", timeShort: "أقل من ساعتين", timeHalf: "نصف يوم", timeFull: "يوم كامل", familyAny: "لا تفضيل", familyYes: "نعم", budgetAny: "لا تفضيل", budgetLow: "أفكار أقل تكلفة", budgetMid: "متوسط", budgetHigh: "إقامة أعلى سعراً", assistantNoMatch: "جرّب مجموعة مختلفة. يوصي هذا الدليل المحلي فقط بالأماكن الموجودة في كتالوجه المنسق.", assistantOpenPlace: "عرض على الخريطة", assistantLocalNotice: "تأتي التوصيات من كتالوج هذا الدليل المحلي، وليست من بيانات حجز مباشرة.",
-      exploreMapEyebrow: "استكشف أبها", exploreMapTitle: "استكشف الخريطة", exploreMapDescription: "اختر مساراً من الدليل، أو تصفح النظرة العامة وحدد مكاناً.", backToGuide: "العودة إلى الدليل",
+      exploreMapEyebrow: "استكشف أبها", exploreMapTitle: "استكشف الخريطة", exploreMapDescription: "اختر مساراً من الدليل، أو تصفح النظرة العامة وحدد مكاناً.",
       mapLabel: "مستكشف الخريطة", mapPromptTitle: "اختر فئة لاستكشاف الأماكن.", mapPrompt: "تظهر نظرة عامة على أبها. اختر مساراً لإظهار أماكنه.", browsePlaces: "تصفح الأماكن كقائمة",
       mealFilterLegend: "اختر الوجبة", mealFilterDescription: "تعرض فلاتر الوجبات فقط أدلة الخدمة الخاصة بالمكان والمسجلة في هذا الدليل.", mealFilterLabel: "فلاتر وجبات المطاعم", mealAll: "الكل", mealBreakfast: "الإفطار", mealLunch: "الغداء", mealDinner: "العشاء", foodRouteStatus: "تظهر {count} أماكن للطعام. اختر علامة أو عنصراً من القائمة.", noVerifiedMealPlaces: "لا توجد أماكن {meal} موثقة في هذا الدليل حتى الآن. لا تُستنتج الوجبات من نوع المكان أو بيانات الموقع.", returnToAll: "عرض جميع أماكن الطعام",
       stayFilterLegend: "اختر تصنيف الإقامة", stayFilterDescription: "تعرض فلاتر النجوم فقط المنشآت ذات التصنيف المسجل مع مصدر مستقل.", stayFilterLabel: "فلاتر نجوم الفنادق", stayAll: "جميع الإقامات", stay3Stars: "3 نجوم", stay4Stars: "4 نجوم", stay5Stars: "5 نجوم", staysRouteStatus: "تظهر {count} إقامات. اختر علامة أو عنصراً من القائمة.", noVerifiedStarStays: "لا توجد إقامات بتصنيف {stars} نجوم متحقق منه في هذا الدليل بعد. لا يُستنتج التصنيف من اسم المنشأة أو العلامة التجارية أو سجل الخريطة.", stayEmptyTitle: "لا توجد نتائج بتصنيف إقامة متحقق منه بعد", returnToAllStays: "عرض جميع الإقامات", ratingNotVerified: "تصنيف النجوم غير متحقق منه",
@@ -48,8 +47,7 @@
       placeholderImage: "رسم توضيحي محلي", noVerifiedPhoto: "لا تتوفر حالياً صورة قابلة لإعادة الاستخدام تم التحقق منها لهذا المكان.", imageFallback: "تعذر تحميل الصورة المحلية، لذلك تظهر هذه الصورة التوضيحية المحلية.",
       photoCredit: "حقوق الصورة", modifiedPhoto: "نسخة محلية مشتقة", openSource: "عرض المصدر والترخيص", locationNote: "مرجع الموقع", needsConfirmation: "مرجع للمنطقة — تحقق من نقطة الدخول", verifiedLocation: "موقع مراجع", sourceLinks: "المصادر", tagsLabel: "ما الذي تتوقعه",
       openMaps: "عرض في خرائط Google", opensNewTab: "يفتح في علامة تبويب جديدة", focusPlaceCard: "ركز {place} على الخريطة", cardFocusHint: "حدد هذه البطاقة لإعادة تركيز الخريطة.",
-      notesEyebrow: "سافر بوعي", notesTitle: "معلومات مفيدة قبل الذهاب", noteOne: "<strong>إحداثية موحدة:</strong> يفتح كل رابط خرائط Google الإحداثية نفسها المستخدمة في هذا الدليل.",
-      noteTwo: "<strong>تحقق مسبقاً:</strong> تأكد من المواعيد والأسعار وإمكانية الدخول والتوفر الموسمي مباشرةً مع كل مكان.", noteThree: "<strong>الصور بعناية:</strong> للصور المحلية المرخصة حقوق واضحة؛ أما البطاقات الأخرى فتستخدم رسوماً محلية مقصودة. لا يعاد استخدام صور خرائط Google.",
+      notesEyebrow: "سافر بوعي", notesTitle: "معلومات مفيدة قبل الذهاب", noteOne: "<strong>إحداثية موحدة:</strong> يفتح كل رابط خرائط Google الإحداثية نفسها المستخدمة في هذا الدليل.", noteTwo: "<strong>تحقق مسبقاً:</strong> تأكد من المواعيد والأسعار وإمكانية الدخول والتوفر الموسمي مباشرةً مع كل مكان.", noteThree: "<strong>الصور بعناية:</strong> للصور المحلية المرخصة حقوق واضحة؛ أما البطاقات الأخرى فتستخدم رسوماً محلية مقصودة. لا يعاد استخدام صور خرائط Google.",
       footerText: "صُمم للأصدقاء الذين يكتشفون عسير"
     }
   };
@@ -59,20 +57,19 @@
   const defaultCenter = [18.2164, 42.5053];
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   let language = localStorage.getItem("abha-language") || "en";
-  let activeView = "guide";
   let activeCategory = null;
   let activeFoodMeal = "all";
   let activeStayStar = "all";
   let activePlace = null;
   let markers = [];
   let pendingPlaceId = null;
-  let pendingFocusTarget = null;
+  let shouldFocusExplore = false;
+  let shouldFocusGuide = false;
 
   const root = document.documentElement;
-  const guideView = document.querySelector("#guide-view");
-  const exploreView = document.querySelector("#explore-view");
+  const exploreSection = document.querySelector("#explore");
   const exploreHeading = document.querySelector("#explore-map-title");
-  const guideHeading = document.querySelector("#explorer-title");
+  const guideHeading = document.querySelector("#intro-title");
   const themeToggle = document.querySelector("#theme-toggle");
   const mapPrompt = document.querySelector("#map-prompt");
   const placeCard = document.querySelector("#place-card");
@@ -108,25 +105,25 @@
 
   function parseRoute() {
     const route = location.hash.replace(/^#/, "");
-    if (!route || route === "guide") return { view: "guide", category: null };
-    if (route === "explore") return { view: "explore", category: null };
+    if (!route || route === "guide") return { target: "guide", category: null };
+    if (route === "explore") return { target: "explore", category: null };
     const match = route.match(/^explore\/([^/]+)$/);
-    if (match && validCategory(match[1])) return { view: "explore", category: match[1] };
-    return { view: "guide", category: null };
+    if (match && validCategory(match[1])) return { target: "explore", category: match[1] };
+    return { target: "guide", category: null };
   }
 
   function routeHash(category = null) { return category ? `#explore/${category}` : "#explore"; }
 
   function navigateToExplore(category = null, options = {}) {
     if (options.placeId) pendingPlaceId = options.placeId;
-    if (options.focus) pendingFocusTarget = "explore";
+    shouldFocusExplore = Boolean(options.focus);
     const nextHash = routeHash(category);
     if (location.hash === nextHash) applyRoute(parseRoute());
     else location.hash = nextHash;
   }
 
   function navigateToGuide(options = {}) {
-    if (options.focus) pendingFocusTarget = "guide";
+    shouldFocusGuide = Boolean(options.focus);
     if (location.hash === "#guide") applyRoute(parseRoute());
     else location.hash = "#guide";
   }
@@ -213,8 +210,7 @@
     document.querySelectorAll("[data-count]").forEach((node) => { node.textContent = String(window.PLACES.filter((place) => place.category === node.dataset.count).length); });
     updateThemeButton();
     updateMapControlDirection();
-    updateCategoryButtons();
-    if (activeView === "explore") renderVisibleMap();
+    renderCategory({ deferViewport: true });
   }
 
   function markerIcon(category, selected = false) {
@@ -358,7 +354,7 @@
   }
 
   function showPlace(place) {
-    if (activeView !== "explore") {
+    if (activeCategory !== place.category) {
       navigateToExplore(place.category, { placeId: place.id, focus: true });
       return;
     }
@@ -375,7 +371,18 @@
     document.querySelector("#place-panel").scrollIntoView({ behavior: reducedMotion() ? "auto" : "smooth", block: "nearest" });
   }
 
-  function renderCategory() {
+  function setMapViewport(places) {
+    if (!activeCategory) {
+      map.setView(defaultCenter, 10, { animate: !reducedMotion() });
+      return;
+    }
+    if (places.length) {
+      const bounds = L.latLngBounds(places.map((place) => place.coordinates));
+      map.fitBounds(bounds, { padding: [40, 40], maxZoom: activeCategory === "heritage" ? 12 : 13, animate: !reducedMotion() });
+    } else map.setView(defaultCenter, 10, { animate: !reducedMotion() });
+  }
+
+  function renderCategory(options = {}) {
     clearMarkers();
     updateCategoryButtons();
     if (activeCategory !== "food") activeFoodMeal = "all";
@@ -389,7 +396,8 @@
       renderCard(null);
       renderList([]);
       mapStatus.textContent = text("mapPrompt");
-      map.setView(defaultCenter, 10, { animate: !reducedMotion() });
+      if (options.deferViewport) window.requestAnimationFrame(() => { map.invalidateSize(); setMapViewport([]); });
+      else setMapViewport([]);
       return;
     }
     mapPrompt.hidden = true;
@@ -401,10 +409,6 @@
       marker.on("click", () => showPlace(place));
       markers.push({ marker, place });
     });
-    if (selectedPlaces.length) {
-      const bounds = L.latLngBounds(selectedPlaces.map((place) => place.coordinates));
-      map.fitBounds(bounds, { padding: [40, 40], maxZoom: activeCategory === "heritage" ? 12 : 13, animate: !reducedMotion() });
-    } else map.setView(defaultCenter, 10, { animate: !reducedMotion() });
     renderCard(activePlace);
     renderList(selectedPlaces);
     if (!selectedPlaces.length) mapStatus.textContent = isMealEmptyState() ? mealEmptyMessage() : isStayEmptyState() ? stayEmptyMessage() : text("noPlaces");
@@ -414,56 +418,46 @@
         ? `${routeStatus.replace("{count}", selectedPlaces.length)} · ${text("selectedPlace").replace("{place}", placeText(activePlace, "name"))}`
         : routeStatus.replace("{count}", selectedPlaces.length);
     }
+    if (options.deferViewport) {
+      window.requestAnimationFrame(() => {
+        map.invalidateSize();
+        setMapViewport(selectedPlaces);
+        revealPendingPlace();
+      });
+    } else setMapViewport(selectedPlaces);
   }
 
-  function renderVisibleMap() {
-    window.requestAnimationFrame(() => {
-      if (activeView !== "explore") return;
-      map.invalidateSize();
-      renderCategory();
-      if (!pendingPlaceId) return;
-      const pendingPlace = window.PLACES.find((place) => place.id === pendingPlaceId && place.category === activeCategory);
-      pendingPlaceId = null;
-      if (pendingPlace) showPlace(pendingPlace);
-    });
-  }
-
-  function resetRouteState() {
-    activeCategory = null;
-    activePlace = null;
-    activeFoodMeal = "all";
-    activeStayStar = "all";
-    updateCategoryButtons();
+  function revealPendingPlace() {
+    if (!pendingPlaceId) return;
+    const pendingPlace = window.PLACES.find((place) => place.id === pendingPlaceId && place.category === activeCategory);
+    pendingPlaceId = null;
+    if (pendingPlace) showPlace(pendingPlace);
   }
 
   function setRouteCategory(category) {
     if (activeCategory === category) return;
-    if (category !== "food" || activeCategory !== "food") activeFoodMeal = "all";
-    if (category !== "stays" || activeCategory !== "stays") activeStayStar = "all";
     activeCategory = category;
+    activeFoodMeal = "all";
+    activeStayStar = "all";
     activePlace = null;
   }
 
-  function moveFocusAfterViewChange(previousView) {
-    const focusTarget = pendingFocusTarget;
-    pendingFocusTarget = null;
-    const movedFromHiddenView = previousView !== activeView && document.activeElement && (activeView === "explore" ? guideView.contains(document.activeElement) : exploreView.contains(document.activeElement));
-    if (!focusTarget && !movedFromHiddenView) return;
-    const target = focusTarget === "explore" || (movedFromHiddenView && activeView === "explore") ? exploreHeading : guideHeading;
-    window.requestAnimationFrame(() => target.focus());
-  }
-
   function applyRoute(route = parseRoute()) {
-    const previousView = activeView;
-    activeView = route.view;
-    guideView.hidden = activeView !== "guide";
-    exploreView.hidden = activeView !== "explore";
-    if (activeView === "guide") {
-      pendingPlaceId = null;
-      resetRouteState();
-    } else setRouteCategory(route.category);
-    moveFocusAfterViewChange(previousView);
-    if (activeView === "explore") renderVisibleMap();
+    setRouteCategory(route.category);
+    renderCategory({ deferViewport: true });
+
+    window.requestAnimationFrame(() => {
+      if (shouldFocusGuide && route.target === "guide") {
+        shouldFocusGuide = false;
+        guideHeading.focus({ preventScroll: true });
+        document.querySelector("#guide").scrollIntoView({ behavior: reducedMotion() ? "auto" : "smooth", block: "start" });
+      }
+      if (shouldFocusExplore && route.target === "explore") {
+        shouldFocusExplore = false;
+        exploreHeading.focus({ preventScroll: true });
+        exploreSection.scrollIntoView({ behavior: reducedMotion() ? "auto" : "smooth", block: "start" });
+      }
+    });
   }
 
   function assistantSelection() {
@@ -512,7 +506,6 @@
     event.preventDefault();
     navigateToGuide({ focus: true });
   });
-  document.querySelector("#back-to-guide").addEventListener("click", () => navigateToGuide({ focus: true }));
   document.querySelector(".browse-link").addEventListener("click", (event) => {
     event.preventDefault();
     document.querySelector("#place-list").scrollIntoView({ behavior: reducedMotion() ? "auto" : "smooth", block: "start" });
@@ -529,12 +522,14 @@
   document.querySelectorAll(".meal-filter-button").forEach((button) => {
     button.addEventListener("click", () => {
       activeFoodMeal = button.dataset.meal;
+      activePlace = null;
       renderCategory();
     });
   });
   document.querySelectorAll(".stay-filter-button").forEach((button) => {
     button.addEventListener("click", () => {
       activeStayStar = button.dataset.star;
+      activePlace = null;
       renderCategory();
     });
   });
@@ -568,7 +563,5 @@
   applyText();
   applyRoute();
   window.addEventListener("hashchange", () => applyRoute());
-  window.addEventListener("resize", () => {
-    if (activeView === "explore") map.invalidateSize();
-  });
+  window.addEventListener("resize", () => map.invalidateSize());
 })();
