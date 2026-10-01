@@ -92,38 +92,16 @@
         </button>
       </div>
 
-      <section class="visitor-assistant" aria-labelledby="assistant-title">
-        <div class="assistant-heading">
-          <p class="eyebrow" data-i18n="assistantEyebrow">Plan with the local guide</p>
-          <h3 id="assistant-title" data-i18n="assistantTitle">Curated Visitor Assistant</h3>
-          <p data-i18n="assistantDescription">Choose what matters and receive a local catalog recommendation. It does not use live booking, traffic, or opening-hour data.</p>
+      <fieldset class="meal-filter" id="meal-filter" hidden aria-describedby="meal-filter-description">
+        <legend data-i18n="mealFilterLegend">Choose a meal</legend>
+        <p id="meal-filter-description" data-i18n="mealFilterDescription">Meal filters show only venue-specific service evidence recorded in this guide.</p>
+        <div class="meal-filter-buttons" role="group" data-i18n-aria="mealFilterLabel" aria-label="Restaurant meal filters">
+          <button type="button" class="meal-filter-button is-active" data-meal="all" aria-pressed="true" data-i18n="mealAll">All</button>
+          <button type="button" class="meal-filter-button" data-meal="breakfast" aria-pressed="false" data-i18n="mealBreakfast">Breakfast</button>
+          <button type="button" class="meal-filter-button" data-meal="lunch" aria-pressed="false" data-i18n="mealLunch">Lunch</button>
+          <button type="button" class="meal-filter-button" data-meal="dinner" aria-pressed="false" data-i18n="mealDinner">Dinner</button>
         </div>
-        <form class="assistant-form" id="assistant-form">
-          <label><span data-i18n="assistantInterest">What interests you?</span><select id="assistant-interest" name="interest">
-            <option value="scenic-view" data-i18n="interestViews">Mountain views</option>
-            <option value="heritage" data-i18n="interestCulture">Culture &amp; heritage</option>
-            <option value="family-friendly" data-i18n="interestFamily">Family time</option>
-            <option value="hotel" data-i18n="interestStay">A practical stay</option>
-          </select></label>
-          <label><span data-i18n="assistantTime">Time available</span><select id="assistant-time" name="time">
-            <option value="short" data-i18n="timeShort">Under 2 hours</option>
-            <option value="half" data-i18n="timeHalf">Half a day</option>
-            <option value="full" data-i18n="timeFull">A full day</option>
-          </select></label>
-          <label><span data-i18n="assistantFamily">Travelling with family?</span><select id="assistant-family" name="family">
-            <option value="any" data-i18n="familyAny">No preference</option>
-            <option value="yes" data-i18n="familyYes">Yes</option>
-          </select></label>
-          <label><span data-i18n="assistantBudget">Budget</span><select id="assistant-budget" name="budget">
-            <option value="any" data-i18n="budgetAny">No preference</option>
-            <option value="low" data-i18n="budgetLow">Lower-cost ideas</option>
-            <option value="mid" data-i18n="budgetMid">Mid-range</option>
-            <option value="high" data-i18n="budgetHigh">Higher-end stay</option>
-          </select></label>
-          <div class="assistant-actions"><button class="assistant-submit" type="submit" data-i18n="assistantSubmit">Suggest places</button><button class="assistant-reset" id="assistant-reset" type="button" data-i18n="assistantReset">Clear</button></div>
-        </form>
-        <div class="assistant-results" id="assistant-results" role="status" aria-live="polite"></div>
-      </section>
+      </fieldset>
 
       <div class="map-toolbar">
         <div><span class="toolbar-label" data-i18n="mapLabel">Map explorer</span><p id="map-status" role="status" aria-live="polite"></p></div>
@@ -156,6 +134,39 @@
           <p data-i18n="accessibleListDescription">Use this keyboard-friendly list to choose a place.</p>
         </div>
         <div class="place-list" id="place-list"></div>
+      </section>
+
+      <section class="visitor-assistant" aria-labelledby="assistant-title">
+        <div class="assistant-heading">
+          <p class="eyebrow" data-i18n="assistantEyebrow">Plan with the local guide</p>
+          <h3 id="assistant-title" data-i18n="assistantTitle">Curated Visitor Assistant</h3>
+          <p data-i18n="assistantDescription">Choose what matters and receive a local catalog recommendation. It does not use live booking, traffic, or opening-hour data.</p>
+        </div>
+        <form class="assistant-form" id="assistant-form">
+          <label><span data-i18n="assistantInterest">What interests you?</span><select id="assistant-interest" name="interest">
+            <option value="scenic-view" data-i18n="interestViews">Mountain views</option>
+            <option value="heritage" data-i18n="interestCulture">Culture &amp; heritage</option>
+            <option value="family-friendly" data-i18n="interestFamily">Family time</option>
+            <option value="hotel" data-i18n="interestStay">A practical stay</option>
+          </select></label>
+          <label><span data-i18n="assistantTime">Time available</span><select id="assistant-time" name="time">
+            <option value="short" data-i18n="timeShort">Under 2 hours</option>
+            <option value="half" data-i18n="timeHalf">Half a day</option>
+            <option value="full" data-i18n="timeFull">A full day</option>
+          </select></label>
+          <label><span data-i18n="assistantFamily">Travelling with family?</span><select id="assistant-family" name="family">
+            <option value="any" data-i18n="familyAny">No preference</option>
+            <option value="yes" data-i18n="familyYes">Yes</option>
+          </select></label>
+          <label><span data-i18n="assistantBudget">Budget</span><select id="assistant-budget" name="budget">
+            <option value="any" data-i18n="budgetAny">No preference</option>
+            <option value="low" data-i18n="budgetLow">Lower-cost ideas</option>
+            <option value="mid" data-i18n="budgetMid">Mid-range</option>
+            <option value="high" data-i18n="budgetHigh">Higher-end stay</option>
+          </select></label>
+          <div class="assistant-actions"><button class="assistant-submit" type="submit" data-i18n="assistantSubmit">Suggest places</button><button class="assistant-reset" id="assistant-reset" type="button" data-i18n="assistantReset">Clear</button></div>
+        </form>
+        <div class="assistant-results" id="assistant-results" role="status" aria-live="polite"></div>
       </section>
     </section>
 

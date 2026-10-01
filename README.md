@@ -4,7 +4,18 @@
 
 A bilingual, mobile-first guide to Abha and nearby Aseer. Choose one of five categories—restaurants and cafés, nature and views, heritage and culture, family activities, or hotels and stays—to reveal that route’s places on a Leaflet and OpenStreetMap map. Select a marker or keyboard-friendly list item, then open the same coordinate in Google Maps.
 
-The map opens immediately to an unselected Abha overview and deliberately shows no place markers until a visitor chooses a category.
+The map appears directly after the category controls, opens immediately to an unselected Abha overview, and deliberately shows no place markers until a visitor chooses a category.
+
+### Restaurants & Cafés meal filter
+
+Selecting **Restaurants & Cafés / مطاعم ومقاهٍ** reveals a second filter: **All, Breakfast, Lunch, and Dinner / الكل، الإفطار، الغداء، والعشاء**. It filters the map markers, accessible list, and selected card together.
+
+Meal labels are evidence-gated: this guide adds Breakfast, Lunch, or Dinner only when it has a venue-specific meal-service source and review date. A location record alone does not establish meal service. At present, **All** contains Towns Talk Coffee, Fit Kitchen, Carlito, Kudu — Abha, Raha café, and Herfy 323; **Breakfast**, **Lunch**, and **Dinner** intentionally have no evidence-backed assignments. Their empty state explains this and offers a one-click return to All.
+
+## Manual browser checks
+
+Use the local-server command below, then verify the page at **390px** and **1440px** in English LTR and Arabic RTL, in both light and dark mode. Confirm there is no horizontal scrolling; the map opens without markers; Food → All shows the six named records; each meal filter shows the truthful empty state and return action; card/list/marker selection stays synchronized; and Google Maps links, language, theme, RTL, and the Curated Visitor Assistant remain functional.
+
 
 ## Run it
 

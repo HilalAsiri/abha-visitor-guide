@@ -12,7 +12,8 @@
       categoryHeritage: "Heritage & Culture", categoryHeritageHint: "Stories in stone and color", categoryFamily: "Family Activities", categoryFamilyHint: "Easy stops for everyone", categoryStays: "Hotels & Stays", categoryStaysHint: "A practical base for your visit",
       assistantEyebrow: "Plan with the local guide", assistantTitle: "Curated Visitor Assistant", assistantDescription: "Choose what matters and receive a local catalog recommendation. It does not use live booking, traffic, or opening-hour data.", assistantInterest: "What interests you?", assistantTime: "Time available", assistantFamily: "Travelling with family?", assistantBudget: "Budget", assistantSubmit: "Suggest places", assistantReset: "Clear", interestViews: "Mountain views", interestCulture: "Culture & heritage", interestFamily: "Family time", interestStay: "A practical stay", timeShort: "Under 2 hours", timeHalf: "Half a day", timeFull: "A full day", familyAny: "No preference", familyYes: "Yes", budgetAny: "No preference", budgetLow: "Lower-cost ideas", budgetMid: "Mid-range", budgetHigh: "Higher-end stay", assistantNoMatch: "Try another combination. This local guide only recommends places in its curated catalog.", assistantOpenPlace: "Show on map", assistantLocalNotice: "Recommendations come from this guide’s local curated catalog, not live booking data.",
       mapLabel: "Map explorer", mapPromptTitle: "Choose a category to explore.", mapPrompt: "The Abha overview is open. Select a route lens to reveal its places.", browsePlaces: "Browse places as a list",
-      initialCardTitle: "Choose a place when you are ready", initialCardDescription: "Select a category, then choose a marker or a place from the keyboard-friendly list.", routeReadyTitle: "Your route is ready", routeReadyDescription: "Choose a marker or place from the list to see its story, image, and map link.",
+      mealFilterLegend: "Choose a meal", mealFilterDescription: "Meal filters show only venue-specific service evidence recorded in this guide.", mealFilterLabel: "Restaurant meal filters", mealAll: "All", mealBreakfast: "Breakfast", mealLunch: "Lunch", mealDinner: "Dinner", foodRouteStatus: "{count} food places shown. Choose a marker or list item.", noVerifiedMealPlaces: "No verified {meal} places are in this guide yet. Meal periods are not inferred from venue type or location data.", returnToAll: "Show all food places",
+      initialCardTitle: "Choose a place when you are ready", initialCardDescription: "Select a category, then choose a marker or a place from the keyboard-friendly list.", routeReadyTitle: "Your route is ready", routeReadyDescription: "Choose a marker or place from the list to see its story, image, and map link.", mealEmptyTitle: "No verified meal matches yet", mealEmptyDescription: "This guide does not infer meal service. Return to all food places to browse the mapped cafés and restaurants.",
       selectedPlace: "Selected: {place}", placesShown: "{count} places in this route", routeReadyStatus: "{count} places shown. Choose a marker or list item.", noPlaces: "No places are available in this route yet.", chooseCategoryList: "Choose a category to view its places.",
       accessibleListEyebrow: "A list, not just a map", accessibleListTitle: "Places in this route", accessibleListDescription: "Use this keyboard-friendly list to choose a place.",
       placeholderImage: "Local illustration", noVerifiedPhoto: "A verified reusable photo is not available for this place yet.", imageFallback: "The local image could not load. This local illustration is shown instead.",
@@ -34,7 +35,8 @@
       categoryHeritage: "تراث وثقافة", categoryHeritageHint: "حكايات من الحجر واللون", categoryFamily: "أنشطة عائلية", categoryFamilyHint: "محطات سهلة للجميع", categoryStays: "إقامات وفنادق", categoryStaysHint: "قاعدة عملية لزيارتك",
       assistantEyebrow: "خطط مع الدليل المحلي", assistantTitle: "مساعد الزائر المنسق", assistantDescription: "اختر ما يهمك واحصل على توصية من دليل محلي منسق. لا يستخدم بيانات الحجز أو الحركة أو مواعيد العمل المباشرة.", assistantInterest: "ما الذي يهمك؟", assistantTime: "الوقت المتاح", assistantFamily: "هل تسافر مع العائلة؟", assistantBudget: "الميزانية", assistantSubmit: "اقترح أماكن", assistantReset: "مسح", interestViews: "إطلالات جبلية", interestCulture: "ثقافة وتراث", interestFamily: "وقت عائلي", interestStay: "إقامة عملية", timeShort: "أقل من ساعتين", timeHalf: "نصف يوم", timeFull: "يوم كامل", familyAny: "لا تفضيل", familyYes: "نعم", budgetAny: "لا تفضيل", budgetLow: "أفكار أقل تكلفة", budgetMid: "متوسط", budgetHigh: "إقامة أعلى سعراً", assistantNoMatch: "جرّب مجموعة مختلفة. يوصي هذا الدليل المحلي فقط بالأماكن الموجودة في كتالوجه المنسق.", assistantOpenPlace: "عرض على الخريطة", assistantLocalNotice: "تأتي التوصيات من كتالوج هذا الدليل المحلي، وليست من بيانات حجز مباشرة.",
       mapLabel: "مستكشف الخريطة", mapPromptTitle: "اختر فئة لاستكشاف الأماكن.", mapPrompt: "تظهر نظرة عامة على أبها. اختر مساراً لإظهار أماكنه.", browsePlaces: "تصفح الأماكن كقائمة",
-      initialCardTitle: "اختر مكاناً عندما تكون مستعداً", initialCardDescription: "اختر فئة، ثم حدد علامة على الخريطة أو مكاناً من القائمة المناسبة للوحة المفاتيح.", routeReadyTitle: "مسارك جاهز", routeReadyDescription: "اختر علامة أو مكاناً من القائمة لرؤية قصته وصورته ورابط الخريطة.",
+      mealFilterLegend: "اختر الوجبة", mealFilterDescription: "تعرض فلاتر الوجبات فقط أدلة الخدمة الخاصة بالمكان والمسجلة في هذا الدليل.", mealFilterLabel: "فلاتر وجبات المطاعم", mealAll: "الكل", mealBreakfast: "الإفطار", mealLunch: "الغداء", mealDinner: "العشاء", foodRouteStatus: "تظهر {count} أماكن للطعام. اختر علامة أو عنصراً من القائمة.", noVerifiedMealPlaces: "لا توجد أماكن {meal} موثقة في هذا الدليل حتى الآن. لا تُستنتج الوجبات من نوع المكان أو بيانات الموقع.", returnToAll: "عرض جميع أماكن الطعام",
+      initialCardTitle: "اختر مكاناً عندما تكون مستعداً", initialCardDescription: "اختر فئة، ثم حدد علامة على الخريطة أو مكاناً من القائمة المناسبة للوحة المفاتيح.", routeReadyTitle: "مسارك جاهز", routeReadyDescription: "اختر علامة أو مكاناً من القائمة لرؤية قصته وصورته ورابط الخريطة.", mealEmptyTitle: "لا توجد نتائج وجبات موثقة بعد", mealEmptyDescription: "لا يستنتج هذا الدليل خدمة الوجبات. عُد إلى جميع أماكن الطعام لتصفح المقاهي والمطاعم المحددة على الخريطة.",
       selectedPlace: "المكان المحدد: {place}", placesShown: "{count} أماكن في هذا المسار", routeReadyStatus: "تظهر {count} أماكن. اختر علامة أو عنصراً من القائمة.", noPlaces: "لا توجد أماكن متاحة في هذا المسار بعد.", chooseCategoryList: "اختر فئة لعرض أماكنها.",
       accessibleListEyebrow: "قائمة وليست خريطة فقط", accessibleListTitle: "أماكن في هذا المسار", accessibleListDescription: "استخدم هذه القائمة المناسبة للوحة المفاتيح لاختيار مكان.",
       placeholderImage: "رسم توضيحي محلي", noVerifiedPhoto: "لا تتوفر حالياً صورة قابلة لإعادة الاستخدام تم التحقق منها لهذا المكان.", imageFallback: "تعذر تحميل الصورة المحلية، لذلك تظهر هذه الصورة التوضيحية المحلية.",
@@ -52,6 +54,7 @@
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   let language = localStorage.getItem("abha-language") || "en";
   let activeCategory = null;
+  let activeFoodMeal = "all";
   let activePlace = null;
   let markers = [];
 
@@ -65,6 +68,7 @@
   const descriptionMeta = document.querySelector('meta[name="description"]');
   const assistantForm = document.querySelector("#assistant-form");
   const assistantResults = document.querySelector("#assistant-results");
+  const mealFilter = document.querySelector("#meal-filter");
 
   const map = L.map("map", { scrollWheelZoom: false, zoomControl: false, attributionControl: false }).setView(defaultCenter, 10);
   const zoomControl = L.control.zoom({ position: "topleft" }).addTo(map);
@@ -83,7 +87,27 @@
   function mapUrl(place) { return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${place.coordinates[0]},${place.coordinates[1]}`)}`; }
   function externalIcon() { return '<svg aria-hidden="true" viewBox="0 0 24 24" focusable="false"><path d="M14 4h6v6M20 4l-9 9M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg>'; }
   function reducedMotion() { return reduceMotion.matches; }
-  function routePlaces() { return window.PLACES.filter((place) => place.category === activeCategory); }
+  function activeMealLabel() { return text(`meal${activeFoodMeal[0].toUpperCase()}${activeFoodMeal.slice(1)}`); }
+  function hasMealEvidence(place, meal) {
+    return Boolean(place.mealPeriodIds?.includes(meal) && place.mealPeriodEvidence?.[meal]?.source && place.mealPeriodEvidence?.[meal]?.checkedAt);
+  }
+  function routePlaces() {
+    if (!activeCategory) return [];
+    const categoryPlaces = window.PLACES.filter((place) => place.category === activeCategory);
+    if (activeCategory !== "food" || activeFoodMeal === "all") return categoryPlaces;
+    return categoryPlaces.filter((place) => hasMealEvidence(place, activeFoodMeal));
+  }
+  function isMealEmptyState() { return activeCategory === "food" && activeFoodMeal !== "all" && !routePlaces().length; }
+  function updateMealFilter() {
+    const visible = activeCategory === "food";
+    mealFilter.hidden = !visible;
+    document.querySelectorAll(".meal-filter-button").forEach((button) => {
+      const selected = button.dataset.meal === activeFoodMeal;
+      button.classList.toggle("is-active", selected);
+      button.setAttribute("aria-pressed", String(selected));
+    });
+  }
+  function mealEmptyMessage() { return text("noVerifiedMealPlaces").replace("{meal}", activeMealLabel()); }
 
   function updateThemeButton() {
     const isDark = root.dataset.theme === "dark";
@@ -127,7 +151,20 @@
   function renderList(places) {
     placeList.innerHTML = "";
     if (!activeCategory) { placeList.innerHTML = `<p class="list-empty">${text("chooseCategoryList")}</p>`; return; }
-    if (!places.length) { placeList.innerHTML = `<p class="list-empty">${text("noPlaces")}</p>`; return; }
+    if (!places.length) {
+      if (isMealEmptyState()) {
+        const message = document.createElement("p");
+        message.className = "list-empty";
+        message.textContent = mealEmptyMessage();
+        const reset = document.createElement("button");
+        reset.type = "button";
+        reset.className = "list-empty-action";
+        reset.textContent = text("returnToAll");
+        reset.addEventListener("click", () => { activeFoodMeal = "all"; renderCategory(); });
+        placeList.append(message, reset);
+      } else placeList.innerHTML = `<p class="list-empty">${text("noPlaces")}</p>`;
+      return;
+    }
     places.forEach((place) => {
       const button = document.createElement("button");
       const selected = activePlace?.id === place.id;
@@ -173,8 +210,17 @@
   function renderCard(place) {
     if (!place) {
       const hasRoute = Boolean(activeCategory);
+      const mealEmpty = isMealEmptyState();
       placeCard.className = "place-card card-empty";
-      placeCard.innerHTML = `<span class="empty-mark" aria-hidden="true">${hasRoute ? "02" : "01"}</span><h3 id="place-panel-title">${text(hasRoute ? "routeReadyTitle" : "initialCardTitle")}</h3><p>${text(hasRoute ? "routeReadyDescription" : "initialCardDescription")}</p>`;
+      placeCard.innerHTML = `<span class="empty-mark" aria-hidden="true">${hasRoute ? "02" : "01"}</span><h3 id="place-panel-title">${text(mealEmpty ? "mealEmptyTitle" : hasRoute ? "routeReadyTitle" : "initialCardTitle")}</h3><p>${text(mealEmpty ? "mealEmptyDescription" : hasRoute ? "routeReadyDescription" : "initialCardDescription")}</p>`;
+      if (mealEmpty) {
+        const reset = document.createElement("button");
+        reset.type = "button";
+        reset.className = "list-empty-action";
+        reset.textContent = text("returnToAll");
+        reset.addEventListener("click", () => { activeFoodMeal = "all"; renderCategory(); });
+        placeCard.append(reset);
+      }
       return;
     }
     placeCard.className = "place-card";
@@ -213,11 +259,13 @@
   }
 
   function showPlace(place, panMap) {
+    if (!routePlaces().some((item) => item.id === place.id)) return;
     activePlace = place;
     renderCard(place);
     updateMarkerSelection();
     renderList(routePlaces());
-    mapStatus.textContent = `${text("placesShown").replace("{count}", routePlaces().length)} · ${text("selectedPlace").replace("{place}", placeText(place, "name"))}`;
+    const routeStatus = activeCategory === "food" ? text("foodRouteStatus") : text("routeReadyStatus");
+    mapStatus.textContent = `${routeStatus.replace("{count}", routePlaces().length)} · ${text("selectedPlace").replace("{place}", placeText(place, "name"))}`;
     if (panMap) {
       if (reducedMotion()) map.setView(place.coordinates, 14);
       else map.flyTo(place.coordinates, 14, { duration: 0.45 });
@@ -233,6 +281,8 @@
       button.classList.toggle("is-active", selected);
       button.setAttribute("aria-pressed", String(selected));
     });
+    if (activeCategory !== "food") activeFoodMeal = "all";
+    updateMealFilter();
     if (!activeCategory) {
       mapPrompt.hidden = false;
       activePlace = null;
@@ -244,18 +294,26 @@
     }
     mapPrompt.hidden = true;
     const selectedPlaces = routePlaces();
-    activePlace = null;
+    if (activePlace && !selectedPlaces.some((place) => place.id === activePlace.id)) activePlace = null;
     selectedPlaces.forEach((place) => {
-      const marker = L.marker(place.coordinates, { icon: markerIcon(place.category), title: placeText(place, "name"), keyboard: true }).addTo(map);
+      const marker = L.marker(place.coordinates, { icon: markerIcon(place.category, activePlace?.id === place.id), title: placeText(place, "name"), keyboard: true }).addTo(map);
       marker.bindTooltip(placeText(place, "name"), { direction: "top", offset: [0, -37] });
       marker.on("click", () => showPlace(place, false));
       markers.push({ marker, place });
     });
-    const bounds = L.latLngBounds(selectedPlaces.map((place) => place.coordinates));
-    if (selectedPlaces.length) map.fitBounds(bounds, { padding: [40, 40], maxZoom: activeCategory === "heritage" ? 12 : 13, animate: !reducedMotion() });
-    renderCard(null);
+    if (selectedPlaces.length) {
+      const bounds = L.latLngBounds(selectedPlaces.map((place) => place.coordinates));
+      map.fitBounds(bounds, { padding: [40, 40], maxZoom: activeCategory === "heritage" ? 12 : 13, animate: !reducedMotion() });
+    } else map.setView(defaultCenter, 10, { animate: !reducedMotion() });
+    renderCard(activePlace);
     renderList(selectedPlaces);
-    mapStatus.textContent = selectedPlaces.length ? text("routeReadyStatus").replace("{count}", selectedPlaces.length) : text("noPlaces");
+    if (!selectedPlaces.length) mapStatus.textContent = isMealEmptyState() ? mealEmptyMessage() : text("noPlaces");
+    else {
+      const routeStatus = activeCategory === "food" ? text("foodRouteStatus") : text("routeReadyStatus");
+      mapStatus.textContent = activePlace
+        ? `${routeStatus.replace("{count}", selectedPlaces.length)} · ${text("selectedPlace").replace("{place}", placeText(activePlace, "name"))}`
+        : routeStatus.replace("{count}", selectedPlaces.length);
+    }
   }
 
   function assistantSelection() {
@@ -294,10 +352,19 @@
 
   document.querySelectorAll(".category-button").forEach((button) => {
     button.addEventListener("click", () => {
-      activeCategory = activeCategory === button.dataset.category ? null : button.dataset.category;
+      const nextCategory = activeCategory === button.dataset.category ? null : button.dataset.category;
+      if (nextCategory !== "food") activeFoodMeal = "all";
+      else if (activeCategory !== "food") activeFoodMeal = "all";
+      activeCategory = nextCategory;
       activePlace = null;
       renderCategory();
       document.querySelector("#explore").scrollIntoView({ behavior: reducedMotion() ? "auto" : "smooth", block: "start" });
+    });
+  });
+  document.querySelectorAll(".meal-filter-button").forEach((button) => {
+    button.addEventListener("click", () => {
+      activeFoodMeal = button.dataset.meal;
+      renderCategory();
     });
   });
   document.querySelectorAll(".language-button").forEach((button) => button.addEventListener("click", () => { language = button.dataset.language; localStorage.setItem("abha-language", language); applyText(); }));
