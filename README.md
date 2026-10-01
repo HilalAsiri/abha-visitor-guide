@@ -82,14 +82,6 @@ The hero uses a local copy of **Al Sowda Hill top 04** by **Irshadpp**, from Wik
 - **Shamsan Castle** — Heritage Commission, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 - **Abha Dam Lake** — Aiman ALhaddad, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
 
-### User-supplied decorative assets
-
-`images/al-qatt-aseeri-pattern.jpg` and `images/abha-cloud-layer.jpg` are unchanged visual files supplied for this guide. The pattern appears only as low-opacity, clipped edge decoration around the hero, category area, map transition, and travel notes. The cloud layer appears behind the hero, category atmosphere, and compact route-to-map transition; it is never placed over the interactive map or controls.
-
-The cloud asset is a JPEG, so it has no transparent background. Its source pixels remain unchanged; CSS masks and low opacity only soften the rendered edges so the white source background does not create a hard rectangular boundary. No creator, licence, or ownership claim is made beyond the supplied-file record.
-
-The compact route-to-map transition says “Choose your route, then explore Abha on the map.” / “اختر مسارك، ثم استكشف أبها على الخريطة.” It is decorative and noninteractive, stays outside the Leaflet map frame, and respects the page’s RTL, dark-mode, and reduced-motion behavior.
-
 The full local-file, source, creator, licence, and derivative ledger is in [`images/credits.md`](images/credits.md).
 
 All other place cards—including Hotels & Stays—use clearly labelled, intentional local illustrations until a specific reusable image is verified. These are not failed images.
@@ -102,8 +94,6 @@ This static release has no Google Places API key, billing configuration, Place I
 
 ## Design and accessibility
 
-The interface combines original CSS mountains and geometry with the unchanged, user-supplied Al-Qatt edge asset described above. The supplied pattern is never redrawn, recolored, or presented as original CSS artwork.
-
-The supplied cloud layer replaces the earlier geometric cloud silhouettes. Decorative cloud and mist layers animate only when the browser allows motion. The guide supports English and Arabic, RTL, light/dark theme persistence, visible focus styles, a skip link, an accessible non-map place list, and reduced-motion map/page behavior.
+The interface uses clean semantic surfaces, restrained gradients, borders, and spacing rather than decorative patterns, clouds, mist, or background artwork. The guide supports English and Arabic, RTL, light/dark theme persistence, visible focus styles, a skip link, an accessible non-map place list, and reduced-motion map/page behavior.
 
 Built with Claude Code during the KKU Claude Code hackathon.
