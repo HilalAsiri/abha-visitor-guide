@@ -12,7 +12,7 @@
   <a class="skip-link" href="#explore" data-i18n="skipToMap">Skip to map</a>
 
   <header class="site-header" id="top">
-    <a class="brand" href="#top" data-i18n-aria="brandLabel" aria-label="Abha Field Guide home">
+    <a class="brand" href="#guide" data-i18n-aria="brandLabel" aria-label="Abha Field Guide home">
       <span class="brand-mark" aria-hidden="true">
         <svg viewBox="0 0 32 32" focusable="false"><path d="M3 23 11 11l5 7 4-5 9 10M5 26h22"/><path d="m16 5 3 3-3 3-3-3 3-3Z"/></svg>
       </span>
@@ -20,7 +20,7 @@
     </a>
 
     <div class="header-actions">
-      <div class="language-switcher" data-i18n-aria="languageLabel" aria-label="Language selector">
+      <div class="language-switcher" role="group" data-i18n-aria="languageLabel" aria-label="Language selector">
         <button class="language-button is-active" type="button" data-language="en" aria-pressed="true" aria-label="English">EN</button>
         <button class="language-button" type="button" data-language="ar" aria-pressed="false" aria-label="العربية">ع</button>
       </div>
@@ -32,58 +32,116 @@
   </header>
 
   <main>
-    <section class="intro" aria-labelledby="intro-title">
-      <div class="intro-copy">
-        <p class="eyebrow" data-i18n="eyebrow">Aseer highland field guide</p>
-        <h1 id="intro-title" data-i18n="heroTitle">Discover Abha — Where Clouds Drift Through Green Mountains.</h1>
-        <p data-i18n="heroDescription">A focused map for cloud forests, heritage lanes, good coffee, family stops, and practical stays across Abha and Aseer.</p>
-      </div>
-      <figure class="intro-art">
-        <img src="images/places/al-sowda-hill-top-04.jpg" alt="Green mountain slopes and low clouds at Al Soudah near Abha" data-i18n-alt="heroImageAlt" width="4608" height="2592" data-fallback-src="images/places/abha-hero.jpg">
-        <figcaption><span data-i18n="heroPhotoCredit">Photo: Irshadpp / Wikimedia Commons · CC BY-SA 4.0 · Cropped for layout.</span> <a href="https://commons.wikimedia.org/wiki/File:Al_Sowda_Hill_top_04.jpg" target="_blank" rel="noopener" data-i18n="heroPhotoSource">Source</a></figcaption>
-      </figure>
-      <a class="explore-link" href="#categories">
-        <span data-i18n="startExploring">Explore the map</span>
-        <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false"><path d="M12 4v15m0 0 6-6m-6 6-6-6"/></svg>
-      </a>
+    <section class="app-view guide-view" id="guide-view" aria-labelledby="intro-title">
+      <section class="intro">
+        <div class="intro-copy">
+          <p class="eyebrow" data-i18n="eyebrow">Aseer highland field guide</p>
+          <h1 id="intro-title" tabindex="-1" data-i18n="heroTitle">Discover Abha — Where Clouds Drift Through Green Mountains.</h1>
+          <p data-i18n="heroDescription">A focused map for cloud forests, heritage lanes, good coffee, family stops, and practical stays across Abha and Aseer.</p>
+        </div>
+        <figure class="intro-art">
+          <img src="images/places/al-sowda-hill-top-04.jpg" alt="Green mountain slopes and low clouds at Al Soudah near Abha" data-i18n-alt="heroImageAlt" width="4608" height="2592" data-fallback-src="images/places/abha-hero.jpg">
+          <figcaption><span data-i18n="heroPhotoCredit">Photo: Irshadpp / Wikimedia Commons · CC BY-SA 4.0 · Cropped for layout.</span> <a href="https://commons.wikimedia.org/wiki/File:Al_Sowda_Hill_top_04.jpg" target="_blank" rel="noopener" data-i18n="heroPhotoSource">Source</a></figcaption>
+        </figure>
+        <a class="explore-link" href="#explore">
+          <span data-i18n="startExploring">Explore the map</span>
+          <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false"><path d="M12 4v15m0 0 6-6m-6 6-6-6"/></svg>
+        </a>
+      </section>
+
+      <section class="explorer" aria-labelledby="explorer-title">
+        <div class="explorer-heading">
+          <div>
+            <p class="eyebrow" data-i18n="chooseEyebrow">Choose your day</p>
+            <h2 id="explorer-title" tabindex="-1" data-i18n="categoryTitle">Which side of Abha calls you?</h2>
+          </div>
+          <p class="explorer-note" data-i18n="categoryDescription">Select a route lens to reveal its reviewed places.</p>
+        </div>
+
+        <div class="category-grid" id="categories" role="group" data-i18n-aria="categoryLabel" aria-label="Place categories">
+          <button class="category-button category-food" type="button" data-category="food" aria-pressed="false">
+            <span class="category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M7 3v8m3-8v8M5 7h7m-3 4v10M17 3c2.2 2.4 2.2 6.2 0 8.6V21M14.5 7h5"/></svg></span>
+            <span><span class="category-name" data-i18n="categoryFood">Restaurants &amp; Cafés</span><small data-i18n="categoryFoodHint">A pause for coffee or a meal</small></span>
+            <span class="category-count" data-count="food"></span>
+          </button>
+          <button class="category-button category-nature" type="button" data-category="nature" aria-pressed="false">
+            <span class="category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="m3 18 6-9 3 4 3-6 6 11M3 20h18"/></svg></span>
+            <span><span class="category-name" data-i18n="categoryNature">Nature &amp; Views</span><small data-i18n="categoryNatureHint">Highlands, parks, and outlooks</small></span>
+            <span class="category-count" data-count="nature"></span>
+          </button>
+          <button class="category-button category-heritage" type="button" data-category="heritage" aria-pressed="false">
+            <span class="category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 20V8l8-5 8 5v12M8 20v-5h8v5M8 10h.01M12 10h.01M16 10h.01"/></svg></span>
+            <span><span class="category-name" data-i18n="categoryHeritage">Heritage &amp; Culture</span><small data-i18n="categoryHeritageHint">Stories in stone and color</small></span>
+            <span class="category-count" data-count="heritage"></span>
+          </button>
+          <button class="category-button category-family" type="button" data-category="family" aria-pressed="false">
+            <span class="category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16ZM12 2v4m0 12v4M2 12h4m12 0h4m-4.3-5.7-2.8 2.8m-6.2 6.2-2.8 2.8m0-11.3 2.8 2.8m6.2 6.2 2.8 2.8"/></svg></span>
+            <span><span class="category-name" data-i18n="categoryFamily">Family Activities</span><small data-i18n="categoryFamilyHint">Easy stops for everyone</small></span>
+            <span class="category-count" data-count="family"></span>
+          </button>
+          <button class="category-button category-stays" type="button" data-category="stays" aria-pressed="false">
+            <span class="category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M3 19v-7h18v7M5 12V7h6v5m2 0V9h4a2 2 0 0 1 2 2v1M3 19v2m18-2v2"/></svg></span>
+            <span><span class="category-name" data-i18n="categoryStays">Hotels &amp; Stays</span><small data-i18n="categoryStaysHint">A practical base for your visit</small></span>
+            <span class="category-count" data-count="stays"></span>
+          </button>
+        </div>
+
+        <section class="visitor-assistant" aria-labelledby="assistant-title">
+          <div class="assistant-heading">
+            <p class="eyebrow" data-i18n="assistantEyebrow">Plan with the local guide</p>
+            <h3 id="assistant-title" data-i18n="assistantTitle">Curated Visitor Assistant</h3>
+            <p data-i18n="assistantDescription">Choose what matters and receive a local catalog recommendation. It does not use live booking, traffic, or opening-hour data.</p>
+          </div>
+          <form class="assistant-form" id="assistant-form">
+            <label><span data-i18n="assistantInterest">What interests you?</span><select id="assistant-interest" name="interest">
+              <option value="scenic-view" data-i18n="interestViews">Mountain views</option>
+              <option value="heritage" data-i18n="interestCulture">Culture &amp; heritage</option>
+              <option value="family-friendly" data-i18n="interestFamily">Family time</option>
+              <option value="hotel" data-i18n="interestStay">A practical stay</option>
+            </select></label>
+            <label><span data-i18n="assistantTime">Time available</span><select id="assistant-time" name="time">
+              <option value="short" data-i18n="timeShort">Under 2 hours</option>
+              <option value="half" data-i18n="timeHalf">Half a day</option>
+              <option value="full" data-i18n="timeFull">A full day</option>
+            </select></label>
+            <label><span data-i18n="assistantFamily">Travelling with family?</span><select id="assistant-family" name="family">
+              <option value="any" data-i18n="familyAny">No preference</option>
+              <option value="yes" data-i18n="familyYes">Yes</option>
+            </select></label>
+            <label><span data-i18n="assistantBudget">Budget</span><select id="assistant-budget" name="budget">
+              <option value="any" data-i18n="budgetAny">No preference</option>
+              <option value="low" data-i18n="budgetLow">Lower-cost ideas</option>
+              <option value="mid" data-i18n="budgetMid">Mid-range</option>
+              <option value="high" data-i18n="budgetHigh">Higher-end stay</option>
+            </select></label>
+            <div class="assistant-actions"><button class="assistant-submit" type="submit" data-i18n="assistantSubmit">Suggest places</button><button class="assistant-reset" id="assistant-reset" type="button" data-i18n="assistantReset">Clear</button></div>
+          </form>
+          <div class="assistant-results" id="assistant-results" role="status" aria-live="polite"></div>
+        </section>
+      </section>
+
+      <section class="notes" aria-labelledby="notes-title">
+        <div class="notes-heading">
+          <p class="eyebrow" data-i18n="notesEyebrow">Travel thoughtfully</p>
+          <h2 id="notes-title" data-i18n="notesTitle">Good to know before you go</h2>
+        </div>
+        <div class="notes-grid">
+          <p data-i18n="noteOne"><strong>Exact pin:</strong> Each map link opens the same coordinate used by this guide.</p>
+          <p data-i18n="noteTwo"><strong>Check ahead:</strong> Confirm times, prices, access, and seasonal availability directly with each place.</p>
+          <p data-i18n="noteThree"><strong>Images with care:</strong> Licensed local photos include visible credits; remaining cards use intentional local illustrations. Google Maps photos are never reused.</p>
+        </div>
+      </section>
     </section>
 
-    <section class="explorer" id="explore" aria-labelledby="explorer-title">
-      <div class="explorer-heading">
+    <section class="app-view explore-view" id="explore-view" aria-labelledby="explore-map-title" hidden>
+      <header class="explore-view-header">
+        <button class="back-to-guide" id="back-to-guide" type="button" data-i18n="backToGuide">Back to Guide</button>
         <div>
-          <p class="eyebrow" data-i18n="chooseEyebrow">Choose your day</p>
-          <h2 id="explorer-title" data-i18n="categoryTitle">Which side of Abha calls you?</h2>
+          <p class="eyebrow" data-i18n="exploreMapEyebrow">Explore Abha</p>
+          <h1 id="explore-map-title" tabindex="-1" data-i18n="exploreMapTitle">Explore the map</h1>
+          <p data-i18n="exploreMapDescription">Choose a route on the Guide, or browse the overview and select a place.</p>
         </div>
-        <p class="explorer-note" data-i18n="categoryDescription">Select a route lens to reveal its reviewed places.</p>
-      </div>
-
-      <div class="category-grid" id="categories" role="group" data-i18n-aria="categoryLabel" aria-label="Place categories">
-        <button class="category-button category-food" type="button" data-category="food" aria-pressed="false">
-          <span class="category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M7 3v8m3-8v8M5 7h7m-3 4v10M17 3c2.2 2.4 2.2 6.2 0 8.6V21M14.5 7h5"/></svg></span>
-          <span><span class="category-name" data-i18n="categoryFood">Restaurants &amp; Cafés</span><small data-i18n="categoryFoodHint">A pause for coffee or a meal</small></span>
-          <span class="category-count" data-count="food"></span>
-        </button>
-        <button class="category-button category-nature" type="button" data-category="nature" aria-pressed="false">
-          <span class="category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="m3 18 6-9 3 4 3-6 6 11M3 20h18"/></svg></span>
-          <span><span class="category-name" data-i18n="categoryNature">Nature &amp; Views</span><small data-i18n="categoryNatureHint">Highlands, parks, and outlooks</small></span>
-          <span class="category-count" data-count="nature"></span>
-        </button>
-        <button class="category-button category-heritage" type="button" data-category="heritage" aria-pressed="false">
-          <span class="category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 20V8l8-5 8 5v12M8 20v-5h8v5M8 10h.01M12 10h.01M16 10h.01"/></svg></span>
-          <span><span class="category-name" data-i18n="categoryHeritage">Heritage &amp; Culture</span><small data-i18n="categoryHeritageHint">Stories in stone and color</small></span>
-          <span class="category-count" data-count="heritage"></span>
-        </button>
-        <button class="category-button category-family" type="button" data-category="family" aria-pressed="false">
-          <span class="category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16ZM12 2v4m0 12v4M2 12h4m12 0h4m-4.3-5.7-2.8 2.8m-6.2 6.2-2.8 2.8m0-11.3 2.8 2.8m6.2 6.2 2.8 2.8"/></svg></span>
-          <span><span class="category-name" data-i18n="categoryFamily">Family Activities</span><small data-i18n="categoryFamilyHint">Easy stops for everyone</small></span>
-          <span class="category-count" data-count="family"></span>
-        </button>
-        <button class="category-button category-stays" type="button" data-category="stays" aria-pressed="false">
-          <span class="category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M3 19v-7h18v7M5 12V7h6v5m2 0V9h4a2 2 0 0 1 2 2v1M3 19v2m18-2v2"/></svg></span>
-          <span><span class="category-name" data-i18n="categoryStays">Hotels &amp; Stays</span><small data-i18n="categoryStaysHint">A practical base for your visit</small></span>
-          <span class="category-count" data-count="stays"></span>
-        </button>
-      </div>
+      </header>
 
       <fieldset class="meal-filter" id="meal-filter" hidden aria-describedby="meal-filter-description">
         <legend data-i18n="mealFilterLegend">Choose a meal</legend>
@@ -108,7 +166,6 @@
         </div>
       </fieldset>
 
-
       <div class="map-toolbar">
         <div><span class="toolbar-label" data-i18n="mapLabel">Map explorer</span><p id="map-status" role="status" aria-live="polite"></p></div>
         <a class="browse-link" href="#place-list" data-i18n="browsePlaces">Browse places as a list</a>
@@ -119,12 +176,12 @@
           <div id="map" role="region" data-i18n-aria="mapLabel" aria-label="Interactive map of Abha visitor places" tabindex="0"></div>
           <div class="map-prompt" id="map-prompt">
             <span class="prompt-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="9" r="2.3"/></svg></span>
-            <h3 data-i18n="mapPromptTitle">Choose a category to explore.</h3>
+            <h2 data-i18n="mapPromptTitle">Choose a category to explore.</h2>
             <p data-i18n="mapPrompt">The Abha overview is open. Select a route lens to reveal its places.</p>
           </div>
         </div>
 
-        <aside class="place-panel" id="place-panel" aria-live="polite" aria-labelledby="place-panel-title">
+        <aside class="place-panel" id="place-panel" aria-live="polite" data-i18n-aria="placeDetailsLabel" aria-label="Selected place details">
           <article class="place-card" id="place-card"></article>
         </aside>
       </div>
@@ -133,57 +190,12 @@
         <div class="list-heading">
           <div>
             <p class="eyebrow" data-i18n="accessibleListEyebrow">A list, not just a map</p>
-            <h3 id="place-list-title" data-i18n="accessibleListTitle">Places in this route</h3>
+            <h2 id="place-list-title" data-i18n="accessibleListTitle">Places in this route</h2>
           </div>
           <p data-i18n="accessibleListDescription">Use this keyboard-friendly list to choose a place.</p>
         </div>
         <div class="place-list" id="place-list"></div>
       </section>
-
-      <section class="visitor-assistant" aria-labelledby="assistant-title">
-        <div class="assistant-heading">
-          <p class="eyebrow" data-i18n="assistantEyebrow">Plan with the local guide</p>
-          <h3 id="assistant-title" data-i18n="assistantTitle">Curated Visitor Assistant</h3>
-          <p data-i18n="assistantDescription">Choose what matters and receive a local catalog recommendation. It does not use live booking, traffic, or opening-hour data.</p>
-        </div>
-        <form class="assistant-form" id="assistant-form">
-          <label><span data-i18n="assistantInterest">What interests you?</span><select id="assistant-interest" name="interest">
-            <option value="scenic-view" data-i18n="interestViews">Mountain views</option>
-            <option value="heritage" data-i18n="interestCulture">Culture &amp; heritage</option>
-            <option value="family-friendly" data-i18n="interestFamily">Family time</option>
-            <option value="hotel" data-i18n="interestStay">A practical stay</option>
-          </select></label>
-          <label><span data-i18n="assistantTime">Time available</span><select id="assistant-time" name="time">
-            <option value="short" data-i18n="timeShort">Under 2 hours</option>
-            <option value="half" data-i18n="timeHalf">Half a day</option>
-            <option value="full" data-i18n="timeFull">A full day</option>
-          </select></label>
-          <label><span data-i18n="assistantFamily">Travelling with family?</span><select id="assistant-family" name="family">
-            <option value="any" data-i18n="familyAny">No preference</option>
-            <option value="yes" data-i18n="familyYes">Yes</option>
-          </select></label>
-          <label><span data-i18n="assistantBudget">Budget</span><select id="assistant-budget" name="budget">
-            <option value="any" data-i18n="budgetAny">No preference</option>
-            <option value="low" data-i18n="budgetLow">Lower-cost ideas</option>
-            <option value="mid" data-i18n="budgetMid">Mid-range</option>
-            <option value="high" data-i18n="budgetHigh">Higher-end stay</option>
-          </select></label>
-          <div class="assistant-actions"><button class="assistant-submit" type="submit" data-i18n="assistantSubmit">Suggest places</button><button class="assistant-reset" id="assistant-reset" type="button" data-i18n="assistantReset">Clear</button></div>
-        </form>
-        <div class="assistant-results" id="assistant-results" role="status" aria-live="polite"></div>
-      </section>
-    </section>
-
-    <section class="notes" aria-labelledby="notes-title">
-      <div class="notes-heading">
-        <p class="eyebrow" data-i18n="notesEyebrow">Travel thoughtfully</p>
-        <h2 id="notes-title" data-i18n="notesTitle">Good to know before you go</h2>
-      </div>
-      <div class="notes-grid">
-        <p data-i18n="noteOne"><strong>Exact pin:</strong> Each map link opens the same coordinate used by this guide.</p>
-        <p data-i18n="noteTwo"><strong>Check ahead:</strong> Confirm times, prices, access, and seasonal availability directly with each place.</p>
-        <p data-i18n="noteThree"><strong>Images with care:</strong> Licensed local photos include visible credits; remaining cards use intentional local illustrations. Google Maps photos are never reused.</p>
-      </div>
     </section>
   </main>
 

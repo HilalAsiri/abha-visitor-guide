@@ -2,9 +2,9 @@
 
 ## What it does
 
-A bilingual, mobile-first guide to Abha and nearby Aseer. Choose one of five categories—restaurants and cafés, nature and views, heritage and culture, family activities, or hotels and stays—to reveal that route’s places on a Leaflet and OpenStreetMap map. Select a marker or keyboard-friendly list item, then open the same coordinate in Google Maps.
+A bilingual, mobile-first guide to Abha and nearby Aseer. The **Guide** homepage contains the hero, five category choices, Curated Visitor Assistant, and travel notes. Choose restaurants and cafés, nature and views, heritage and culture, family activities, or hotels and stays to open the dedicated **Explore Map** view with that route’s Leaflet and OpenStreetMap markers, details, filters, and keyboard-friendly place list. Select a marker or list item, then open the same coordinate in Google Maps.
 
-The map appears directly after the category controls, opens immediately to an unselected Abha overview, and deliberately shows no place markers until a visitor chooses a category.
+The static hash router supports `#guide`, `#explore` for an unselected map overview, and category links such as `#explore/food`. A category link survives refresh and can be shared. The Explore Map view includes **Back to Guide**; browser Back and Forward also follow these view/category changes.
 
 ### Restaurants & Cafés meal filter
 
@@ -24,7 +24,7 @@ Breakfast, Lunch, and Dinner remain venue-evidence filters. When a selected meal
 
 ## Manual browser checks
 
-Use the local-server command below, then verify the page at **390px** and **1440px** in English LTR and Arabic RTL, in both light and dark mode. Confirm there is no horizontal scrolling; the map opens without markers; Food → All shows the six named records; each meal filter shows the truthful empty state, hotel-meal unavailable note, and return action; Hotels & Stays → All shows the three unverified records; each star filter shows the truthful empty state and return action; card/list/marker selection stays synchronized; and Google Maps links, language, theme, RTL, and the Curated Visitor Assistant remain functional.
+Use the local-server command below, then verify the page at **390px** and **1440px** in English LTR and Arabic RTL, in both light and dark mode. Start at `#guide`, open a category, then verify browser Back/Forward and **Back to Guide**. Load `#explore` and `#explore/food` directly and refresh each; confirm the map renders at full size after each route transition, with no horizontal scrolling. Confirm Food → All shows the six named records; each meal filter shows the truthful empty state, hotel-meal unavailable note, and return action; Hotels & Stays → All shows the three unverified records; each star filter shows the truthful empty state and return action. Confirm Assistant results open the matching Explore route, card/list/marker selection stays synchronized, and Google Maps links, language, theme, RTL, keyboard focus, and the Curated Visitor Assistant remain functional.
 
 
 ## Run it
