@@ -53,7 +53,16 @@
     { id: "osm-green-mountain", publisher: "OpenStreetMap", title: localized("Green Mountain", "الجبل الأخضر"), url: "https://www.openstreetmap.org/node/11769515876", type: "map-record" },
     { id: "citadines-location", publisher: "Citadines", title: localized("Citadines Abha location", "موقع سيتادينز أبها"), url: "https://www.discoverasr.com/en/citadines/saudi-arabia/citadines-abha/location", type: "official-property" },
     { id: "osm-abha-palace-hotel", publisher: "OpenStreetMap", title: localized("Abha Palace Hotel", "فندق قصر أبها"), url: "https://www.openstreetmap.org/way/1468150306", type: "map-record" },
-    { id: "osm-intercontinental-soudah", publisher: "OpenStreetMap", title: localized("InterContinental Al Soudah", "فندق إنتركونتيننتال السودة"), url: "https://www.openstreetmap.org/relation/16244258", type: "map-record" }
+    { id: "osm-intercontinental-soudah", publisher: "OpenStreetMap", title: localized("InterContinental Al Soudah", "فندق إنتركونتيننتال السودة"), url: "https://www.openstreetmap.org/relation/16244258", type: "map-record" },
+    { id: "google-golden-tulip-abha", publisher: "Google Maps", title: localized("Golden Tulip Abha", "فندق جولدن توليب أبها"), url: "https://maps.app.goo.gl/d1V4ttQ7bDQdFth57", type: "map-record" },
+    { id: "google-sarwat-park-hotel-abha", publisher: "Google Maps", title: localized("Sarwat Park Hotel", "فندق سروات بارك أبها"), url: "https://maps.app.goo.gl/Da8N6aomgnX4HcQJ7", type: "map-record" },
+    { id: "google-boudl-abha", publisher: "Google Maps", title: localized("Boudl Abha", "فندق بودل أبها"), url: "https://maps.app.goo.gl/2uvdrh7rDWP1wbwGA", type: "map-record" },
+    { id: "google-aber-abha", publisher: "Google Maps", title: localized("Aber Abha", "فندق عابر أبها"), url: "https://maps.app.goo.gl/PdCw5pjvtH7GjiMr8", type: "map-record" },
+    { id: "google-best-western-danat-al-mansak", publisher: "Google Maps", title: localized("Best Western Plus Danat Al Mansak Hotel", "فندق بست ويسترن بلس دانة المنسك"), url: "https://maps.app.goo.gl/YimTTjrtNJFa8TwF7", type: "map-record" },
+    { id: "google-shafa-abha-hotel", publisher: "Google Maps", title: localized("Shafa Abha Hotel", "فندق شفا أبها"), url: "https://maps.app.goo.gl/AbEKUA6cGq5HAvKTA", type: "map-record" },
+    { id: "sarwat-park-classification", publisher: "Mada Tourism", title: localized("Sarwat Park Hotel, Abha", "فندق سروات بارك، أبها"), url: "https://www.madatourism.com/en/hotels/sarwat-park-hotel-abha", type: "property-classification" },
+    { id: "aber-abha-classification", publisher: "Aber Hotels", title: localized("Aber Abha Hotel", "فندق عابر أبها"), url: "https://boudl.com/en/hotel/aber-abha-hotel", type: "official-property" },
+    { id: "best-western-danat-al-mansak-classification", publisher: "Best Western", title: localized("Best Western Plus Danat Al Mansak Hotel", "فندق بست ويسترن بلس دانة المنسك"), url: "https://www.bestwestern.com/en_US/book/hotels-in-abha-city/best-western-plus-danat-almansak-hotel/propertyCode.76933.html", type: "official-property" }
   ];
 
   const categories = [
@@ -269,6 +278,36 @@
       id: "intercontinental-al-soudah", category: "stays", coordinates: [18.2706959, 42.3680188], location: { ...location(), locality: "Al Soudah" },
       name: localized("InterContinental Al Soudah", "فندق إنتركونتيننتال السودة"), description: localized("A mapped hotel reference in the Al Soudah area. Confirm its current visitor and booking status directly before routing there.", "مرجع لفندق محدد على الخريطة في منطقة السودة. تحقّق مباشرةً من حالته الحالية للزوار والحجز قبل التوجه إليه."),
       tagIds: ["hotel", "mountain-stay", "scenic-view"], media: stayPlaceholder("Illustrated mountain hotel placeholder", "رسم توضيحي محلي لفندق جبلي"), source: localized("OpenStreetMap map reference", "مرجع خريطة OpenStreetMap"), verification: verified(["osm-intercontinental-soudah"], "medium"), needsConfirmation: true
+    },
+    {
+      id: "golden-tulip-abha", category: "stays", coordinates: [18.2307748, 42.4935476], location: location(), googleMapsUrl: "https://maps.app.goo.gl/d1V4ttQ7bDQdFth57",
+      name: localized("Golden Tulip Abha", "فندق جولدن توليب أبها"), description: localized("A mapped hotel in central Abha. Confirm availability, rates, and current services directly with the property.", "فندق محدد على الخريطة في وسط أبها. تحقّق من التوفر والأسعار والخدمات الحالية مباشرةً مع مكان الإقامة."),
+      tagIds: ["hotel", "city-stay"], media: stayPlaceholder("Illustrated central Abha hotel placeholder", "رسم توضيحي محلي لفندق في وسط أبها"), source: localized("Google Maps hotel listing", "إدراج فندق في خرائط Google"), verification: verified(["google-golden-tulip-abha"])
+    },
+    {
+      id: "sarwat-park-hotel-abha", category: "stays", coordinates: [18.1997482, 42.4973643], location: location(), googleMapsUrl: "https://maps.app.goo.gl/Da8N6aomgnX4HcQJ7", starRating: 4, starRatingEvidence: { source: "sarwat-park-classification", checkedAt },
+      name: localized("Sarwat Park Hotel", "فندق سروات بارك"), description: localized("A mapped hotel in Abha. Confirm availability, rates, and current services directly with the property.", "فندق محدد على الخريطة في أبها. تحقّق من التوفر والأسعار والخدمات الحالية مباشرةً مع مكان الإقامة."),
+      tagIds: ["hotel", "city-stay"], media: stayPlaceholder("Illustrated Abha hotel placeholder", "رسم توضيحي محلي لفندق في أبها"), source: localized("Google Maps hotel listing; classification recorded from a reviewed property source", "إدراج فندق في خرائط Google؛ تم تسجيل التصنيف من مصدر تمت مراجعته"), verification: verified(["google-sarwat-park-hotel-abha", "sarwat-park-classification"])
+    },
+    {
+      id: "boudl-abha", category: "stays", coordinates: [18.2337905, 42.5057447], location: location(), googleMapsUrl: "https://maps.app.goo.gl/2uvdrh7rDWP1wbwGA",
+      name: localized("Boudl Abha", "فندق بودل أبها"), description: localized("A mapped hotel in Abha. Confirm availability, rates, and current services directly with the property.", "فندق محدد على الخريطة في أبها. تحقّق من التوفر والأسعار والخدمات الحالية مباشرةً مع مكان الإقامة."),
+      tagIds: ["hotel", "city-stay"], media: stayPlaceholder("Illustrated Abha hotel placeholder", "رسم توضيحي محلي لفندق في أبها"), source: localized("Google Maps hotel listing", "إدراج فندق في خرائط Google"), verification: verified(["google-boudl-abha"])
+    },
+    {
+      id: "aber-abha", category: "stays", coordinates: [18.2300444, 42.5088418], location: location(), googleMapsUrl: "https://maps.app.goo.gl/PdCw5pjvtH7GjiMr8", starRating: 3, starRatingEvidence: { source: "aber-abha-classification", checkedAt },
+      name: localized("Aber Abha", "فندق عابر أبها"), description: localized("A mapped hotel in Abha. Confirm availability, rates, and current services directly with the property.", "فندق محدد على الخريطة في أبها. تحقّق من التوفر والأسعار والخدمات الحالية مباشرةً مع مكان الإقامة."),
+      tagIds: ["hotel", "city-stay"], media: stayPlaceholder("Illustrated Abha hotel placeholder", "رسم توضيحي محلي لفندق في أبها"), source: localized("Google Maps hotel listing; classification recorded from the operator", "إدراج فندق في خرائط Google؛ تم تسجيل التصنيف من المشغل"), verification: verified(["google-aber-abha", "aber-abha-classification"])
+    },
+    {
+      id: "best-western-plus-danat-al-mansak", category: "stays", coordinates: [18.2332188, 42.5561823], location: location(), googleMapsUrl: "https://maps.app.goo.gl/YimTTjrtNJFa8TwF7", starRating: 4, starRatingEvidence: { source: "best-western-danat-al-mansak-classification", checkedAt },
+      name: localized("Best Western Plus Danat Al Mansak Hotel", "فندق بست ويسترن بلس دانة المنسك"), description: localized("A mapped hotel in Abha. Confirm availability, rates, and current services directly with the property.", "فندق محدد على الخريطة في أبها. تحقّق من التوفر والأسعار والخدمات الحالية مباشرةً مع مكان الإقامة."),
+      tagIds: ["hotel", "city-stay", "airport-access"], media: stayPlaceholder("Illustrated Abha hotel placeholder", "رسم توضيحي محلي لفندق في أبها"), source: localized("Google Maps hotel listing; classification recorded from the operator", "إدراج فندق في خرائط Google؛ تم تسجيل التصنيف من المشغل"), verification: verified(["google-best-western-danat-al-mansak", "best-western-danat-al-mansak-classification"])
+    },
+    {
+      id: "shafa-abha-hotel", category: "stays", coordinates: [18.1950281, 42.5203197], location: location(), googleMapsUrl: "https://maps.app.goo.gl/AbEKUA6cGq5HAvKTA",
+      name: localized("Shafa Abha Hotel", "فندق شفا أبها"), description: localized("A mapped hotel in Abha. Confirm availability, rates, and current services directly with the property.", "فندق محدد على الخريطة في أبها. تحقّق من التوفر والأسعار والخدمات الحالية مباشرةً مع مكان الإقامة."),
+      tagIds: ["hotel", "city-stay"], media: stayPlaceholder("Illustrated Abha hotel placeholder", "رسم توضيحي محلي لفندق في أبها"), source: localized("Google Maps hotel listing", "إدراج فندق في خرائط Google"), verification: verified(["google-shafa-abha-hotel"])
     }
   ];
 
