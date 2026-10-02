@@ -6,7 +6,7 @@
       theme: "Theme", themeLight: "light", themeDark: "dark", switchTheme: "Switch to {theme} mode",
       eyebrow: "Aseer highland field guide", heroTitle: "Discover Abha — Where Clouds Drift Through Green Mountains.",
       heroDescription: "A focused map for cloud forests, heritage lanes, good coffee, family stops, and practical stays across Abha and Aseer.",
-      heroPhotoCredit: "Photo: Irshadpp / Wikimedia Commons · CC BY-SA 4.0 · Cropped for layout.", heroPhotoSource: "Source", heroImageAlt: "Green mountain slopes and low clouds at Al Soudah near Abha",
+      heroPhotoCredit: "Al Sowda Hill top 04 by Irshadpp / Wikimedia Commons · Cropped for layout.", heroPhotoSource: "Source", heroImageAlt: "Green mountain slopes and low clouds at Al Soudah near Abha",
       startExploring: "Explore the map", chooseEyebrow: "Choose your day", categoryTitle: "Which side of Abha calls you?", categoryDescription: "Select a route lens to reveal its reviewed places.",
       categoryLabel: "Place categories", categoryFood: "Restaurants & Cafés", categoryFoodHint: "A pause for coffee or a meal", categoryNature: "Nature & Views", categoryNatureHint: "Highlands, parks, and outlooks",
       categoryHeritage: "Heritage & Culture", categoryHeritageHint: "Stories in stone and color", categoryFamily: "Family Activities", categoryFamilyHint: "Easy stops for everyone", categoryStays: "Hotels & Stays", categoryStaysHint: "A practical base for your visit",
@@ -31,7 +31,7 @@
       theme: "المظهر", themeLight: "الفاتح", themeDark: "الداكن", switchTheme: "التبديل إلى المظهر {theme}",
       eyebrow: "دليل عسير الميداني", heroTitle: "اكتشف أبها — حيث تعانق الغيوم الجبال الخضراء.",
       heroDescription: "خريطة مركزة للغابات الضبابية والأزقة التراثية والمقاهي الجميلة والوجهات العائلية والإقامات العملية في أبها وعسير.",
-      heroPhotoCredit: "الصورة: Irshadpp / ويكيميديا كومنز · CC BY-SA 4.0 · تم اقتصاصها للعرض.", heroPhotoSource: "المصدر", heroImageAlt: "منحدرات جبلية خضراء وغيوم منخفضة في السودة قرب أبها",
+      heroPhotoCredit: "Al Sowda Hill top 04 لـ Irshadpp / ويكيميديا كومنز · تم اقتصاصها للعرض.", heroPhotoSource: "المصدر", heroImageAlt: "منحدرات جبلية خضراء وغيوم منخفضة في السودة قرب أبها",
       startExploring: "استكشف الخريطة", chooseEyebrow: "اختر يومك", categoryTitle: "أي جانب من أبها يناديك؟", categoryDescription: "اختر مساراً لإظهار أماكنه المراجعة.",
       categoryLabel: "فئات الأماكن", categoryFood: "مطاعم ومقاهٍ", categoryFoodHint: "استراحة لقهوة أو وجبة", categoryNature: "طبيعة وإطلالات", categoryNatureHint: "مرتفعات ومنتزهات ومناظر",
       categoryHeritage: "تراث وثقافة", categoryHeritageHint: "حكايات من الحجر واللون", categoryFamily: "أنشطة عائلية", categoryFamilyHint: "محطات سهلة للجميع", categoryStays: "إقامات وفنادق", categoryStaysHint: "قاعدة عملية لزيارتك",
@@ -556,13 +556,6 @@
     renderAssistantResult(curated);
   });
   document.querySelector("#assistant-reset").addEventListener("click", () => { assistantForm.reset(); assistantResults.innerHTML = ""; });
-  document.querySelector(".intro-art img").addEventListener("error", (event) => {
-    const image = event.currentTarget;
-    if (image.dataset.fallbackApplied) return;
-    image.dataset.fallbackApplied = "true";
-    image.src = image.dataset.fallbackSrc;
-  });
-
   const savedTheme = localStorage.getItem("abha-theme");
   root.dataset.theme = savedTheme || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
   applyText();

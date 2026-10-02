@@ -74,7 +74,7 @@ All displayed imagery is loaded from project-local relative paths. The guide doe
 
 ### Active hero image
 
-The hero uses a local copy of **Al Sowda Hill top 04** by **Irshadpp**, from Wikimedia Commons, under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). It depicts green mountain terrain and low cloud around Al Soudah. The visible credit identifies the creator, source, licence, and any responsive crop. `images/places/abha-hero.jpg` remains a local fallback.
+The hero uses a local copy of **Al Sowda Hill top 04** by **Irshadpp**, from Wikimedia Commons, under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). It depicts green mountain terrain and low cloud around Al Soudah. It is used as a responsive full-viewport background, with attribution in the credits line at the bottom of the site footer. That line identifies the title, creator, source, licence, and responsive crop. `images/places/abha-hero.jpg` remains a local fallback.
 
 ### Licensed place photographs
 

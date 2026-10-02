@@ -112,25 +112,29 @@ h3 { font-size: 1.35rem; }
 .theme-icon { width: 1.08rem; height: 1.08rem; color: var(--forest); }
 .theme-label { font-size: .9rem; font-weight: 800; }
 
-.intro, .explorer, .exploration, .support-section, .notes { width: min(1280px, calc(100% - 2rem)); margin-inline: auto; }
+.explorer, .exploration, .support-section, .notes { width: min(1280px, calc(100% - 2rem)); margin-inline: auto; }
 .intro {
+  position: relative;
+  isolation: isolate;
   display: grid;
+  align-content: center;
   gap: 1.4rem;
-  margin-block: 1.1rem 2.35rem;
-  padding: clamp(1.35rem, 4vw, 2.45rem);
-  background: linear-gradient(135deg, var(--surface-solid), var(--surface-soft));
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
+  min-height: calc(100dvh - 4.9rem);
+  margin-block: 0 2.35rem;
+  padding: clamp(1.5rem, 6vw, 5.25rem) max(1rem, calc((100% - 1280px) / 2));
+  color: #fffdf5;
+  background-color: #183b39;
+  background-image: linear-gradient(90deg, rgba(7, 25, 30, .86) 0%, rgba(9, 33, 36, .68) 45%, rgba(9, 33, 36, .38) 100%), url("images/places/al-sowda-hill-top-04.jpg");
+  background-position: center, center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.intro-copy { min-width: 0; }
-.intro .eyebrow { color: var(--forest); }
-.intro-copy > p:not(.eyebrow) { max-width: 42rem; margin: .95rem 0 0; color: var(--muted); font-size: 1.03rem; }
-.intro-art { min-height: 12.4rem; margin: 0; overflow: hidden; background: var(--surface-soft); border: 1px solid var(--line); border-radius: var(--radius); }
-.intro-art img { width: 100%; height: 100%; min-height: 12.4rem; object-fit: cover; }
-.intro-art figcaption { padding: .55rem .7rem; color: var(--muted); background: var(--surface-solid); border-block-start: 1px solid var(--line); font-size: .82rem; font-weight: 700; line-height: 1.4; }
-.intro-art figcaption a { color: var(--forest-deep); font-weight: 800; text-underline-offset: .18em; }
-.explore-link { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 2.85rem; width: fit-content; padding: .62rem 1.05rem; color: var(--on-action); background: var(--action); border: 1px solid var(--action); border-radius: .7rem; font-weight: 850; text-decoration: none; }
+.intro-copy { max-width: 46rem; min-width: 0; }
+html[dir="rtl"] .intro-copy { margin-inline-start: auto; text-align: start; }
+.intro h1 { color: #fffdf5; text-shadow: 0 2px 16px rgba(0, 0, 0, .28); }
+.intro .eyebrow { color: #f5d995; text-shadow: 0 1px 9px rgba(0, 0, 0, .3); }
+.intro-copy > p:not(.eyebrow) { max-width: 42rem; margin: .95rem 0 0; color: rgba(255, 253, 245, .94); font-size: 1.03rem; text-shadow: 0 1px 9px rgba(0, 0, 0, .3); }
+.explore-link { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 2.85rem; width: fit-content; margin-block-start: .35rem; padding: .62rem 1.05rem; color: #173b34; background: #fffdf5; border: 1px solid #fffdf5; border-radius: .7rem; box-shadow: 0 4px 14px rgba(0, 0, 0, .2); font-weight: 850; text-decoration: none; }
 .explore-link svg { width: 1rem; height: 1rem; }
 
 .explorer { margin-block-end: 1.1rem; }
@@ -302,6 +306,7 @@ html[dir="rtl"] .meal-stay-context { border-radius: .6rem 0 0 .6rem; }
 .site-footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .4rem 1rem; padding: 1.35rem max(1rem, calc((100% - 1280px) / 2)); color: color-mix(in srgb, var(--surface-solid) 92%, transparent); background: var(--indigo); font-size: .9rem; font-weight: 650; line-height: 1.5; }
 .site-footer p { margin: 0; }
 .site-footer a { color: var(--surface-solid); text-underline-offset: .2em; }
+.hero-credit { flex-basis: 100%; padding-block-start: .55rem; border-block-start: 1px solid color-mix(in srgb, var(--surface-solid) 30%, transparent); color: color-mix(in srgb, var(--surface-solid) 82%, transparent); font-size: .76rem; font-weight: 600; }
 
 .place-marker { display: grid; width: 2.4rem; height: 2.4rem; place-items: center; color: #fff; background: var(--marker-color, var(--forest)); border: 3px solid #fff; border-radius: 50%; box-shadow: 0 3px 8px rgba(7, 35, 29, .28); transition: box-shadow .18s ease, outline-color .18s ease; }
 .place-marker.is-selected { outline: 4px solid rgba(255, 222, 148, .72); outline-offset: 2px; box-shadow: 0 5px 12px rgba(0,0,0,.34); }
@@ -335,10 +340,7 @@ button:focus-visible, a:focus-visible, #map:focus-visible { outline: 3px solid v
   .browse-link { width: 100%; text-align: center; }
 }
 @media (min-width: 640px) {
-  .intro { grid-template-columns: minmax(0, 1.05fr) minmax(18rem, .95fr); align-items: center; padding: 1.9rem; }
-  .intro-art { grid-column: 2; grid-row: 1 / span 2; min-height: 16.5rem; }
-  .intro-art img { min-height: 16.5rem; }
-  .explore-link { grid-column: 1; }
+  .intro { min-height: calc(100dvh - 4.9rem); background-position: center, center 48%; }
   .category-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .category-button { grid-template-columns: 3rem minmax(0, 1fr) auto; }
   .assistant-form { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: end; }
@@ -346,9 +348,9 @@ button:focus-visible, a:focus-visible, #map:focus-visible { outline: 3px solid v
   .notes-grid { grid-template-columns: repeat(3, 1fr); }
 }
 @media (min-width: 960px) {
-  .site-header, .intro, .explorer, .exploration, .support-section, .notes { width: min(1280px, calc(100% - 4rem)); }
+  .site-header, .explorer, .exploration, .support-section, .notes { width: min(1280px, calc(100% - 4rem)); }
   .site-header { min-height: 5.25rem; }
-  .intro { margin-block: 1.2rem 2.5rem; }
+  .intro { min-height: calc(100dvh - 5.25rem); margin-block-end: 2.5rem; padding-inline: max(2rem, calc((100% - 1280px) / 2)); background-position: center, center 45%; }
   .explorer-heading, .explore-section-heading { grid-template-columns: minmax(0, 1fr) minmax(20rem, .48fr); align-items: end; }
   .explorer-note, .explore-section-heading > p { padding-block-end: .25rem; }
   .category-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
