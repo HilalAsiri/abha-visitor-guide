@@ -24,6 +24,10 @@
     { id: "osm-kudu", publisher: "OpenStreetMap", title: localized("Kudu — Abha", "كودو — أبها"), url: "https://www.openstreetmap.org/node/4111112575", type: "map-record" },
     { id: "osm-raha-cafe", publisher: "OpenStreetMap", title: localized("Raha café", "رهاء"), url: "https://www.openstreetmap.org/node/12992141478", type: "map-record" },
     { id: "osm-herfy", publisher: "OpenStreetMap", title: localized("Herfy 323", "هيرفي 323"), url: "https://www.openstreetmap.org/node/5316647922", type: "map-record" },
+    { id: "google-be-you-coffee", publisher: "Google Maps", title: localized("Be You Coffee Roasters", "مقهى ومحمصة بي يو"), url: "https://maps.app.goo.gl/WM8edQMb3PL7TTDc8", type: "map-record" },
+    { id: "google-calm-house", publisher: "Google Maps", title: localized("CALM HOUSE", "كالم هاوس"), url: "https://maps.app.goo.gl/h6eeFCF2ve7RkNbV6", type: "map-record" },
+    { id: "google-fog-coffee", publisher: "Google Maps", title: localized("Fog Coffee", "قهوة فوق"), url: "https://maps.app.goo.gl/9rg3C7jiuNpuLdhT9", type: "map-record" },
+    { id: "google-kaya-cafe", publisher: "Google Maps", title: localized("Kaya Cafe - Abha", "كايا كافيه أبها"), url: "https://maps.app.goo.gl/GY8ikJ1cPKauSHWN6", type: "map-record" },
     { id: "visit-saudi-aseer", publisher: "Visit Saudi", title: localized("Aseer destination guide", "دليل وجهة عسير"), url: "https://www.visitsaudi.com/en/aseer", type: "tourism-guide" },
     { id: "osm-rijal-almaa", publisher: "OpenStreetMap", title: localized("Rijal Almaa Heritage Village", "قرية رجال ألمع التراثية"), url: "https://www.openstreetmap.org/node/7160717585", type: "map-record" },
     { id: "osm-muftaha", publisher: "OpenStreetMap", title: localized("Al Muftaha Art Village", "قرية المفتاحة الفنية"), url: "https://www.openstreetmap.org/node/7246059985", type: "map-record" },
@@ -90,6 +94,26 @@
       id: "herfy-323", category: "food", coordinates: [18.2379435, 42.5800578], location: location(),
       name: localized("Herfy 323", "هيرفي 323"), description: localized("A named restaurant branch in Abha. Confirm current services directly with the venue.", "فرع مطعم محدد بالاسم في أبها. تحقّق من الخدمات الحالية مباشرةً مع المكان."),
       tagIds: ["restaurant", "quick-stop"], mealPeriodIds: [], media: placeholder("food", "Illustrated restaurant placeholder", "رسم توضيحي محلي لمطعم"), source: localized("OpenStreetMap place record", "سجل مكان في OpenStreetMap"), verification: verified(["osm-herfy"])
+    },
+    {
+      id: "be-you-coffee-roasters", category: "food", coordinates: [18.2406569, 42.5062628], location: location(),
+      name: localized("Be You Coffee Roasters", "مقهى ومحمصة بي يو"), description: localized("A mapped coffee roastery and café in Abha. Confirm current menu and hours directly before visiting.", "محمصة ومقهى محددان على الخريطة في أبها. تحقّق من القائمة وساعات العمل الحالية مباشرةً قبل الزيارة."),
+      tagIds: ["coffee"], mealPeriodIds: [], foodFilterIds: ["cafes"], googleMapsUrl: "https://maps.app.goo.gl/WM8edQMb3PL7TTDc8", media: placeholder("food", "Illustrated coffee roastery placeholder", "رسم توضيحي محلي لمحمصة ومقهى"), source: localized("Google Maps place listing", "إدراج المكان في خرائط Google"), verification: verified(["google-be-you-coffee"])
+    },
+    {
+      id: "calm-house", category: "food", coordinates: [18.2418044, 42.4878652], location: location(),
+      name: localized("CALM HOUSE", "كالم هاوس"), description: localized("A mapped café in Abha. Confirm current menu and hours directly before visiting.", "مقهى محدد على الخريطة في أبها. تحقّق من القائمة وساعات العمل الحالية مباشرةً قبل الزيارة."),
+      tagIds: ["coffee"], mealPeriodIds: [], foodFilterIds: ["cafes"], googleMapsUrl: "https://maps.app.goo.gl/h6eeFCF2ve7RkNbV6", media: placeholder("food", "Illustrated café placeholder", "رسم توضيحي محلي لمقهى"), source: localized("Google Maps place listing", "إدراج المكان في خرائط Google"), verification: verified(["google-calm-house"])
+    },
+    {
+      id: "fog-coffee", category: "food", coordinates: [18.2001058, 42.4953445], location: location(),
+      name: localized("Fog Coffee", "قهوة فوق"), description: localized("A mapped coffee stop in Abha. Confirm current menu and hours directly before visiting.", "مقهى محدد على الخريطة في أبها. تحقّق من القائمة وساعات العمل الحالية مباشرةً قبل الزيارة."),
+      tagIds: ["coffee"], mealPeriodIds: [], foodFilterIds: ["cafes"], googleMapsUrl: "https://maps.app.goo.gl/9rg3C7jiuNpuLdhT9", media: placeholder("food", "Illustrated coffee shop placeholder", "رسم توضيحي محلي لمقهى"), source: localized("Google Maps place listing", "إدراج المكان في خرائط Google"), verification: verified(["google-fog-coffee"])
+    },
+    {
+      id: "kaya-cafe-abha", category: "food", coordinates: [18.214023, 42.4928167], location: location(),
+      name: localized("Kaya Cafe - Abha", "كايا كافيه أبها"), description: localized("A mapped café in Abha. Confirm current menu and hours directly before visiting.", "مقهى محدد على الخريطة في أبها. تحقّق من القائمة وساعات العمل الحالية مباشرةً قبل الزيارة."),
+      tagIds: ["coffee"], mealPeriodIds: [], foodFilterIds: ["cafes"], googleMapsUrl: "https://maps.app.goo.gl/GY8ikJ1cPKauSHWN6", media: placeholder("food", "Illustrated café placeholder", "رسم توضيحي محلي لمقهى"), source: localized("Google Maps place listing", "إدراج المكان في خرائط Google"), verification: verified(["google-kaya-cafe"])
     },
     {
       id: "al-soudah", category: "nature", coordinates: [18.2717, 42.384], location: location("area"),

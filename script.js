@@ -99,7 +99,7 @@
   function categoryName(category) { return localized(categoryRecord(category)?.label); }
   function tagName(tagId) { return localized(window.CATALOG.tags.find((tag) => tag.id === tagId)?.label) || tagId; }
   function sourceRecord(sourceId) { return window.CATALOG.sources.find((source) => source.id === sourceId); }
-  function mapUrl(place) { return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${place.coordinates[0]},${place.coordinates[1]}`)}`; }
+  function mapUrl(place) { return place.googleMapsUrl || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${place.coordinates[0]},${place.coordinates[1]}`)}`; }
   function externalIcon() { return '<svg aria-hidden="true" viewBox="0 0 24 24" focusable="false"><path d="M14 4h6v6M20 4l-9 9M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg>'; }
   function reducedMotion() { return reduceMotion.matches; }
   function activeMealLabel() { return text(`meal${activeFoodMeal[0].toUpperCase()}${activeFoodMeal.slice(1)}`); }
