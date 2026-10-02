@@ -34,6 +34,10 @@
     { id: "google-giorno-abha", publisher: "Google Maps", title: localized("Giorno", "جورنو"), url: "https://maps.app.goo.gl/4SCCBD2xLdFrXFUf7", type: "map-record" },
     { id: "google-mornix-abha", publisher: "Google Maps", title: localized("Mornix", "مورنكس"), url: "https://maps.app.goo.gl/KqY2BbGAhu6CraFQA", type: "map-record" },
     { id: "google-jarrah-abha", publisher: "Google Maps", title: localized("Jarrah Restaurant", "مطعم جره"), url: "https://maps.app.goo.gl/vgCjHpoQocBonXPr7", type: "map-record" },
+    { id: "google-pasta-street-abha", publisher: "Google Maps", title: localized("PASTA STREET", "باستا ستريت"), url: "https://maps.app.goo.gl/Qe7GsyUppZc3yRPL9", type: "map-record" },
+    { id: "google-la-scene-abha", publisher: "Google Maps", title: localized("La-Scene", "لا سين"), url: "https://maps.app.goo.gl/i5iTqnuSgZ39DKFe8", type: "map-record" },
+    { id: "google-bechamelo-abha", publisher: "Google Maps", title: localized("Béchamelo", "بشميلو"), url: "https://maps.app.goo.gl/fNup8Vd6FTJS318G9", type: "map-record" },
+    { id: "google-bellucci-abha", publisher: "Google Maps", title: localized("Bellucci", "بيلوتشي"), url: "https://maps.app.goo.gl/H2kqh17ZgrHMtBcy5", type: "map-record" },
     { id: "visit-saudi-aseer", publisher: "Visit Saudi", title: localized("Aseer destination guide", "دليل وجهة عسير"), url: "https://www.visitsaudi.com/en/aseer", type: "tourism-guide" },
     { id: "osm-rijal-almaa", publisher: "OpenStreetMap", title: localized("Rijal Almaa Heritage Village", "قرية رجال ألمع التراثية"), url: "https://www.openstreetmap.org/node/7160717585", type: "map-record" },
     { id: "osm-muftaha", publisher: "OpenStreetMap", title: localized("Al Muftaha Art Village", "قرية المفتاحة الفنية"), url: "https://www.openstreetmap.org/node/7246059985", type: "map-record" },
@@ -150,6 +154,26 @@
       id: "jarrah-restaurant-abha", category: "food", coordinates: [18.2199119, 42.5056938], location: location(),
       name: localized("Jarrah Restaurant", "مطعم جره"), description: localized("A mapped Abha restaurant listed for breakfast. Confirm the current menu and hours directly before visiting.", "مطعم محدد على الخريطة في أبها ومدرج للفطور. تحقّق من القائمة وساعات العمل الحالية مباشرةً قبل الزيارة."),
       tagIds: ["restaurant"], mealPeriodIds: ["breakfast"], mealPeriodEvidence: { breakfast: { source: "google-jarrah-abha", checkedAt } }, googleMapsUrl: "https://maps.app.goo.gl/vgCjHpoQocBonXPr7", media: placeholder("food", "Illustrated breakfast restaurant placeholder", "رسم توضيحي محلي لمطعم فطور"), source: localized("Google Maps place listing", "إدراج المكان في خرائط Google"), verification: verified(["google-jarrah-abha"])
+    },
+    {
+      id: "pasta-street-abha", category: "food", coordinates: [18.240068, 42.5059388], location: location(),
+      name: localized("PASTA STREET", "باستا ستريت"), description: localized("A mapped pasta restaurant in Abha listed for dinner. Confirm the current menu and hours directly before visiting.", "مطعم باستا محدد على الخريطة في أبها ومدرج للعشاء. تحقّق من القائمة وساعات العمل الحالية مباشرةً قبل الزيارة."),
+      tagIds: ["restaurant"], mealPeriodIds: ["dinner"], mealPeriodEvidence: { dinner: { source: "google-pasta-street-abha", checkedAt } }, googleMapsUrl: "https://maps.app.goo.gl/Qe7GsyUppZc3yRPL9", media: placeholder("food", "Illustrated pasta restaurant placeholder", "رسم توضيحي محلي لمطعم باستا"), source: localized("Google Maps place listing", "إدراج المكان في خرائط Google"), verification: verified(["google-pasta-street-abha"])
+    },
+    {
+      id: "la-scene-abha", category: "food", coordinates: [18.2371875, 42.5798125], location: location(),
+      name: localized("La-Scene", "لا سين"), description: localized("A mapped Abha restaurant listed for dinner. Confirm the current menu and hours directly before visiting.", "مطعم محدد على الخريطة في أبها ومدرج للعشاء. تحقّق من القائمة وساعات العمل الحالية مباشرةً قبل الزيارة."),
+      tagIds: ["restaurant"], mealPeriodIds: ["dinner"], mealPeriodEvidence: { dinner: { source: "google-la-scene-abha", checkedAt } }, googleMapsUrl: "https://maps.app.goo.gl/i5iTqnuSgZ39DKFe8", media: placeholder("food", "Illustrated dinner restaurant placeholder", "رسم توضيحي محلي لمطعم عشاء"), source: localized("Google Maps place listing", "إدراج المكان في خرائط Google"), verification: verified(["google-la-scene-abha"])
+    },
+    {
+      id: "bechamelo-abha", category: "food", coordinates: [18.2399113, 42.5059499], location: location(),
+      name: localized("Béchamelo", "بشميلو"), description: localized("A mapped Abha restaurant listed for dinner. Confirm the current menu and hours directly before visiting.", "مطعم محدد على الخريطة في أبها ومدرج للعشاء. تحقّق من القائمة وساعات العمل الحالية مباشرةً قبل الزيارة."),
+      tagIds: ["restaurant"], mealPeriodIds: ["dinner"], mealPeriodEvidence: { dinner: { source: "google-bechamelo-abha", checkedAt } }, googleMapsUrl: "https://maps.app.goo.gl/fNup8Vd6FTJS318G9", media: placeholder("food", "Illustrated dinner restaurant placeholder", "رسم توضيحي محلي لمطعم عشاء"), source: localized("Google Maps place listing", "إدراج المكان في خرائط Google"), verification: verified(["google-bechamelo-abha"])
+    },
+    {
+      id: "bellucci-abha", category: "food", coordinates: [18.2399022, 42.5062194], location: location(),
+      name: localized("Bellucci", "بيلوتشي"), description: localized("A mapped Abha restaurant listed for dinner. Confirm the current menu and hours directly before visiting.", "مطعم محدد على الخريطة في أبها ومدرج للعشاء. تحقّق من القائمة وساعات العمل الحالية مباشرةً قبل الزيارة."),
+      tagIds: ["restaurant"], mealPeriodIds: ["dinner"], mealPeriodEvidence: { dinner: { source: "google-bellucci-abha", checkedAt } }, googleMapsUrl: "https://maps.app.goo.gl/H2kqh17ZgrHMtBcy5", media: placeholder("food", "Illustrated dinner restaurant placeholder", "رسم توضيحي محلي لمطعم عشاء"), source: localized("Google Maps place listing", "إدراج المكان في خرائط Google"), verification: verified(["google-bellucci-abha"])
     },
     {
       id: "al-soudah", category: "nature", coordinates: [18.2717, 42.384], location: location("area"),
