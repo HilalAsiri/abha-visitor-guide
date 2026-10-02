@@ -28,6 +28,9 @@
     { id: "google-calm-house", publisher: "Google Maps", title: localized("CALM HOUSE", "كالم هاوس"), url: "https://maps.app.goo.gl/h6eeFCF2ve7RkNbV6", type: "map-record" },
     { id: "google-fog-coffee", publisher: "Google Maps", title: localized("Fog Coffee", "قهوة فوق"), url: "https://maps.app.goo.gl/9rg3C7jiuNpuLdhT9", type: "map-record" },
     { id: "google-kaya-cafe", publisher: "Google Maps", title: localized("Kaya Cafe - Abha", "كايا كافيه أبها"), url: "https://maps.app.goo.gl/GY8ikJ1cPKauSHWN6", type: "map-record" },
+    { id: "google-maharani-abha", publisher: "Google Maps", title: localized("Maharani Restaurant, Abha Branch", "مطعم مهرانى فرع أبها"), url: "https://maps.app.goo.gl/gM8EeKgLLobHQ1uW8", type: "map-record" },
+    { id: "google-olive-garden-abha", publisher: "Google Maps", title: localized("Olive Garden Abha", "مطعم أوليف جاردن أبها"), url: "https://maps.app.goo.gl/f9GeMMjRVC5xRJyA8", type: "map-record" },
+    { id: "google-raj-abha", publisher: "Google Maps", title: localized("RAJ Abha", "مطعم راج الهندي"), url: "https://maps.app.goo.gl/7vfwMuffuSF8rcop8", type: "map-record" },
     { id: "visit-saudi-aseer", publisher: "Visit Saudi", title: localized("Aseer destination guide", "دليل وجهة عسير"), url: "https://www.visitsaudi.com/en/aseer", type: "tourism-guide" },
     { id: "osm-rijal-almaa", publisher: "OpenStreetMap", title: localized("Rijal Almaa Heritage Village", "قرية رجال ألمع التراثية"), url: "https://www.openstreetmap.org/node/7160717585", type: "map-record" },
     { id: "osm-muftaha", publisher: "OpenStreetMap", title: localized("Al Muftaha Art Village", "قرية المفتاحة الفنية"), url: "https://www.openstreetmap.org/node/7246059985", type: "map-record" },
@@ -114,6 +117,21 @@
       id: "kaya-cafe-abha", category: "food", coordinates: [18.214023, 42.4928167], location: location(),
       name: localized("Kaya Cafe - Abha", "كايا كافيه أبها"), description: localized("A mapped café in Abha. Confirm current menu and hours directly before visiting.", "مقهى محدد على الخريطة في أبها. تحقّق من القائمة وساعات العمل الحالية مباشرةً قبل الزيارة."),
       tagIds: ["coffee"], mealPeriodIds: [], foodFilterIds: ["cafes"], googleMapsUrl: "https://maps.app.goo.gl/GY8ikJ1cPKauSHWN6", media: placeholder("food", "Illustrated café placeholder", "رسم توضيحي محلي لمقهى"), source: localized("Google Maps place listing", "إدراج المكان في خرائط Google"), verification: verified(["google-kaya-cafe"])
+    },
+    {
+      id: "maharani-restaurant-abha", category: "food", coordinates: [18.2174371, 42.5225502], location: location(),
+      name: localized("Maharani Restaurant, Abha Branch", "مطعم مهرانى فرع أبها"), description: localized("A mapped Indian restaurant in Abha. Confirm current menu and hours directly before visiting.", "مطعم هندي محدد على الخريطة في أبها. تحقّق من القائمة وساعات العمل الحالية مباشرةً قبل الزيارة."),
+      tagIds: ["restaurant"], mealPeriodIds: ["lunch"], mealPeriodEvidence: { lunch: { source: "google-maharani-abha", checkedAt } }, googleMapsUrl: "https://maps.app.goo.gl/gM8EeKgLLobHQ1uW8", media: placeholder("food", "Illustrated Indian restaurant placeholder", "رسم توضيحي محلي لمطعم هندي"), source: localized("Google Maps place listing", "إدراج المكان في خرائط Google"), verification: verified(["google-maharani-abha"])
+    },
+    {
+      id: "olive-garden-abha", category: "food", coordinates: [18.2562247, 42.491297], location: location(),
+      name: localized("Olive Garden Abha", "مطعم أوليف جاردن أبها"), description: localized("A mapped restaurant in Abha. Confirm current menu and hours directly before visiting.", "مطعم محدد على الخريطة في أبها. تحقّق من القائمة وساعات العمل الحالية مباشرةً قبل الزيارة."),
+      tagIds: ["restaurant"], mealPeriodIds: ["lunch"], mealPeriodEvidence: { lunch: { source: "google-olive-garden-abha", checkedAt } }, googleMapsUrl: "https://maps.app.goo.gl/f9GeMMjRVC5xRJyA8", media: placeholder("food", "Illustrated restaurant placeholder", "رسم توضيحي محلي لمطعم"), source: localized("Google Maps place listing", "إدراج المكان في خرائط Google"), verification: verified(["google-olive-garden-abha"])
+    },
+    {
+      id: "raj-abha", category: "food", coordinates: [18.2282476, 42.5889734], location: location(),
+      name: localized("RAJ Abha", "مطعم راج الهندي"), description: localized("A mapped Indian restaurant in Abha. Confirm current menu and hours directly before visiting.", "مطعم هندي محدد على الخريطة في أبها. تحقّق من القائمة وساعات العمل الحالية مباشرةً قبل الزيارة."),
+      tagIds: ["restaurant"], mealPeriodIds: ["lunch"], mealPeriodEvidence: { lunch: { source: "google-raj-abha", checkedAt } }, googleMapsUrl: "https://maps.app.goo.gl/7vfwMuffuSF8rcop8", media: placeholder("food", "Illustrated Indian restaurant placeholder", "رسم توضيحي محلي لمطعم هندي"), source: localized("Google Maps place listing", "إدراج المكان في خرائط Google"), verification: verified(["google-raj-abha"])
     },
     {
       id: "al-soudah", category: "nature", coordinates: [18.2717, 42.384], location: location("area"),
