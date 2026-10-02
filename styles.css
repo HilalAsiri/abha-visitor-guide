@@ -24,6 +24,8 @@
   --radius-sm: .8rem;
   --radius: 1.15rem;
   --radius-lg: 1.45rem;
+  --section-photo-overlay: linear-gradient(135deg, rgba(255, 253, 246, .95), rgba(255, 253, 246, .78));
+  --section-photo-tint: rgba(237, 242, 231, .7);
 }
 
 :root[data-theme="dark"] {
@@ -49,6 +51,8 @@
   --focus: #a9d0ff;
   --shadow-sm: 0 6px 16px rgba(0, 0, 0, .22);
   --shadow-md: 0 16px 38px rgba(0, 0, 0, .26);
+  --section-photo-overlay: linear-gradient(135deg, rgba(16, 28, 47, .94), rgba(16, 28, 47, .78));
+  --section-photo-tint: rgba(20, 40, 58, .72);
 }
 
 * { box-sizing: border-box; }
@@ -137,7 +141,30 @@ html[dir="rtl"] .intro-copy { margin-inline-start: auto; text-align: start; }
 .explore-link { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 2.85rem; width: fit-content; margin-block-start: .35rem; padding: .62rem 1.05rem; color: #173b34; background: #fffdf5; border: 1px solid #fffdf5; border-radius: .7rem; box-shadow: 0 4px 14px rgba(0, 0, 0, .2); font-weight: 850; text-decoration: none; }
 .explore-link svg { width: 1rem; height: 1rem; }
 
-.explorer { margin-block-end: 1.1rem; }
+.explorer {
+  position: relative;
+  isolation: isolate;
+  margin-block-end: 1.1rem;
+  padding: clamp(1rem, 2.5vw, 1.55rem);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+.explorer::before, .exploration::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.explorer::before {
+  background-image: var(--section-photo-overlay), url("images/places/valley-ashran-dam.jpg");
+  background-position: center, center 52%;
+}
+.explorer > * { position: relative; z-index: 1; }
 .explorer-heading, .explore-section-heading { display: grid; gap: .55rem; margin-block-end: 1.05rem; }
 .eyebrow { margin: 0 0 .45rem; color: var(--forest); font-size: .88rem; font-weight: 850; letter-spacing: .08em; line-height: 1.45; text-transform: uppercase; }
 .explorer-note, .explore-section-heading > p { max-width: 43rem; margin: 0; color: var(--muted); }
@@ -186,14 +213,22 @@ html[dir="rtl"] .intro-copy { margin-inline-start: auto; text-align: start; }
 .category-button.is-active small, .category-button.is-active .category-count { color: color-mix(in srgb, var(--on-action) 88%, transparent); background: color-mix(in srgb, var(--on-action) 14%, transparent); }
 
 .exploration {
+  position: relative;
+  isolation: isolate;
   scroll-margin-top: 1rem;
   margin-block: 1.1rem 0;
   padding: clamp(1rem, 2.5vw, 1.55rem);
-  background: linear-gradient(145deg, var(--surface-solid), var(--surface-soft));
+  overflow: hidden;
+  background: linear-gradient(145deg, var(--section-photo-tint), var(--section-photo-tint));
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
 }
+.exploration::before {
+  background-image: var(--section-photo-overlay), url("images/places/green-mountain-abha.jpg");
+  background-position: center, center 42%;
+}
+.exploration > * { position: relative; z-index: 1; }
 .explore-section-heading { margin-block-end: 1rem; }
 
 .meal-filter, .stay-filter { display: grid; gap: .6rem; margin: 0; padding: .9rem; background: var(--surface-soft); border: 1px solid var(--line); border-radius: var(--radius-sm); }
@@ -306,7 +341,9 @@ html[dir="rtl"] .meal-stay-context { border-radius: .6rem 0 0 .6rem; }
 .site-footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .4rem 1rem; padding: 1.35rem max(1rem, calc((100% - 1280px) / 2)); color: color-mix(in srgb, var(--surface-solid) 92%, transparent); background: var(--indigo); font-size: .9rem; font-weight: 650; line-height: 1.5; }
 .site-footer p { margin: 0; }
 .site-footer a { color: var(--surface-solid); text-underline-offset: .2em; }
-.hero-credit { flex-basis: 100%; padding-block-start: .55rem; border-block-start: 1px solid color-mix(in srgb, var(--surface-solid) 30%, transparent); color: color-mix(in srgb, var(--surface-solid) 82%, transparent); font-size: .76rem; font-weight: 600; }
+.hero-credit, .background-credit { flex-basis: 100%; color: color-mix(in srgb, var(--surface-solid) 82%, transparent); font-size: .76rem; font-weight: 600; }
+.hero-credit { padding-block-start: .55rem; border-block-start: 1px solid color-mix(in srgb, var(--surface-solid) 30%, transparent); }
+.background-credit { margin-block-start: -.15rem !important; }
 
 .place-marker { display: grid; width: 2.4rem; height: 2.4rem; place-items: center; color: #fff; background: var(--marker-color, var(--forest)); border: 3px solid #fff; border-radius: 50%; box-shadow: 0 3px 8px rgba(7, 35, 29, .28); transition: box-shadow .18s ease, outline-color .18s ease; }
 .place-marker.is-selected { outline: 4px solid rgba(255, 222, 148, .72); outline-offset: 2px; box-shadow: 0 5px 12px rgba(0,0,0,.34); }
@@ -341,6 +378,8 @@ button:focus-visible, a:focus-visible, #map:focus-visible { outline: 3px solid v
 }
 @media (min-width: 640px) {
   .intro { min-height: calc(100dvh - 4.9rem); background-position: center, center 48%; }
+  .explorer::before { background-position: center, center 48%; }
+  .exploration::before { background-position: center, center 40%; }
   .category-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .category-button { grid-template-columns: 3rem minmax(0, 1fr) auto; }
   .assistant-form { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: end; }
@@ -351,6 +390,8 @@ button:focus-visible, a:focus-visible, #map:focus-visible { outline: 3px solid v
   .site-header, .explorer, .exploration, .support-section, .notes { width: min(1280px, calc(100% - 4rem)); }
   .site-header { min-height: 5.25rem; }
   .intro { min-height: calc(100dvh - 5.25rem); margin-block-end: 2.5rem; padding-inline: max(2rem, calc((100% - 1280px) / 2)); background-position: center, center 45%; }
+  .explorer::before { background-position: center, center 54%; }
+  .exploration::before { background-position: center, center 46%; }
   .explorer-heading, .explore-section-heading { grid-template-columns: minmax(0, 1fr) minmax(20rem, .48fr); align-items: end; }
   .explorer-note, .explore-section-heading > p { padding-block-end: .25rem; }
   .category-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }

@@ -17,9 +17,16 @@ All imagery loaded by the guide is stored inside this repository. The website do
 | `places/al-sowda-hill-top-04.jpg` | Active hero image: green mountain ridges and low cloud at Al Soudah near Abha. | [Al Sowda Hill top 04.jpg](https://commons.wikimedia.org/wiki/File:Al_Sowda_Hill_top_04.jpg) | Irshadpp | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | Downloaded and stored locally as a JPEG. The page may crop it for responsive layout; the visible credit discloses the crop. This derivative remains available under CC BY-SA 4.0. |
 | `places/abha-hero.jpg` | Local fallback only if the active hero cannot load; it does not represent an individual guide entry. | [Abha1.jpg](https://commons.wikimedia.org/wiki/File:Abha1.jpg) | Aimk07 (uploaded by Aziz1005) | Public Domain / PD-self, as stated on the Commons file page | Downloaded and stored locally as a JPEG. |
 
+## Section background photographs
+
+| Local file | Use | Original source | Creator | License | Original dimensions | Local modification |
+| --- | --- | --- | --- | --- | --- | --- |
+| `places/valley-ashran-dam.jpg` | Decorative background behind the category options area. | [Valley Ashran Dam at Abha01.jpg](https://commons.wikimedia.org/wiki/File:Valley_Ashran_Dam_at_Abha01.jpg) | Irshadpp | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | 4608 × 2592 | Downloaded and stored locally as a JPEG. Responsive CSS crops and overlays it for readability; the footer discloses this layout adaptation. The derivative remains available under CC BY-SA 4.0. |
+| `places/green-mountain-abha.jpg` | Decorative background around the integrated map section, never over the Leaflet canvas. | [Green Mountain - Abha, Saudi Arabia (6702611457).jpg](https://commons.wikimedia.org/wiki/File:Green_Mountain_-_Abha,_Saudi_Arabia_(6702611457).jpg) | Basheer Olakara | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) | 4000 × 3000 | Downloaded and stored locally as a JPEG. Responsive CSS crops and overlays it for readability; the footer discloses this layout adaptation. |
+
 ## Interface presentation
 
-The interface uses CSS semantic surfaces, restrained gradients, borders, and spacing. It does not load decorative pattern, cloud, or mist assets, and no decorative artwork appears within the Leaflet map frame or controls.
+The interface uses CSS semantic surfaces, restrained gradients, borders, spacing, and two low-contrast local section photographs. Both background layers are non-interactive and sit behind section content; the Leaflet map frame, canvas, markers, and controls remain on an untouched solid surface. The interface does not load decorative pattern, cloud, or mist assets.
 
 ## Hotels & Stays illustrations
 
