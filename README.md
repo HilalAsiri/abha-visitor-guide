@@ -12,7 +12,7 @@ Selecting **Restaurants & Cafés / مطاعم ومقاهٍ** reveals a second fi
 
 **Cafés / مقاهي** shows only the six explicitly tagged cafés: Towns Talk Coffee, Raha café, Be You Coffee Roasters, CALM HOUSE, Fog Coffee, and Kaya Cafe - Abha. The imported listings retain their supplied Google Maps short links; established records continue to use coordinate handoffs.
 
-Meal labels are evidence-gated: this guide adds Breakfast, Lunch, or Dinner only when it has a venue-specific meal-service source and review date. A location record alone does not establish meal service. At present, **All** contains 13 food locations; **Lunch** contains exactly three places: Mahrani Restaurant, Abha Branch; Olive Garden Abha; and RAJ Abha. **Breakfast** and **Dinner** intentionally have no evidence-backed assignments. Their empty state explains this and offers a one-click return to All.
+Meal labels are evidence-gated: this guide adds Breakfast, Lunch, or Dinner only when it has a venue-specific meal-service source and review date. A location record alone does not establish meal service. At present, **All** contains 16 food locations; **Breakfast** contains exactly three places: Giorno; Mornix / مورنكس; and Jarrah Restaurant / مطعم جره. **Lunch** contains exactly three places: Mahrani Restaurant, Abha Branch; Olive Garden Abha; and RAJ Abha. The imported Breakfast and Lunch cards retain their supplied Google Maps short links. **Dinner** intentionally has no evidence-backed assignments; its empty state offers a one-click return to All.
 
 ### Hotels & Stays star filter
 
@@ -26,7 +26,7 @@ Breakfast, Lunch, and Dinner remain venue-evidence filters. When a selected meal
 
 ## Manual browser checks
 
-Use the local-server command below, then verify the page at **390px** and **1440px** in English LTR and Arabic RTL, in both light and dark mode. Start at `#guide`, choose several categories, and verify browser Back/Forward restores their selected markers, filters, list, and card state. Load `#explore`, `#explore/food`, and an invalid hash directly and refresh each; confirm the map renders at full size after each route change, with no horizontal scrolling. Category and Assistant choices should scroll/focus the integrated map; passive refresh and browser-history restoration should not steal focus. Confirm Food → All shows 13 records, Cafés shows exactly the six named cafés, and Lunch shows exactly three places: Mahrani Restaurant, Abha Branch; Olive Garden Abha; and RAJ Abha. Breakfast and Dinner each show the truthful empty state, hotel-meal unavailable note, and return action. Hotels & Stays → All shows the three unverified records; each star filter shows the truthful empty state and return action. Confirm card/list/marker selection stays synchronized, imported café and Lunch cards retain their original Google Maps short links, established cards retain exact-coordinate links, and language, theme, RTL, keyboard focus, and the Curated Visitor Assistant remain functional. Verify the slightly clearer category background keeps all category text and buttons clear, while the map-section background remains outside the solid Leaflet frame so tiles, markers, zoom controls, and the accessible list stay unobstructed. Check that both local background paths load under GitHub Pages, the compact footer credits wrap cleanly, and the 1–5 star footer rating has visible focus/selection, keyboard support, bilingual feedback, and persistence after refresh without sending data anywhere.
+Use the local-server command below, then verify the page at **390px** and **1440px** in English LTR and Arabic RTL, in both light and dark mode. Start at `#guide`, choose several categories, and verify browser Back/Forward restores their selected markers, filters, list, and card state. Load `#explore`, `#explore/food`, and an invalid hash directly and refresh each; confirm the map renders at full size after each route change, with no horizontal scrolling. Category and Assistant choices should scroll/focus the integrated map; passive refresh and browser-history restoration should not steal focus. Confirm Food → All shows 16 records, Cafés shows exactly the six named cafés, Breakfast shows exactly three places—Giorno; Mornix / مورنكس; and Jarrah Restaurant / مطعم جره—and Lunch shows exactly three places: Mahrani Restaurant, Abha Branch; Olive Garden Abha; and RAJ Abha. Dinner shows the truthful empty state, hotel-meal unavailable note, and return action. Hotels & Stays → All shows the three unverified records; each star filter shows the truthful empty state and return action. Confirm card/list/marker selection stays synchronized, imported café, Breakfast, and Lunch cards retain their original Google Maps short links, established cards retain exact-coordinate links, and language, theme, RTL, keyboard focus, and the Curated Visitor Assistant remain functional. Verify the slightly clearer category background keeps all category text and buttons clear, while the map-section background remains outside the solid Leaflet frame so tiles, markers, zoom controls, and the accessible list stay unobstructed. Check that both local background paths load under GitHub Pages, the compact footer credits wrap cleanly, and the 1–5 star footer rating has visible focus/selection, keyboard support, bilingual feedback, and persistence after refresh without sending data anywhere.
 
 
 ## Run it
@@ -43,11 +43,11 @@ The page has no build step or backend. Internet access is needed only for OpenSt
 
 ## Reviewed local catalog
 
-The catalog is stored in `sample-data/data.js` and currently contains **32 locations**:
+The catalog is stored in `sample-data/data.js` and currently contains **35 locations**:
 
 | Category | Places |
 | --- | ---: |
-| Restaurants & Cafés | 13 |
+| Restaurants & Cafés | 16 |
 | Nature & Views | 5 |
 | Heritage & Culture | 6 |
 | Family Activities | 5 |

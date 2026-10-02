@@ -31,6 +31,9 @@
     { id: "google-maharani-abha", publisher: "Google Maps", title: localized("Maharani Restaurant, Abha Branch", "مطعم مهرانى فرع أبها"), url: "https://maps.app.goo.gl/gM8EeKgLLobHQ1uW8", type: "map-record" },
     { id: "google-olive-garden-abha", publisher: "Google Maps", title: localized("Olive Garden Abha", "مطعم أوليف جاردن أبها"), url: "https://maps.app.goo.gl/f9GeMMjRVC5xRJyA8", type: "map-record" },
     { id: "google-raj-abha", publisher: "Google Maps", title: localized("RAJ Abha", "مطعم راج الهندي"), url: "https://maps.app.goo.gl/7vfwMuffuSF8rcop8", type: "map-record" },
+    { id: "google-giorno-abha", publisher: "Google Maps", title: localized("Giorno", "جورنو"), url: "https://maps.app.goo.gl/4SCCBD2xLdFrXFUf7", type: "map-record" },
+    { id: "google-mornix-abha", publisher: "Google Maps", title: localized("Mornix", "مورنكس"), url: "https://maps.app.goo.gl/KqY2BbGAhu6CraFQA", type: "map-record" },
+    { id: "google-jarrah-abha", publisher: "Google Maps", title: localized("Jarrah Restaurant", "مطعم جره"), url: "https://maps.app.goo.gl/vgCjHpoQocBonXPr7", type: "map-record" },
     { id: "visit-saudi-aseer", publisher: "Visit Saudi", title: localized("Aseer destination guide", "دليل وجهة عسير"), url: "https://www.visitsaudi.com/en/aseer", type: "tourism-guide" },
     { id: "osm-rijal-almaa", publisher: "OpenStreetMap", title: localized("Rijal Almaa Heritage Village", "قرية رجال ألمع التراثية"), url: "https://www.openstreetmap.org/node/7160717585", type: "map-record" },
     { id: "osm-muftaha", publisher: "OpenStreetMap", title: localized("Al Muftaha Art Village", "قرية المفتاحة الفنية"), url: "https://www.openstreetmap.org/node/7246059985", type: "map-record" },
@@ -132,6 +135,21 @@
       id: "raj-abha", category: "food", coordinates: [18.2282476, 42.5889734], location: location(),
       name: localized("RAJ Abha", "مطعم راج الهندي"), description: localized("A mapped Indian restaurant in Abha. Confirm current menu and hours directly before visiting.", "مطعم هندي محدد على الخريطة في أبها. تحقّق من القائمة وساعات العمل الحالية مباشرةً قبل الزيارة."),
       tagIds: ["restaurant"], mealPeriodIds: ["lunch"], mealPeriodEvidence: { lunch: { source: "google-raj-abha", checkedAt } }, googleMapsUrl: "https://maps.app.goo.gl/7vfwMuffuSF8rcop8", media: placeholder("food", "Illustrated Indian restaurant placeholder", "رسم توضيحي محلي لمطعم هندي"), source: localized("Google Maps place listing", "إدراج المكان في خرائط Google"), verification: verified(["google-raj-abha"])
+    },
+    {
+      id: "giorno-abha", category: "food", coordinates: [18.1984287, 42.5074418], location: location(),
+      name: localized("Giorno", "جورنو"), description: localized("A mapped breakfast and brunch café in Abha. Confirm the current menu and hours directly before visiting.", "مقهى محدد للفطور والبرانش في أبها. تحقّق من القائمة وساعات العمل الحالية مباشرةً قبل الزيارة."),
+      tagIds: ["restaurant"], mealPeriodIds: ["breakfast"], mealPeriodEvidence: { breakfast: { source: "google-giorno-abha", checkedAt } }, googleMapsUrl: "https://maps.app.goo.gl/4SCCBD2xLdFrXFUf7", media: placeholder("food", "Illustrated breakfast café placeholder", "رسم توضيحي محلي لمقهى فطور"), source: localized("Google Maps place listing", "إدراج المكان في خرائط Google"), verification: verified(["google-giorno-abha"])
+    },
+    {
+      id: "mornix-abha", category: "food", coordinates: [18.2204622, 42.5436808], location: location(),
+      name: localized("Mornix", "مورنكس"), description: localized("A mapped breakfast venue in Abha. Confirm the current menu and hours directly before visiting.", "وجهة فطور محددة على الخريطة في أبها. تحقّق من القائمة وساعات العمل الحالية مباشرةً قبل الزيارة."),
+      tagIds: ["restaurant"], mealPeriodIds: ["breakfast"], mealPeriodEvidence: { breakfast: { source: "google-mornix-abha", checkedAt } }, googleMapsUrl: "https://maps.app.goo.gl/KqY2BbGAhu6CraFQA", media: placeholder("food", "Illustrated breakfast venue placeholder", "رسم توضيحي محلي لوجهة فطور"), source: localized("Google Maps place listing", "إدراج المكان في خرائط Google"), verification: verified(["google-mornix-abha"])
+    },
+    {
+      id: "jarrah-restaurant-abha", category: "food", coordinates: [18.2199119, 42.5056938], location: location(),
+      name: localized("Jarrah Restaurant", "مطعم جره"), description: localized("A mapped Abha restaurant listed for breakfast. Confirm the current menu and hours directly before visiting.", "مطعم محدد على الخريطة في أبها ومدرج للفطور. تحقّق من القائمة وساعات العمل الحالية مباشرةً قبل الزيارة."),
+      tagIds: ["restaurant"], mealPeriodIds: ["breakfast"], mealPeriodEvidence: { breakfast: { source: "google-jarrah-abha", checkedAt } }, googleMapsUrl: "https://maps.app.goo.gl/vgCjHpoQocBonXPr7", media: placeholder("food", "Illustrated breakfast restaurant placeholder", "رسم توضيحي محلي لمطعم فطور"), source: localized("Google Maps place listing", "إدراج المكان في خرائط Google"), verification: verified(["google-jarrah-abha"])
     },
     {
       id: "al-soudah", category: "nature", coordinates: [18.2717, 42.384], location: location("area"),
