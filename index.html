@@ -38,10 +38,16 @@
         <h1 id="intro-title" tabindex="-1" data-i18n="heroTitle">Discover Abha — Where Clouds Drift Through Green Mountains.</h1>
         <p data-i18n="heroDescription">A focused map for cloud forests, heritage lanes, good coffee, family stops, and practical stays across Abha and Aseer.</p>
       </div>
-      <a class="explore-link" href="#categories">
-        <span data-i18n="startExploring">Explore the map</span>
-        <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false"><path d="M12 4v15m0 0 6-6m-6 6-6-6"/></svg>
-      </a>
+      <div class="hero-actions">
+        <a class="explore-link" href="#categories">
+          <span data-i18n="startExploring">Explore the map</span>
+          <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false"><path d="M12 4v15m0 0 6-6m-6 6-6-6"/></svg>
+        </a>
+        <a class="ready-plans-link" href="#ready-made-plans">
+          <span data-i18n="readyPlansCta">Ready-Made Plans</span>
+          <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false"><path d="M5 12h14m-5-5 5 5-5 5"/></svg>
+        </a>
+      </div>
     </section>
 
     <section class="explorer" aria-labelledby="explorer-title">
@@ -190,6 +196,18 @@
         <p data-i18n="noteTwo"><strong>Check ahead:</strong> Confirm times, prices, access, and seasonal availability directly with each place.</p>
         <p data-i18n="noteThree"><strong>Images with care:</strong> Licensed local photos include visible credits; remaining cards use intentional local illustrations. Google Maps photos are never reused.</p>
       </div>
+    </section>
+
+    <section class="ready-made-plans support-section" id="ready-made-plans" aria-labelledby="ready-plans-title">
+      <div class="ready-plans-heading">
+        <p class="eyebrow" data-i18n="readyPlansEyebrow">A full day, thoughtfully arranged</p>
+        <h2 id="ready-plans-title" tabindex="-1" data-i18n="readyPlansTitle">Ready-Made Plans</h2>
+        <p data-i18n="readyPlansDescription">Choose a style for a local-catalog itinerary. Each place opens in the integrated map; confirm live details directly before you go.</p>
+      </div>
+      <div class="ready-plan-grid" role="group" data-i18n-aria="readyPlansLabel" aria-label="Ready-made day plans" id="ready-plan-grid"></div>
+      <section class="ready-plan-detail" id="ready-plan-detail" aria-live="polite" aria-atomic="true" aria-labelledby="ready-plan-detail-title" tabindex="-1">
+        <h3 id="ready-plan-detail-title" data-i18n="readyPlansPrompt">Choose a plan to see its full day.</h3>
+      </section>
     </section>
   </main>
 

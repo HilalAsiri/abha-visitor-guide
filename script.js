@@ -9,7 +9,7 @@
       heroPhotoCredit: "Al Sowda Hill top 04 by Irshadpp / Wikimedia Commons · Cropped for layout.", heroPhotoSource: "Source", heroImageAlt: "Green mountain slopes and low clouds at Al Soudah near Abha",
       categoryBackgroundCredit: "Category background: Valley Ashran Dam at Abha01 by Irshadpp / Wikimedia Commons · Cropped for layout.", categoryBackgroundSource: "Source",
       mapBackgroundCredit: "Map section background: Green Mountain - Abha, Saudi Arabia (6702611457) by Basheer Olakara / Wikimedia Commons · Cropped for layout.", mapBackgroundSource: "Source",
-      startExploring: "Explore the map", chooseEyebrow: "Choose your day", categoryTitle: "Which side of Abha calls you?", categoryDescription: "Select a route lens to reveal its reviewed places.",
+      startExploring: "Explore the map", readyPlansCta: "Ready-Made Plans", readyPlansEyebrow: "A full day, thoughtfully arranged", readyPlansTitle: "Ready-Made Plans", readyPlansDescription: "Choose a style for a local-catalog itinerary. Each place opens in the integrated map; confirm live details directly before you go.", readyPlansLabel: "Ready-made day plans", readyPlansPrompt: "Choose a plan to see its full day.", readyPlansShowMap: "Show {place} on map", readyPlansUnavailable: "Unavailable in the current verified catalog", readyPlansAlternative: "Suggested alternative", readyPlansPracticalNote: "Practical note", readyPlansStay: "Stay", readyPlansBreakfast: "Breakfast", readyPlansLunch: "Lunch", readyPlansActivity: "Activity", readyPlansDinner: "Dinner", readyPlansMapAction: "Open in Google Maps", readyPlansLocalNotice: "These are local catalog suggestions, not live booking, availability, menu, or opening-hour information.", chooseEyebrow: "Choose your day", categoryTitle: "Which side of Abha calls you?", categoryDescription: "Select a route lens to reveal its reviewed places.",
       categoryLabel: "Place categories", categoryFood: "Restaurants & Cafés", categoryFoodHint: "A pause for coffee or a meal", categoryNature: "Nature & Views", categoryNatureHint: "Highlands, parks, and outlooks",
       categoryHeritage: "Heritage & Culture", categoryHeritageHint: "Stories in stone and color", categoryFamily: "Family Activities", categoryFamilyHint: "Easy stops for everyone", categoryStays: "Hotels & Stays", categoryStaysHint: "A practical base for your visit",
       assistantEyebrow: "Plan with the local guide", assistantTitle: "Curated Visitor Assistant", assistantDescription: "Choose what matters and receive a local catalog recommendation. It does not use live booking, traffic, or opening-hour data.", assistantInterest: "What interests you?", assistantTime: "Time available", assistantFamily: "Travelling with family?", assistantBudget: "Budget", assistantSubmit: "Suggest places", assistantReset: "Clear", interestViews: "Mountain views", interestCulture: "Culture & heritage", interestFamily: "Family time", interestStay: "A practical stay", timeShort: "Under 2 hours", timeHalf: "Half a day", timeFull: "A full day", familyAny: "No preference", familyYes: "Yes", budgetAny: "No preference", budgetLow: "Lower-cost ideas", budgetMid: "Mid-range", budgetHigh: "Higher-end stay", assistantNoMatch: "Try another combination. This local guide only recommends places in its curated catalog.", assistantOpenPlace: "Show on map", assistantLocalNotice: "Recommendations come from this guide’s local curated catalog, not live booking data.",
@@ -37,7 +37,7 @@
       heroPhotoCredit: "Al Sowda Hill top 04 لـ Irshadpp / ويكيميديا كومنز · تم اقتصاصها للعرض.", heroPhotoSource: "المصدر", heroImageAlt: "منحدرات جبلية خضراء وغيوم منخفضة في السودة قرب أبها",
       categoryBackgroundCredit: "خلفية الفئات: Valley Ashran Dam at Abha01 لـ Irshadpp / ويكيميديا كومنز · تم اقتصاصها للعرض.", categoryBackgroundSource: "المصدر",
       mapBackgroundCredit: "خلفية قسم الخريطة: Green Mountain - Abha, Saudi Arabia (6702611457) لـ Basheer Olakara / ويكيميديا كومنز · تم اقتصاصها للعرض.", mapBackgroundSource: "المصدر",
-      startExploring: "استكشف الخريطة", chooseEyebrow: "اختر يومك", categoryTitle: "أي جانب من أبها يناديك؟", categoryDescription: "اختر مساراً لإظهار أماكنه المراجعة.",
+      startExploring: "استكشف الخريطة", readyPlansCta: "خطط جاهزة", readyPlansEyebrow: "يوم كامل بتنسيق مدروس", readyPlansTitle: "خطط جاهزة", readyPlansDescription: "اختر أسلوباً لمسار من كتالوج الدليل المحلي. يفتح كل مكان في الخريطة التفاعلية؛ تحقّق من التفاصيل الحالية مباشرةً قبل الذهاب.", readyPlansLabel: "خطط يوم جاهزة", readyPlansPrompt: "اختر خطة لرؤية برنامجها الكامل.", readyPlansShowMap: "عرض {place} على الخريطة", readyPlansUnavailable: "غير متاح في الكتالوج الموثق الحالي", readyPlansAlternative: "بديل مقترح", readyPlansPracticalNote: "ملاحظة عملية", readyPlansStay: "الإقامة", readyPlansBreakfast: "الإفطار", readyPlansLunch: "الغداء", readyPlansActivity: "نشاط", readyPlansDinner: "العشاء", readyPlansMapAction: "فتح في خرائط Google", readyPlansLocalNotice: "هذه اقتراحات من كتالوج محلي، وليست معلومات مباشرة عن الحجز أو التوفر أو القوائم أو ساعات العمل.", chooseEyebrow: "اختر يومك", categoryTitle: "أي جانب من أبها يناديك؟", categoryDescription: "اختر مساراً لإظهار أماكنه المراجعة.",
       categoryLabel: "فئات الأماكن", categoryFood: "مطاعم ومقاهٍ", categoryFoodHint: "استراحة لقهوة أو وجبة", categoryNature: "طبيعة وإطلالات", categoryNatureHint: "مرتفعات ومنتزهات ومناظر",
       categoryHeritage: "تراث وثقافة", categoryHeritageHint: "حكايات من الحجر واللون", categoryFamily: "أنشطة عائلية", categoryFamilyHint: "محطات سهلة للجميع", categoryStays: "إقامات وفنادق", categoryStaysHint: "قاعدة عملية لزيارتك",
       assistantEyebrow: "خطط مع الدليل المحلي", assistantTitle: "مساعد الزائر المنسق", assistantDescription: "اختر ما يهمك واحصل على توصية من دليل محلي منسق. لا يستخدم بيانات الحجز أو الحركة أو مواعيد العمل المباشرة.", assistantInterest: "ما الذي يهمك؟", assistantTime: "الوقت المتاح", assistantFamily: "هل تسافر مع العائلة؟", assistantBudget: "الميزانية", assistantSubmit: "اقترح أماكن", assistantReset: "مسح", interestViews: "إطلالات جبلية", interestCulture: "ثقافة وتراث", interestFamily: "وقت عائلي", interestStay: "إقامة عملية", timeShort: "أقل من ساعتين", timeHalf: "نصف يوم", timeFull: "يوم كامل", familyAny: "لا تفضيل", familyYes: "نعم", budgetAny: "لا تفضيل", budgetLow: "أفكار أقل تكلفة", budgetMid: "متوسط", budgetHigh: "إقامة أعلى سعراً", assistantNoMatch: "جرّب مجموعة مختلفة. يوصي هذا الدليل المحلي فقط بالأماكن الموجودة في كتالوجه المنسق.", assistantOpenPlace: "عرض على الخريطة", assistantLocalNotice: "تأتي التوصيات من كتالوج هذا الدليل المحلي، وليست من بيانات حجز مباشرة.",
@@ -59,6 +59,33 @@
   };
 
   const fallbackImages = { food: "images/food-placeholder.svg", nature: "images/nature-placeholder.svg", heritage: "images/heritage-placeholder.svg", family: "images/family-placeholder.svg", stays: "images/stays-placeholder.svg" };
+  const readyMadePlans = [
+    {
+      id: "fun-day", title: { en: "Fun Day", ar: "يوم ممتع" }, summary: { en: "An upbeat city-and-lake day with a playful stop.", ar: "يوم نابض بالحيوية بين المدينة والبحيرة مع محطة ترفيهية." },
+      slots: { stay: "abha-palace-hotel", breakfast: "jarrah-restaurant-abha", lunch: "olive-garden-abha", activity: "abha-palace-theme-park", dinner: "bellucci-abha" },
+      note: { en: "The theme park is an area reference; confirm operating dates, tickets, and available attractions before leaving.", ar: "المدينة الترفيهية مرجع لمنطقة؛ تحقّق من أيام التشغيل والتذاكر والألعاب المتاحة قبل الانطلاق." }
+    },
+    {
+      id: "calm-day", title: { en: "Calm Day", ar: "يوم هادئ" }, summary: { en: "A slower city rhythm with a park pause and familiar food stops.", ar: "إيقاع مدينة أهدأ مع استراحة في الحديقة ومحطات طعام مريحة." },
+      slots: { stay: "citadines-abha", breakfast: "giorno-abha", lunch: "maharani-restaurant-abha", activity: "al-andalus-park", dinner: "pasta-street-abha" },
+      note: { en: "Check current facilities at Al Andalus Park and confirm each venue’s current hours directly.", ar: "تحقّق من المرافق الحالية في حديقة الأندلس ومن ساعات عمل كل مكان مباشرةً." }
+    },
+    {
+      id: "relax-unwind", title: { en: "Relax & Unwind", ar: "استجمام" }, summary: { en: "A mountain-leaning day with a clear breakfast alternative when the catalog has no verified Al Soudah option.", ar: "يوم يميل إلى الجبال مع بديل إفطار واضح لأن الكتالوج لا يثبت خياراً في السودة." },
+      slots: { stay: "intercontinental-al-soudah", breakfast: { unavailable: { en: "No verified breakfast place is recorded for the Al Soudah area.", ar: "لا يسجل الدليل مكان إفطار موثقاً في منطقة السودة." }, alternative: "giorno-abha" }, lunch: "raj-abha", activity: "al-soudah", dinner: "bechamelo-abha" },
+      note: { en: "Al Soudah and the hotel are area/current-status references—confirm access, visitor status, and the morning drive before routing there.", ar: "السودة والفندق مراجع للمنطقة أو للحالة الحالية؛ تحقّق من الوصول وحالة استقبال الزوار وطريق الصباح قبل التوجه." }
+    },
+    {
+      id: "family-day", title: { en: "Family Day", ar: "يوم عائلي" }, summary: { en: "An easy lake-area plan with flexible family stops.", ar: "خطة سهلة حول منطقة البحيرة مع محطات عائلية مرنة." },
+      slots: { stay: "abha-palace-hotel", breakfast: "jarrah-restaurant-abha", lunch: "olive-garden-abha", activity: "abha-dam-lake", dinner: "la-scene-abha" },
+      note: { en: "Abha Dam Lake is an area reference; choose and confirm your preferred access point before you go.", ar: "بحيرة سد أبها مرجع لمنطقة؛ اختر وتحقق من نقطة الوصول المناسبة قبل الذهاب." }
+    },
+    {
+      id: "food-explorer", title: { en: "Food Explorer", ar: "جولة تذوق" }, summary: { en: "A food-led day with a cultural pause between courses.", ar: "يوم يقوده التذوق مع استراحة ثقافية بين الوجبات." },
+      slots: { stay: "citadines-abha", breakfast: "giorno-abha", lunch: "maharani-restaurant-abha", activity: "al-muftaha", dinner: "pasta-street-abha" },
+      note: { en: "Confirm current menus and hours directly; Al Muftaha’s venue arrangements can change.", ar: "تحقّق من القوائم وساعات العمل الحالية مباشرةً؛ فقد تتغير ترتيبات الأماكن في حي المفتاحة." }
+    }
+  ];
   const markerSymbols = { food: "F", nature: "N", heritage: "H", family: "A", stays: "S" };
   const defaultCenter = [18.2164, 42.5053];
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -67,6 +94,7 @@
   let activeFoodMeal = "all";
   let activeStayStar = "all";
   let activePlace = null;
+  let activeReadyPlanId = null;
   const savedRating = Number(localStorage.getItem("abha-guide-rating"));
   let visitorRating = Number.isInteger(savedRating) && savedRating >= 1 && savedRating <= 5 ? savedRating : null;
   let markers = [];
@@ -89,6 +117,10 @@
   const descriptionMeta = document.querySelector('meta[name="description"]');
   const assistantForm = document.querySelector("#assistant-form");
   const assistantResults = document.querySelector("#assistant-results");
+  const readyPlansSection = document.querySelector("#ready-made-plans");
+  const readyPlansHeading = document.querySelector("#ready-plans-title");
+  const readyPlanGrid = document.querySelector("#ready-plan-grid");
+  const readyPlanDetail = document.querySelector("#ready-plan-detail");
   const mealFilter = document.querySelector("#meal-filter");
   const mealStayContext = document.querySelector("#meal-stay-context");
   const stayFilter = document.querySelector("#stay-filter");
@@ -248,6 +280,7 @@
     updateThemeButton();
     updateMapControlDirection();
     renderRating();
+    renderReadyMadePlans();
     renderCategory({ deferViewport: true });
   }
 
@@ -504,6 +537,128 @@
 
   function matches(value, options) { return options.includes("any") || options.includes(value); }
 
+  function readyPlanSlot(labelKey, value) {
+    const row = document.createElement("li");
+    row.className = "ready-plan-slot";
+    const label = document.createElement("span");
+    label.className = "ready-plan-slot-label";
+    label.textContent = text(labelKey);
+    const content = document.createElement("div");
+    content.className = "ready-plan-slot-content";
+
+    if (typeof value === "string") {
+      const place = window.PLACES.find((item) => item.id === value);
+      if (!place) return row;
+      const placeButton = document.createElement("button");
+      placeButton.type = "button";
+      placeButton.className = "ready-plan-place";
+      placeButton.textContent = placeText(place, "name");
+      placeButton.setAttribute("aria-label", text("readyPlansShowMap").replace("{place}", placeText(place, "name")));
+      placeButton.addEventListener("click", () => navigateToExplore(place.category, { placeId: place.id, focus: true }));
+      const mapsLink = document.createElement("a");
+      mapsLink.className = "ready-plan-map-link";
+      mapsLink.href = mapUrl(place);
+      mapsLink.target = "_blank";
+      mapsLink.rel = "noopener";
+      mapsLink.innerHTML = `${text("readyPlansMapAction")} ${externalIcon()}<span class="visually-hidden"> (${text("opensNewTab")})</span>`;
+      content.append(placeButton, mapsLink);
+    } else {
+      const unavailable = document.createElement("p");
+      unavailable.className = "ready-plan-unavailable";
+      unavailable.innerHTML = `<strong>${text("readyPlansUnavailable")}:</strong> ${localized(value.unavailable)}`;
+      content.append(unavailable);
+      const alternative = window.PLACES.find((item) => item.id === value.alternative);
+      if (alternative) {
+        const alternativeWrap = document.createElement("div");
+        alternativeWrap.className = "ready-plan-alternative";
+        const alternativeLabel = document.createElement("span");
+        alternativeLabel.textContent = `${text("readyPlansAlternative")}:`;
+        const alternativeButton = document.createElement("button");
+        alternativeButton.type = "button";
+        alternativeButton.className = "ready-plan-place";
+        alternativeButton.textContent = placeText(alternative, "name");
+        alternativeButton.setAttribute("aria-label", text("readyPlansShowMap").replace("{place}", placeText(alternative, "name")));
+        alternativeButton.addEventListener("click", () => navigateToExplore(alternative.category, { placeId: alternative.id, focus: true }));
+        const mapsLink = document.createElement("a");
+        mapsLink.className = "ready-plan-map-link";
+        mapsLink.href = mapUrl(alternative);
+        mapsLink.target = "_blank";
+        mapsLink.rel = "noopener";
+        mapsLink.innerHTML = `${text("readyPlansMapAction")} ${externalIcon()}<span class="visually-hidden"> (${text("opensNewTab")})</span>`;
+        alternativeWrap.append(alternativeLabel, alternativeButton, mapsLink);
+        content.append(alternativeWrap);
+      }
+    }
+    row.append(label, content);
+    return row;
+  }
+
+  function selectReadyPlan(planId, options = {}) {
+    activeReadyPlanId = planId;
+    renderReadyMadePlans();
+    if (options.focus) readyPlanDetail.focus({ preventScroll: true });
+  }
+
+  function renderReadyMadePlans() {
+    if (!readyPlanGrid || !readyPlanDetail) return;
+    readyPlanGrid.innerHTML = "";
+    readyMadePlans.forEach((plan, index) => {
+      const selected = plan.id === activeReadyPlanId;
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = `ready-plan-button${selected ? " is-selected" : ""}`;
+      button.dataset.planId = plan.id;
+      button.setAttribute("aria-pressed", String(selected));
+      button.setAttribute("aria-controls", "ready-plan-detail");
+      button.setAttribute("aria-label", localized(plan.title));
+      button.innerHTML = `<strong>${localized(plan.title)}</strong><span aria-hidden="true">${localized(plan.summary)}</span>`;
+      button.addEventListener("click", () => selectReadyPlan(plan.id, { focus: true }));
+      button.addEventListener("keydown", (event) => {
+        const direction = event.key === "ArrowRight" || event.key === "ArrowDown" ? 1 : event.key === "ArrowLeft" || event.key === "ArrowUp" ? -1 : 0;
+        const destination = event.key === "Home" ? 0 : event.key === "End" ? readyMadePlans.length - 1 : index + direction;
+        if (!direction && event.key !== "Home" && event.key !== "End") return;
+        event.preventDefault();
+        const nextIndex = (destination + readyMadePlans.length) % readyMadePlans.length;
+        selectReadyPlan(readyMadePlans[nextIndex].id);
+        requestAnimationFrame(() => readyPlanGrid.querySelectorAll(".ready-plan-button")[nextIndex]?.focus());
+      });
+      readyPlanGrid.append(button);
+    });
+
+    readyPlanDetail.innerHTML = "";
+    if (!activeReadyPlanId) {
+      const prompt = document.createElement("h3");
+      prompt.id = "ready-plan-detail-title";
+      prompt.textContent = text("readyPlansPrompt");
+      readyPlanDetail.append(prompt);
+      return;
+    }
+    const plan = readyMadePlans.find((item) => item.id === activeReadyPlanId);
+    if (!plan) return;
+    const heading = document.createElement("h3");
+    heading.id = "ready-plan-detail-title";
+    heading.textContent = localized(plan.title);
+    const summary = document.createElement("p");
+    summary.className = "ready-plan-summary";
+    summary.textContent = localized(plan.summary);
+    const slots = document.createElement("ol");
+    slots.className = "ready-plan-slots";
+    [
+      ["readyPlansStay", plan.slots.stay],
+      ["readyPlansBreakfast", plan.slots.breakfast],
+      ["readyPlansLunch", plan.slots.lunch],
+      ["readyPlansActivity", plan.slots.activity],
+      ["readyPlansDinner", plan.slots.dinner]
+    ].forEach(([label, value]) => slots.append(readyPlanSlot(label, value)));
+    const note = document.createElement("p");
+    note.className = "ready-plan-note";
+    note.innerHTML = `<strong>${text("readyPlansPracticalNote")}:</strong> ${localized(plan.note)}`;
+    const notice = document.createElement("small");
+    notice.className = "ready-plan-local-notice";
+    notice.textContent = text("readyPlansLocalNotice");
+    readyPlanDetail.append(heading, summary, slots, note, notice);
+  }
+
   function renderAssistantResult(curation) {
     assistantResults.innerHTML = "";
     if (!curation) {
@@ -538,6 +693,11 @@
     event.preventDefault();
     categoryHeading.focus({ preventScroll: true });
     categorySection.scrollIntoView({ behavior: reducedMotion() ? "auto" : "smooth", block: "start" });
+  });
+  document.querySelector(".ready-plans-link").addEventListener("click", (event) => {
+    event.preventDefault();
+    readyPlansHeading.focus({ preventScroll: true });
+    readyPlansSection.scrollIntoView({ behavior: reducedMotion() ? "auto" : "smooth", block: "start" });
   });
   document.querySelector(".skip-link").addEventListener("click", (event) => {
     event.preventDefault();
