@@ -64,7 +64,7 @@
     {
       id: "towns-talk-coffee", category: "food", coordinates: [18.2166801, 42.5222887], location: location(),
       name: localized("Towns Talk Coffee", "تاونز توك كوفي"), description: localized("A mapped coffee stop in Abha. Confirm current hours directly with the venue.", "مقهى محدد على الخريطة في أبها. تحقّق من ساعات العمل الحالية مباشرةً مع المكان."),
-      tagIds: ["coffee", "quick-stop"], mealPeriodIds: [], media: placeholder("food", "Illustrated coffee shop placeholder", "رسم توضيحي محلي لمقهى"), source: localized("OpenStreetMap place record", "سجل مكان في OpenStreetMap"), verification: verified(["osm-towns-talk"])
+      tagIds: ["coffee", "quick-stop"], mealPeriodIds: [], foodFilterIds: ["cafes"], media: placeholder("food", "Illustrated coffee shop placeholder", "رسم توضيحي محلي لمقهى"), source: localized("OpenStreetMap place record", "سجل مكان في OpenStreetMap"), verification: verified(["osm-towns-talk"])
     },
     {
       id: "fit-kitchen", category: "food", coordinates: [18.2168804, 42.5218626], location: location(),
@@ -84,7 +84,7 @@
     {
       id: "raha-cafe", category: "food", coordinates: [18.2310656, 42.5092645], location: location(),
       name: localized("Raha café", "رهاء"), description: localized("A named café in Abha. Confirm current menu and hours directly before visiting.", "مقهى محدد بالاسم في أبها. تحقّق من القائمة وساعات العمل الحالية مباشرةً قبل الزيارة."),
-      tagIds: ["coffee"], mealPeriodIds: [], media: placeholder("food", "Illustrated café placeholder", "رسم توضيحي محلي لمقهى"), source: localized("OpenStreetMap place record", "سجل مكان في OpenStreetMap"), verification: verified(["osm-raha-cafe"])
+      tagIds: ["coffee"], mealPeriodIds: [], foodFilterIds: ["cafes"], media: placeholder("food", "Illustrated café placeholder", "رسم توضيحي محلي لمقهى"), source: localized("OpenStreetMap place record", "سجل مكان في OpenStreetMap"), verification: verified(["osm-raha-cafe"])
     },
     {
       id: "herfy-323", category: "food", coordinates: [18.2379435, 42.5800578], location: location(),
