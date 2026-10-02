@@ -25,7 +25,8 @@
       photoCredit: "Photo credit", modifiedPhoto: "Local derivative", openSource: "View source and licence", locationNote: "Location reference", needsConfirmation: "Area reference — confirm access", verifiedLocation: "Reviewed location", sourceLinks: "Sources", tagsLabel: "What to expect",
       openMaps: "View on Google Maps", opensNewTab: "opens in a new tab", focusPlaceCard: "Focus {place} on the map", cardFocusHint: "Select this card to refocus the map.",
       notesEyebrow: "Travel thoughtfully", notesTitle: "Good to know before you go", noteOne: "<strong>Coordinate-backed:</strong> Each Google Maps link opens the same coordinate used by this guide.", noteTwo: "<strong>Check ahead:</strong> Confirm times, prices, access, and seasonal availability directly with each place.", noteThree: "<strong>Images with care:</strong> Licensed local photos include visible credits; remaining cards use intentional local illustrations. Google Maps photos are never reused.",
-      footerText: "Built for friends discovering Aseer"
+      footerText: "Built for friends discovering Aseer",
+      ratingPrompt: "Rate your Abha Guide", ratingLocalNote: "Saved only on this device.", ratingGroupLabel: "Choose a rating from one to five stars", ratingStarLabel: "{rating} out of 5 stars", ratingThanks: "Thank you for rating this guide {rating} out of 5 stars."
     },
     ar: {
       pageTitle: "دليل زائر أبها | دليل عسير الميداني", pageDescription: "خريطة تفاعلية ثنائية اللغة لزوار أبها ووجهات عسير القريبة.",
@@ -52,7 +53,8 @@
       photoCredit: "حقوق الصورة", modifiedPhoto: "نسخة محلية مشتقة", openSource: "عرض المصدر والترخيص", locationNote: "مرجع الموقع", needsConfirmation: "مرجع للمنطقة — تحقق من نقطة الدخول", verifiedLocation: "موقع مراجع", sourceLinks: "المصادر", tagsLabel: "ما الذي تتوقعه",
       openMaps: "عرض في خرائط Google", opensNewTab: "يفتح في علامة تبويب جديدة", focusPlaceCard: "ركز {place} على الخريطة", cardFocusHint: "حدد هذه البطاقة لإعادة تركيز الخريطة.",
       notesEyebrow: "سافر بوعي", notesTitle: "معلومات مفيدة قبل الذهاب", noteOne: "<strong>إحداثية موحدة:</strong> يفتح كل رابط خرائط Google الإحداثية نفسها المستخدمة في هذا الدليل.", noteTwo: "<strong>تحقق مسبقاً:</strong> تأكد من المواعيد والأسعار وإمكانية الدخول والتوفر الموسمي مباشرةً مع كل مكان.", noteThree: "<strong>الصور بعناية:</strong> للصور المحلية المرخصة حقوق واضحة؛ أما البطاقات الأخرى فتستخدم رسوماً محلية مقصودة. لا يعاد استخدام صور خرائط Google.",
-      footerText: "صُمم للأصدقاء الذين يكتشفون عسير"
+      footerText: "صُمم للأصدقاء الذين يكتشفون عسير",
+      ratingPrompt: "قيّم دليل أبها", ratingLocalNote: "يُحفظ على هذا الجهاز فقط.", ratingGroupLabel: "اختر تقييماً من نجمة إلى خمس نجوم", ratingStarLabel: "{rating} من 5 نجوم", ratingThanks: "شكراً لتقييمك هذا الدليل بـ {rating} من 5 نجوم."
     }
   };
 
@@ -65,6 +67,8 @@
   let activeFoodMeal = "all";
   let activeStayStar = "all";
   let activePlace = null;
+  const savedRating = Number(localStorage.getItem("abha-guide-rating"));
+  let visitorRating = Number.isInteger(savedRating) && savedRating >= 1 && savedRating <= 5 ? savedRating : null;
   let markers = [];
   let pendingPlaceId = null;
   let shouldFocusExplore = false;
@@ -88,6 +92,8 @@
   const mealFilter = document.querySelector("#meal-filter");
   const mealStayContext = document.querySelector("#meal-stay-context");
   const stayFilter = document.querySelector("#stay-filter");
+  const ratingStars = [...document.querySelectorAll(".rating-star")];
+  const ratingStatus = document.querySelector("#rating-status");
 
   const map = L.map("map", { scrollWheelZoom: false, zoomControl: false, attributionControl: false }).setView(defaultCenter, 10);
   const zoomControl = L.control.zoom({ position: "topleft" }).addTo(map);
@@ -202,6 +208,29 @@
     });
   }
 
+  function ratingMessage() {
+    return visitorRating ? text("ratingThanks").replace("{rating}", visitorRating) : "";
+  }
+
+  function renderRating() {
+    ratingStars.forEach((star) => {
+      const rating = Number(star.dataset.rating);
+      const selected = rating === visitorRating;
+      star.classList.toggle("is-filled", Boolean(visitorRating && rating <= visitorRating));
+      star.classList.toggle("is-selected", selected);
+      star.setAttribute("aria-pressed", String(selected));
+      star.setAttribute("aria-label", text("ratingStarLabel").replace("{rating}", rating));
+      star.querySelector(".visually-hidden").textContent = text("ratingStarLabel").replace("{rating}", rating);
+    });
+    ratingStatus.textContent = ratingMessage();
+  }
+
+  function saveRating(rating) {
+    visitorRating = rating;
+    localStorage.setItem("abha-guide-rating", String(rating));
+    renderRating();
+  }
+
   function applyText() {
     root.lang = language;
     root.dir = language === "ar" ? "rtl" : "ltr";
@@ -218,6 +247,7 @@
     document.querySelectorAll("[data-count]").forEach((node) => { node.textContent = String(window.PLACES.filter((place) => place.category === node.dataset.count).length); });
     updateThemeButton();
     updateMapControlDirection();
+    renderRating();
     renderCategory({ deferViewport: true });
   }
 
@@ -549,6 +579,18 @@
     localStorage.setItem("abha-language", language);
     applyText();
   }));
+  ratingStars.forEach((star, index) => {
+    star.addEventListener("click", () => saveRating(Number(star.dataset.rating)));
+    star.addEventListener("keydown", (event) => {
+      const direction = event.key === "ArrowRight" || event.key === "ArrowUp" ? 1 : event.key === "ArrowLeft" || event.key === "ArrowDown" ? -1 : 0;
+      const destination = event.key === "Home" ? 0 : event.key === "End" ? ratingStars.length - 1 : index + direction;
+      if (!direction && event.key !== "Home" && event.key !== "End") return;
+      event.preventDefault();
+      const next = ratingStars[(destination + ratingStars.length) % ratingStars.length];
+      next.focus();
+      saveRating(Number(next.dataset.rating));
+    });
+  });
   themeToggle.addEventListener("click", () => {
     root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
     localStorage.setItem("abha-theme", root.dataset.theme);
